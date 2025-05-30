@@ -14,6 +14,7 @@ type
     TabSheet3: TTabSheet;
     Edit2: TEdit;
     Button1: TButton;
+    RichEdit1: TRichEdit;
   private
     { Private declaratio
     Edit1: TEdit;ns }
