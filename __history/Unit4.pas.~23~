@@ -20,13 +20,9 @@ type
     btnRegister: TButton;
     Panel1: TPanel;
     Button2: TButton;
-    edtLUsername: TEdit;
-    edtLPassword: TEdit;
-    cbxSH1: TCheckBox;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure cbxSH1Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -62,15 +58,6 @@ begin
   ShowOnly(tsLogin);
 end;
 
-procedure TForm4.cbxSH1Click(Sender: TObject);
-begin
-  if cbxSH1.Checked then
-    edtLPassword.PasswordChar := #0  // hierdie sal die teks wys wat ingetik word
-  else
-    edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
-end;
-
-
 procedure TForm4.FormCreate(Sender: TObject);
 begin
   pnlLogin.caption := '';
@@ -80,13 +67,6 @@ begin
   lblLPassword.font.size := 10;
 
   lblUsername.caption := 'Username';
-  lblLPassword.caption := 'Password';
-
-  edtLUsername.text := '';
-  edtLPassword.text := '';
-  edtLPassword.PasswordChar := '*';
-
-  cbxSH1.caption := 'show/hide';
 
 
 end;

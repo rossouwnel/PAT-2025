@@ -84,7 +84,6 @@ begin
 
   edtLUsername.text := '';
   edtLPassword.text := '';
-  edtLPassword.PasswordChar := '*';
 
   cbxSH1.caption := 'show/hide';
 

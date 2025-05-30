@@ -23,78 +23,42 @@ object Form4: TForm4
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
-        Left = 64
+        Left = 40
         Top = 56
-        Width = 505
-        Height = 265
+        Width = 529
+        Height = 297
         TabOrder = 0
         object lblUsername: TLabel
-          Left = 104
-          Top = 99
-          Width = 77
-          Height = 23
-          Caption = 'Username'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          Left = 80
+          Top = 91
+          Width = 66
+          Height = 15
+          Caption = 'lblUsername'
         end
         object lblLPassword: TLabel
-          Left = 111
-          Top = 135
-          Width = 70
-          Height = 23
-          Caption = 'Password'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
+          Left = 77
+          Top = 128
+          Width = 69
+          Height = 15
+          Caption = 'lblLPassword'
         end
         object pnlHeading1: TPanel
           Left = 1
           Top = 1
-          Width = 503
+          Width = 527
           Height = 41
           Align = alTop
           Caption = 'Login or Sign up'
           TabOrder = 0
-          ExplicitWidth = 527
         end
-        object btnRegister: TButton
-          Left = 120
-          Top = 200
-          Width = 113
+        object Button1: TButton
+          Left = 288
+          Top = 176
+          Width = 75
           Height = 25
-          Caption = 'btnRegister'
+          Caption = 'Button1'
           TabOrder = 1
-          OnClick = btnRegisterClick
-        end
-        object edtLUsername: TEdit
-          Left = 216
-          Top = 102
-          Width = 121
-          Height = 23
-          TabOrder = 2
-        end
-        object edtLPassword: TEdit
-          Left = 216
-          Top = 138
-          Width = 121
-          Height = 23
-          TabOrder = 3
-        end
-        object cbxSH1: TCheckBox
-          Left = 343
-          Top = 141
-          Width = 97
-          Height = 17
-          Caption = 'show/hide'
-          TabOrder = 4
-          OnClick = cbxSH1Click
+          OnClick = Button1Click
         end
       end
     end

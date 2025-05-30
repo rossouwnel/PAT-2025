@@ -1,4 +1,4 @@
-unit Unit4;
+﻿unit Unit4;
 
 interface
 
@@ -10,17 +10,16 @@ uses
 type
   TForm4 = class(TForm)
     PageControl1: TPageControl;
-    TabSheet1: TTabSheet;
-    TabSheet2: TTabSheet;
-    TabSheet3: TTabSheet;
+    tsLogin: TTabSheet;
+    tsRegister: TTabSheet;
+    tsOptions: TTabSheet;
     pnlLogin: TPanel;
     pnlHeading1: TPanel;
-    Label1: TLabel;
-    Label2: TLabel;
-    procedure pnlLoginClick(Sender: TObject);
-    procedure PageControl1Change(Sender: TObject);
+    lblUsername: TLabel;
+    lblLPassword: TLabel;
+    Button1: TButton;
     procedure FormCreate(Sender: TObject);
-    procedure pnlHeading1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -35,11 +34,21 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm4.Button1Click(Sender: TObject);
+begin
+ PageControl1.ActivePage := tsRegister;
+end;
+
 procedure TForm4.FormCreate(Sender: TObject);
 begin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
   pnlHeading1.font.size := 15;
+
+  lblUsername.caption := 'Username';
+   PageControl1.ActivePage := tsLogin;
+   tsRegister.TabVisible := False;
+   tsOptions.TabVisible := false;
 end;
 
 

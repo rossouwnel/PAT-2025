@@ -17,16 +17,12 @@ type
     pnlHeading1: TPanel;
     lblUsername: TLabel;
     lblLPassword: TLabel;
-    btnRegister: TButton;
+    Button1: TButton;
     Panel1: TPanel;
     Button2: TButton;
-    edtLUsername: TEdit;
-    edtLPassword: TEdit;
-    cbxSH1: TCheckBox;
     procedure FormCreate(Sender: TObject);
-    procedure btnRegisterClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
-    procedure cbxSH1Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -48,49 +44,35 @@ var
 begin
   for i := 0 to PageControl1.PageCount - 1 do
     PageControl1.Pages[i].TabVisible := (PageControl1.Pages[i] = ATab);
-  PageControl1.ActivePage := ATab;
+  PageControl1.ActivePage := ATab;
 end;
 
-procedure TForm4.btnRegisterClick(Sender: TObject);
-
+procedure TForm4.Button1Click(Sender: TObject);
 begin
- ShowOnly(tsRegister);
+ PageControl1.ActivePage := tsRegister;
+ tsRegister.TabVisible := true;
+ tsLogin.TabVisible := false;
+ tsOptions.TabVisible := false;
 end;
 
 procedure TForm4.Button2Click(Sender: TObject);
 begin
-  ShowOnly(tsLogin);
+ PageControl1.ActivePage := tsLogin;
+ tsLogin.Tabvisible := true;
+ tsOptions.Tabvisible := false;
 end;
-
-procedure TForm4.cbxSH1Click(Sender: TObject);
-begin
-  if cbxSH1.Checked then
-    edtLPassword.PasswordChar := #0  // hierdie sal die teks wys wat ingetik word
-  else
-    edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
-end;
-
 
 procedure TForm4.FormCreate(Sender: TObject);
 begin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
   pnlHeading1.font.size := 15;
-  lblUsername.font.size := 10;
-  lblLPassword.font.size := 10;
 
   lblUsername.caption := 'Username';
-  lblLPassword.caption := 'Password';
-
-  edtLUsername.text := '';
-  edtLPassword.text := '';
-  edtLPassword.PasswordChar := '*';
-
-  cbxSH1.caption := 'show/hide';
-
-
+  PageControl1.ActivePage := tsLogin;
+  tsRegister.TabVisible := False;
+  tsOptions.TabVisible := false;
 end;
-
 
 
 end.
