@@ -12,6 +12,7 @@ type
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
+    Button1: TButton;
   private
     { Private declaratio
     Edit1: TEdit;ns }
