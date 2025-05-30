@@ -179,9 +179,6 @@ begin
   //  Simulation 1
   pnlSim1.caption := '';
   pnlNH.caption := '';
-  pnlSim1Menu.caption := '';
-  pnlNH.Brush.color := clSkyBlue;
-  pnlSim1Menu.brush.color := clMenuHighlight;
 
   sedN.font.size := 30;
   sedH.font.size := 30;

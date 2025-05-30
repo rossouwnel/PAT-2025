@@ -342,79 +342,10 @@ object Form4: TForm4
           Width = 1065
           Height = 225
           Align = alBottom
-          Color = clSkyBlue
-          ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 0
-          ExplicitTop = 416
-          object lblN: TLabel
-            Left = 112
-            Top = 59
-            Width = 128
-            Height = 31
-            Caption = 'N'#8322'-Molekule'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -23
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblH: TLabel
-            Left = 423
-            Top = 59
-            Width = 127
-            Height = 31
-            Caption = 'H'#8322'-Molekule'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -23
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblNH: TLabel
-            Left = 775
-            Top = 59
-            Width = 154
-            Height = 31
-            Caption = 'NH'#8323'-Molekules'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -23
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblPlus1: TLabel
-            Left = 288
-            Top = 112
-            Width = 80
-            Height = 31
-            Caption = 'lblPlus1'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -23
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
-          object lblArrow1: TLabel
-            Left = 616
-            Top = 112
-            Width = 99
-            Height = 31
-            Caption = 'lblArrow1'
-            Font.Charset = DEFAULT_CHARSET
-            Font.Color = clWindowText
-            Font.Height = -23
-            Font.Name = 'Segoe UI'
-            Font.Style = []
-            ParentFont = False
-          end
           object sedN: TSpinEdit
-            Left = 112
-            Top = 88
+            Left = 64
+            Top = 56
             Width = 121
             Height = 73
             Font.Charset = DEFAULT_CHARSET
@@ -429,8 +360,8 @@ object Form4: TForm4
             Value = 0
           end
           object sedH: TSpinEdit
-            Left = 423
-            Top = 88
+            Left = 383
+            Top = 56
             Width = 121
             Height = 73
             MaxValue = 0
@@ -439,8 +370,8 @@ object Form4: TForm4
             Value = 0
           end
           object sedNH: TSpinEdit
-            Left = 775
-            Top = 88
+            Left = 767
+            Top = 56
             Width = 121
             Height = 73
             MaxValue = 0
@@ -456,8 +387,6 @@ object Form4: TForm4
           Height = 431
           Align = alRight
           Caption = 'pnlSim1Menu'
-          Color = clMenuHighlight
-          ParentBackground = False
           TabOrder = 1
           ExplicitHeight = 568
         end

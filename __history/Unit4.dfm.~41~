@@ -17,13 +17,13 @@ object Form4: TForm4
     Top = 0
     Width = 1075
     Height = 715
-    ActivePage = tsRegister
+    ActivePage = tsOptions
     Align = alClient
     TabOrder = 0
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
-        Left = 256
+        Left = 280
         Top = 128
         Width = 505
         Height = 265
@@ -115,11 +115,11 @@ object Form4: TForm4
         Left = 280
         Top = 120
         Width = 505
-        Height = 257
+        Height = 265
         TabOrder = 0
         object lblRUsername: TLabel
-          Left = 104
-          Top = 64
+          Left = 74
+          Top = 69
           Width = 105
           Height = 23
           Caption = 'lblRUsername'
@@ -131,11 +131,11 @@ object Form4: TForm4
           ParentFont = False
         end
         object lblCPassword: TLabel
-          Left = 54
-          Top = 160
-          Width = 99
+          Left = 19
+          Top = 168
+          Width = 136
           Height = 23
-          Caption = 'lblCPassword'
+          Caption = 'Confirm Password'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -17
@@ -144,8 +144,8 @@ object Form4: TForm4
           ParentFont = False
         end
         object lblRPassword: TLabel
-          Left = 111
-          Top = 112
+          Left = 89
+          Top = 120
           Width = 98
           Height = 23
           Caption = 'lblRPassword'
@@ -158,7 +158,7 @@ object Form4: TForm4
         end
         object btnReturn: TButton
           Left = 1
-          Top = 216
+          Top = 225
           Width = 256
           Height = 41
           Align = alCustom
@@ -180,7 +180,7 @@ object Form4: TForm4
         end
         object btnRLogin: TButton
           Left = 255
-          Top = 216
+          Top = 225
           Width = 249
           Height = 41
           Align = alCustom
@@ -188,11 +188,137 @@ object Form4: TForm4
           TabOrder = 2
           OnClick = btnReturnClick
         end
+        object edtRUsername: TEdit
+          Left = 216
+          Top = 72
+          Width = 121
+          Height = 23
+          TabOrder = 3
+        end
+        object edtRPassword: TEdit
+          Left = 216
+          Top = 120
+          Width = 121
+          Height = 23
+          TabOrder = 4
+        end
+        object edtCPassword: TEdit
+          Left = 216
+          Top = 168
+          Width = 121
+          Height = 23
+          TabOrder = 5
+        end
+        object cbxSH2: TCheckBox
+          Left = 352
+          Top = 120
+          Width = 97
+          Height = 25
+          Caption = 'show/hide'
+          TabOrder = 6
+          OnClick = cbxSH2Click
+        end
+        object cbxSHC: TCheckBox
+          Left = 352
+          Top = 168
+          Width = 97
+          Height = 25
+          Caption = 'show/hide'
+          TabOrder = 7
+          OnClick = cbxSHCClick
+        end
       end
     end
     object tsOptions: TTabSheet
       Caption = 'tsOptions'
       ImageIndex = 2
+      object pnlOptions: TPanel
+        Left = 240
+        Top = 144
+        Width = 561
+        Height = 281
+        TabOrder = 0
+        object btnFlashcards: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 221
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnFlashcards'
+          TabOrder = 0
+          ExplicitLeft = 280
+          ExplicitTop = 120
+          ExplicitWidth = 75
+        end
+        object btnTest: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 252
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnTest'
+          TabOrder = 1
+          ExplicitLeft = 280
+          ExplicitTop = 152
+          ExplicitWidth = 75
+        end
+        object btnSim1: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 128
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnSim1'
+          TabOrder = 2
+          ExplicitLeft = 288
+          ExplicitTop = 167
+          ExplicitWidth = 75
+        end
+        object btnSim2: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 159
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnSim2'
+          TabOrder = 3
+          ExplicitLeft = 240
+          ExplicitTop = 152
+          ExplicitWidth = 75
+        end
+        object btnSim3: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 190
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnSim3'
+          TabOrder = 4
+          ExplicitLeft = 248
+          ExplicitTop = 160
+          ExplicitWidth = 75
+        end
+        object pnlHeading3: TPanel
+          Left = 1
+          Top = 1
+          Width = 559
+          Height = 120
+          Align = alTop
+          Caption = 'Menu'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -33
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 5
+        end
+      end
     end
   end
 end

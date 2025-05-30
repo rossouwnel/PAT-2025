@@ -456,8 +456,6 @@ object Form4: TForm4
           Height = 431
           Align = alRight
           Caption = 'pnlSim1Menu'
-          Color = clMenuHighlight
-          ParentBackground = False
           TabOrder = 1
           ExplicitHeight = 568
         end

@@ -179,28 +179,13 @@ begin
   //  Simulation 1
   pnlSim1.caption := '';
   pnlNH.caption := '';
-  pnlSim1Menu.caption := '';
-  pnlNH.Brush.color := clSkyBlue;
-  pnlSim1Menu.brush.color := clMenuHighlight;
 
   sedN.font.size := 30;
   sedH.font.size := 30;
   sedNH.font.size := 30;
-  sedN.MaxValue := 3;
-  sedH.MaxValue := 3;
-  sedNH.MaxValue := 3;
-
   lblN.caption := 'N₂-Molekules';
   lblH.caption := 'H₂-Molekules';
   lblNH.caption := 'NH₃-Molekules';
-  lblPlus1.caption := '+';
-  lblArrow1.caption := '→';
-  lblN.Font.Size := 14;
-  lblH.Font.Size := 14;
-  lblNH.Font.Size := 14;
-  lblPlus1.Font.Size := 25;
-  lblArrow1.Font.Size := 25;
-
 end;
 
 end.

@@ -1,4 +1,5 @@
-﻿unit Unit4;
+﻿// rossouw nel
+unit Unit4;
 
 interface
 
@@ -18,16 +19,35 @@ type
     lblUsername: TLabel;
     lblLPassword: TLabel;
     btnRegister: TButton;
-    Panel1: TPanel;
-    Button2: TButton;
+    pnlRegister: TPanel;
+    btnReturn: TButton;
     edtLUsername: TEdit;
     edtLPassword: TEdit;
     cbxSH1: TCheckBox;
     btnLogin: TButton;
+    pnlHeading2: TPanel;
+    btnRLogin: TButton;
+    lblRUsername: TLabel;
+    lblCPassword: TLabel;
+    lblRPassword: TLabel;
+    edtRUsername: TEdit;
+    edtRPassword: TEdit;
+    edtCPassword: TEdit;
+    cbxSH2: TCheckBox;
+    cbxSHC: TCheckBox;
+    pnlOptions: TPanel;
+    btnFlashcards: TButton;
+    btnTest: TButton;
+    btnSim1: TButton;
+    btnSim2: TButton;
+    btnSim3: TButton;
+    pnlHeading3: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure btnReturnClick(Sender: TObject);
     procedure cbxSH1Click(Sender: TObject);
+    procedure cbxSH2Click(Sender: TObject);
+    procedure cbxSHCClick(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -50,6 +70,7 @@ begin
   for i := 0 to PageControl1.PageCount - 1 do
     PageControl1.Pages[i].TabVisible := (PageControl1.Pages[i] = ATab);
   PageControl1.ActivePage := ATab;
+
 end;
 
 procedure TForm4.btnRegisterClick(Sender: TObject);
@@ -58,7 +79,7 @@ begin
  ShowOnly(tsRegister);
 end;
 
-procedure TForm4.Button2Click(Sender: TObject);
+procedure TForm4.btnReturnClick(Sender: TObject);
 begin
   ShowOnly(tsLogin);
 end;
@@ -71,13 +92,28 @@ begin
     edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
 end;
 
+procedure TForm4.cbxSH2Click(Sender: TObject);
+begin
+  if cbxSH2.Checked then
+    edtRPassword.PasswordChar := #0  // hierdie sal die teks wys wat ingetik word
+  else
+    edtRPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
+end;
+
+procedure TForm4.cbxSHCClick(Sender: TObject);
+begin
+  if cbxSHC.Checked then
+    edtCPassword.PasswordChar := #0  // hierdie sal die teks wys wat ingetik word
+  else
+    edtCPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
+end;
 
 procedure TForm4.FormCreate(Sender: TObject);
 begin
-  tsLogin.caption := 'login';
+  tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
-
+  // tsLogin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
   pnlHeading1.font.size := 15;
@@ -95,10 +131,33 @@ begin
 
   btnRegister.caption := 'Sign up';
   btnLogin.caption := 'Login';
+  // tsRegister
+  pnlRegister.caption := '';
+  pnlHeading2.caption := 'Sign Up';
+  pnlHeading2.font.size := 15;
+  lblRUsername.font.size := 10;
+  lblRPassword.font.size := 10;
+  lblCPassword.font.size := 10;
 
+  lblRUsername.caption := 'Username';
+  lblRPassword.caption := 'Password';
+  lblCPassword.caption := 'Confirm Password';
 
+  edtRUsername.text := '';
+  edtRPassword.text := '';
+  edtCPassword.text := '';
+  edtRPassword.PasswordChar := '*';
+  edtCPassword.PasswordChar := '*';
+  // tsOptions
+  pnlOptions.caption := '';
+  pnlHeading3.caption := 'Menu';
+  pnlHeading3.font.size := 25;
+
+  btnSim1.caption := 'Simulation 1';
+  btnSim2.caption := 'Simulation 2';
+  btnSim3.caption := 'Simulation 3';
+  btnFlashcards.caption := 'Flashcards';
+  btnTest.caption := 'Test';
 end;
-
-
 
 end.
