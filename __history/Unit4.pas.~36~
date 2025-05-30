@@ -38,8 +38,6 @@ type
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
     procedure cbxSH1Click(Sender: TObject);
-    procedure cbxSH2Click(Sender: TObject);
-    procedure cbxSHCClick(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -84,22 +82,6 @@ begin
     edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
 end;
 
-
-procedure TForm4.cbxSH2Click(Sender: TObject);
-begin
-  if cbxSH2.Checked then
-    edtRPassword.PasswordChar := #0  // hierdie sal die teks wys wat ingetik word
-  else
-    edtRPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
-end;
-
-procedure TForm4.cbxSHCClick(Sender: TObject);
-begin
-  if cbxSHC.Checked then
-    edtCPassword.PasswordChar := #0  // hierdie sal die teks wys wat ingetik word
-  else
-    edtCPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
-end;
 
 procedure TForm4.FormCreate(Sender: TObject);
 begin

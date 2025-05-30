@@ -216,7 +216,6 @@ object Form4: TForm4
           Height = 25
           Caption = 'show/hide'
           TabOrder = 6
-          OnClick = cbxSH2Click
         end
         object cbxSHC: TCheckBox
           Left = 352
@@ -225,7 +224,6 @@ object Form4: TForm4
           Height = 25
           Caption = 'show/hide'
           TabOrder = 7
-          OnClick = cbxSHCClick
         end
       end
     end
