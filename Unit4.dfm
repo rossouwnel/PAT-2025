@@ -29,6 +29,14 @@ object Form4: TForm4
     object TabSheet3: TTabSheet
       Caption = 'TabSheet3'
       ImageIndex = 2
+      object Edit1: TEdit
+        Left = 624
+        Top = 440
+        Width = 121
+        Height = 23
+        TabOrder = 0
+        Text = 'Edit1'
+      end
     end
   end
 end
