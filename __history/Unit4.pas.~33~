@@ -26,9 +26,6 @@ type
     btnLogin: TButton;
     pnlHeading2: TPanel;
     btnRLogin: TButton;
-    lblRUsername: TLabel;
-    lblCPassword: TLabel;
-    lblRPassword: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -55,7 +52,6 @@ begin
   for i := 0 to PageControl1.PageCount - 1 do
     PageControl1.Pages[i].TabVisible := (PageControl1.Pages[i] = ATab);
   PageControl1.ActivePage := ATab;
-
 end;
 
 procedure TForm4.btnRegisterClick(Sender: TObject);
@@ -108,11 +104,6 @@ begin
   lblRUsername.font.size := 10;
   lblRPassword.font.size := 10;
   lblCPassword.font.size := 10;
-
-  lblRUsername.caption := 'Username';
-  lblRPassword.caption := 'Password';
-  lblCPassword.caption := 'Confirm Password';
-
 
 
 end;

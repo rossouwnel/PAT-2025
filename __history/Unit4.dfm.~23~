@@ -17,14 +17,14 @@ object Form4: TForm4
     Top = 0
     Width = 1075
     Height = 715
-    ActivePage = tsRegister
+    ActivePage = tsLogin
     Align = alClient
     TabOrder = 0
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
-        Left = 256
-        Top = 128
+        Left = 64
+        Top = 56
         Width = 505
         Height = 265
         TabOrder = 0
@@ -66,7 +66,7 @@ object Form4: TForm4
         object btnRegister: TButton
           Left = 1
           Top = 224
-          Width = 256
+          Width = 248
           Height = 41
           Align = alCustom
           Caption = 'btnRegister'
@@ -98,9 +98,9 @@ object Form4: TForm4
           OnClick = cbxSH1Click
         end
         object btnLogin: TButton
-          Left = 254
+          Left = 255
           Top = 224
-          Width = 250
+          Width = 252
           Height = 41
           Align = alCustom
           Caption = 'btnLogin'
@@ -111,82 +111,21 @@ object Form4: TForm4
     object tsRegister: TTabSheet
       Caption = 'tsRegister'
       ImageIndex = 1
-      object pnlRegister: TPanel
-        Left = 280
+      object Panel1: TPanel
+        Left = 424
         Top = 120
-        Width = 505
+        Width = 481
         Height = 257
+        Caption = 'Panel1'
         TabOrder = 0
-        object lblRUsername: TLabel
-          Left = 104
-          Top = 64
-          Width = 105
-          Height = 23
-          Caption = 'lblRUsername'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lblCPassword: TLabel
-          Left = 111
-          Top = 160
-          Width = 99
-          Height = 23
-          Caption = 'lblCPassword'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lblRPassword: TLabel
-          Left = 111
-          Top = 112
-          Width = 98
-          Height = 23
-          Caption = 'lblRPassword'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object btnReturn: TButton
-          Left = 1
-          Top = 216
-          Width = 256
-          Height = 41
-          Align = alCustom
-          Caption = 'Return'
+        object Button2: TButton
+          Left = 200
+          Top = 168
+          Width = 75
+          Height = 25
+          Caption = 'Button2'
           TabOrder = 0
-          OnClick = btnReturnClick
-        end
-        object pnlHeading2: TPanel
-          Left = 1
-          Top = 1
-          Width = 503
-          Height = 41
-          Align = alTop
-          Caption = 'pnlHeading2'
-          TabOrder = 1
-          ExplicitLeft = 176
-          ExplicitTop = 48
-          ExplicitWidth = 185
-        end
-        object btnRLogin: TButton
-          Left = 255
-          Top = 216
-          Width = 249
-          Height = 41
-          Align = alCustom
-          Caption = 'Login'
-          TabOrder = 2
-          OnClick = btnReturnClick
+          OnClick = Button2Click
         end
       end
     end

@@ -66,7 +66,7 @@ object Form4: TForm4
         object btnRegister: TButton
           Left = 1
           Top = 224
-          Width = 256
+          Width = 247
           Height = 41
           Align = alCustom
           Caption = 'btnRegister'
@@ -117,45 +117,6 @@ object Form4: TForm4
         Width = 505
         Height = 257
         TabOrder = 0
-        object lblRUsername: TLabel
-          Left = 104
-          Top = 64
-          Width = 105
-          Height = 23
-          Caption = 'lblRUsername'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lblCPassword: TLabel
-          Left = 111
-          Top = 160
-          Width = 99
-          Height = 23
-          Caption = 'lblCPassword'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
-        object lblRPassword: TLabel
-          Left = 111
-          Top = 112
-          Width = 98
-          Height = 23
-          Caption = 'lblRPassword'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-        end
         object btnReturn: TButton
           Left = 1
           Top = 216

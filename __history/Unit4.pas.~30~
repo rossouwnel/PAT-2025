@@ -18,20 +18,15 @@ type
     lblUsername: TLabel;
     lblLPassword: TLabel;
     btnRegister: TButton;
-    pnlRegister: TPanel;
-    btnReturn: TButton;
+    Panel1: TPanel;
+    Button2: TButton;
     edtLUsername: TEdit;
     edtLPassword: TEdit;
     cbxSH1: TCheckBox;
     btnLogin: TButton;
-    pnlHeading2: TPanel;
-    btnRLogin: TButton;
-    lblRUsername: TLabel;
-    lblCPassword: TLabel;
-    lblRPassword: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
-    procedure btnReturnClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
     procedure cbxSH1Click(Sender: TObject);
   private
     { Private declaratio
@@ -55,7 +50,6 @@ begin
   for i := 0 to PageControl1.PageCount - 1 do
     PageControl1.Pages[i].TabVisible := (PageControl1.Pages[i] = ATab);
   PageControl1.ActivePage := ATab;
-
 end;
 
 procedure TForm4.btnRegisterClick(Sender: TObject);
@@ -64,7 +58,7 @@ begin
  ShowOnly(tsRegister);
 end;
 
-procedure TForm4.btnReturnClick(Sender: TObject);
+procedure TForm4.Button2Click(Sender: TObject);
 begin
   ShowOnly(tsLogin);
 end;
@@ -83,7 +77,7 @@ begin
   tsLogin.caption := 'login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
-  // tsLogin
+
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
   pnlHeading1.font.size := 15;
@@ -101,19 +95,6 @@ begin
 
   btnRegister.caption := 'Sign up';
   btnLogin.caption := 'Login';
-  // tsRegister
-  pnlRegister.caption := '';
-  pnlHeading2.caption := 'Sign Up';
-  pnlHeading2.font.size := 15;
-  lblRUsername.font.size := 10;
-  lblRPassword.font.size := 10;
-  lblCPassword.font.size := 10;
-
-  lblRUsername.caption := 'Username';
-  lblRPassword.caption := 'Password';
-  lblCPassword.caption := 'Confirm Password';
-
-
 
 end;
 
