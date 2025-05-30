@@ -15,8 +15,8 @@ type
     TabSheet3: TTabSheet;
     pnlLogin: TPanel;
     pnlHeading1: TPanel;
-    lblUsername: TLabel;
-    lblLPassword: TLabel;
+    Label1: TLabel;
+    Label2: TLabel;
     procedure FormCreate(Sender: TObject);
   private
     { Private declaratio
@@ -37,8 +37,6 @@ begin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
   pnlHeading1.font.size := 15;
-
-  lblUsername.caption
 end;
 
 

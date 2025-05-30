@@ -4,8 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls,
-  Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls;
 
 type
   TForm4 = class(TForm)
@@ -13,11 +12,8 @@ type
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
-    pnlLogin: TPanel;
-    pnlHeading1: TPanel;
-    lblUsername: TLabel;
-    lblLPassword: TLabel;
-    procedure FormCreate(Sender: TObject);
+    Edit2: TEdit;
+    Button1: TButton;
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -31,15 +27,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TForm4.FormCreate(Sender: TObject);
-begin
-  pnlLogin.caption := '';
-  pnlHeading1.caption := 'Login or Sign up';
-  pnlHeading1.font.size := 15;
-
-  lblUsername.caption
-end;
-
 
 end.

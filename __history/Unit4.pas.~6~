@@ -13,11 +13,10 @@ type
     TabSheet1: TTabSheet;
     TabSheet2: TTabSheet;
     TabSheet3: TTabSheet;
+    Edit2: TEdit;
+    Button1: TButton;
     pnlLogin: TPanel;
-    pnlHeading1: TPanel;
-    lblUsername: TLabel;
-    lblLPassword: TLabel;
-    procedure FormCreate(Sender: TObject);
+    procedure pnlLoginClick(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -32,14 +31,9 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm4.FormCreate(Sender: TObject);
+procedure TForm4.pnlLoginClick(Sender: TObject);
 begin
-  pnlLogin.caption := '';
-  pnlHeading1.caption := 'Login or Sign up';
-  pnlHeading1.font.size := 15;
-
-  lblUsername.caption
+pnlLogin.Caption := 'Login';
 end;
-
 
 end.
