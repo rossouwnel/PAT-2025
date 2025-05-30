@@ -35,13 +35,6 @@ type
     edtCPassword: TEdit;
     cbxSH2: TCheckBox;
     cbxSHC: TCheckBox;
-    pnlOptions: TPanel;
-    btnFlashcards: TButton;
-    btnTest: TButton;
-    btnSim1: TButton;
-    btnSim2: TButton;
-    btnSim3: TButton;
-    pnlHeading3: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -63,6 +56,21 @@ implementation
 
 {$R *.dfm}
 
+function AreFieldsFilled(EditControls: array of TEdit): Boolean;
+var
+  i: Integer;
+begin
+  Result := True;
+  for i := 0 to High(EditControls) do
+  begin
+    if Trim(EditControls[i].Text) = '' then
+    begin
+      Result := False;
+      Break;
+    end;
+  end;
+end;
+
 procedure TForm4.ShowOnly(ATab: TTabSheet);
 var
   i: Integer;
@@ -82,6 +90,35 @@ end;
 procedure TForm4.btnReturnClick(Sender: TObject);
 begin
   ShowOnly(tsLogin);
+  procedure TForm4.btnLoginClick(Sender: TObject);
+begin
+  if not AreFieldsFilled([edtLUsername, edtLPassword]) then
+  begin
+    ShowMessage('Please fill in both username and password.');
+    Exit;
+  end;
+
+  // Proceed with login logic...
+  ShowMessage('Logging in... (placeholder)');
+end;
+
+procedure TForm4.btnRLoginClick(Sender: TObject);
+begin
+  if not AreFieldsFilled([edtRUsername, edtRPassword, edtCPassword]) then
+  begin
+    ShowMessage('Please complete all fields including confirm password.');
+    Exit;
+  end;
+
+  if edtRPassword.Text <> edtCPassword.Text then
+  begin
+    ShowMessage('Passwords do not match.');
+    Exit;
+  end;
+
+  // Proceed with registration logic...
+  ShowMessage('Registering... (placeholder)');
+end;
 end;
 
 procedure TForm4.cbxSH1Click(Sender: TObject);
@@ -148,16 +185,6 @@ begin
   edtCPassword.text := '';
   edtRPassword.PasswordChar := '*';
   edtCPassword.PasswordChar := '*';
-  // tsOptions
-  pnlOptions.caption := '';
-  pnlHeading3.caption := 'Menu';
-  pnlHeading3.font.size := 25;
-
-  btnSim1.caption := 'Simulation 1';
-  btnSim2.caption := 'Simulation 2';
-  btnSim3.caption := 'Simulation 3';
-  btnFlashcards.caption := 'Flashcards';
-  btnTest.caption := 'Test';
 end;
 
 end.

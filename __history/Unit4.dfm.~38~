@@ -17,13 +17,13 @@ object Form4: TForm4
     Top = 0
     Width = 1075
     Height = 715
-    ActivePage = tsRegister
+    ActivePage = tsOptions
     Align = alClient
     TabOrder = 0
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
-        Left = 256
+        Left = 280
         Top = 128
         Width = 505
         Height = 265
@@ -66,7 +66,7 @@ object Form4: TForm4
         object btnRegister: TButton
           Left = 1
           Top = 224
-          Width = 248
+          Width = 256
           Height = 41
           Align = alCustom
           Caption = 'btnRegister'
@@ -114,13 +114,52 @@ object Form4: TForm4
       object pnlRegister: TPanel
         Left = 280
         Top = 120
-        Width = 481
-        Height = 257
+        Width = 505
+        Height = 265
         TabOrder = 0
+        object lblRUsername: TLabel
+          Left = 74
+          Top = 69
+          Width = 105
+          Height = 23
+          Caption = 'lblRUsername'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object lblCPassword: TLabel
+          Left = 19
+          Top = 168
+          Width = 136
+          Height = 23
+          Caption = 'Confirm Password'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
+        object lblRPassword: TLabel
+          Left = 89
+          Top = 120
+          Width = 98
+          Height = 23
+          Caption = 'lblRPassword'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -17
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+        end
         object btnReturn: TButton
           Left = 1
-          Top = 216
-          Width = 241
+          Top = 224
+          Width = 256
           Height = 41
           Align = alCustom
           Caption = 'Return'
@@ -130,7 +169,7 @@ object Form4: TForm4
         object pnlHeading2: TPanel
           Left = 1
           Top = 1
-          Width = 479
+          Width = 503
           Height = 41
           Align = alTop
           Caption = 'pnlHeading2'
@@ -140,14 +179,53 @@ object Form4: TForm4
           ExplicitWidth = 185
         end
         object btnRLogin: TButton
-          Left = 240
-          Top = 216
-          Width = 240
+          Left = 255
+          Top = 224
+          Width = 249
           Height = 41
           Align = alCustom
           Caption = 'Login'
           TabOrder = 2
           OnClick = btnReturnClick
+        end
+        object edtRUsername: TEdit
+          Left = 216
+          Top = 72
+          Width = 121
+          Height = 23
+          TabOrder = 3
+        end
+        object edtRPassword: TEdit
+          Left = 216
+          Top = 120
+          Width = 121
+          Height = 23
+          TabOrder = 4
+        end
+        object edtCPassword: TEdit
+          Left = 216
+          Top = 168
+          Width = 121
+          Height = 23
+          TabOrder = 5
+        end
+        object cbxSH2: TCheckBox
+          Left = 352
+          Top = 120
+          Width = 97
+          Height = 25
+          Caption = 'show/hide'
+          TabOrder = 6
+          OnClick = cbxSH2Click
+        end
+        object cbxSHC: TCheckBox
+          Left = 352
+          Top = 168
+          Width = 97
+          Height = 25
+          Caption = 'show/hide'
+          TabOrder = 7
+          OnClick = cbxSHCClick
         end
       end
     end

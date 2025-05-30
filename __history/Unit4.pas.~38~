@@ -1,5 +1,4 @@
-﻿// rossouw nel
-unit Unit4;
+﻿unit Unit4;
 
 interface
 
@@ -35,13 +34,6 @@ type
     edtCPassword: TEdit;
     cbxSH2: TCheckBox;
     cbxSHC: TCheckBox;
-    pnlOptions: TPanel;
-    btnFlashcards: TButton;
-    btnTest: TButton;
-    btnSim1: TButton;
-    btnSim2: TButton;
-    btnSim3: TButton;
-    pnlHeading3: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -92,6 +84,7 @@ begin
     edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
 end;
 
+
 procedure TForm4.cbxSH2Click(Sender: TObject);
 begin
   if cbxSH2.Checked then
@@ -110,7 +103,7 @@ end;
 
 procedure TForm4.FormCreate(Sender: TObject);
 begin
-  tsLogin.caption := 'Login';
+  tsLogin.caption := 'login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
   // tsLogin
@@ -148,16 +141,12 @@ begin
   edtCPassword.text := '';
   edtRPassword.PasswordChar := '*';
   edtCPassword.PasswordChar := '*';
-  // tsOptions
-  pnlOptions.caption := '';
-  pnlHeading3.caption := 'Menu';
-  pnlHeading3.font.size := 25;
 
-  btnSim1.caption := 'Simulation 1';
-  btnSim2.caption := 'Simulation 2';
-  btnSim3.caption := 'Simulation 3';
-  btnFlashcards.caption := 'Flashcards';
-  btnTest.caption := 'Test';
+
+
+
 end;
+
+
 
 end.
