@@ -88,10 +88,20 @@ type
     btnRevealZnClH: TButton;
     Image4: TImage;
     Image5: TImage;
-    sedZn: TSpinEdit;
-    sedHcl: TSpinEdit;
+    sedHCl: TSpinEdit;
     sedZnCl: TSpinEdit;
     sedH3: TSpinEdit;
+    lblZn: TLabel;
+    lblHCl: TLabel;
+    lblPlus3: TLabel;
+    lblZnCl: TLabel;
+    lblPlus4: TLabel;
+    lblH3: TLabel;
+    lblArrow3: TLabel;
+    sedZn: TSpinEdit;
+    btnPrevious2: TButton;
+    btnFlashcardsMenu3: TButton;
+    btnTestMenu3: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -105,6 +115,7 @@ type
     procedure btnSim2Click(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
     procedure btnNext2Click(Sender: TObject);
+    procedure btnPrevious2Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -153,6 +164,11 @@ end;
 procedure TForm4.btnPrevious1Click(Sender: TObject);
 begin
   ShowOnly(tsSim1);
+end;
+
+procedure TForm4.btnPrevious2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim2);
 end;
 
 procedure TForm4.btnRegisterClick(Sender: TObject);
@@ -320,6 +336,10 @@ begin
   pnlSim3Menu.brush.color := clMenuHighlight;
 
   btnRevealZnClH.caption := 'Reveal';
+  btnPrevious2.caption := 'Previous';
+  btnFlashcardsMenu3.caption := 'Flashcards';
+  btnTestMenu3.caption := 'Test';
+
   sedZn.font.size := 30;
   sedHCl.font.size := 30;
   sedZnCl.font.size := 30;
@@ -329,16 +349,20 @@ begin
   sedZnCl.MaxValue := 3;
   sedH3.MaxValue := 3;
 
-  lblH2.caption := 'N₂-Molekules';
-  lblC.caption := 'C-Molekules';
-  lblCH.caption := 'CH₄-Molekules';
-  lblPlus2.caption := '+';
-  lblArrow2.caption := '→';
-  lblH2.Font.Size := 14;
-  lblC.Font.Size := 14;
-  lblCH.Font.Size := 14;
-  lblPlus2.Font.Size := 25;
-  lblArrow2.Font.Size := 25;
+  lblZn.caption := 'Zn-Molekules';
+  lblHCl.caption := 'HCl-Molekules';
+  lblZnCl.caption := 'ZnCl₂-Molekules';
+  lblH3.caption := 'H₂-Molekules';
+  lblPlus3.caption := '+';
+  lblPlus4.caption := '+';
+  lblArrow3.caption := '→';
+  lblZn.Font.Size := 14;
+  lblHCl.Font.Size := 14;
+  lblZnCl.Font.Size := 14;
+  lblH3.Font.Size := 14;
+  lblPlus3.Font.Size := 25;
+  lblPlus4.Font.Size := 25;
+  lblArrow3.Font.Size := 25;
 
 if PageControl1.ActivePage = tsSim1 then
 begin
