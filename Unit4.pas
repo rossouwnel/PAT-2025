@@ -6,7 +6,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.Samples.Spin;
+  Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Imaging.pngimage;
 
 type
   TForm4 = class(TForm)
@@ -54,6 +54,12 @@ type
     lblNH: TLabel;
     lblPlus1: TLabel;
     lblArrow1: TLabel;
+    btnNext: TButton;
+    btnPrevious: TButton;
+    btnFlashcardsMenu: TButton;
+    btnTestMenu: TButton;
+    imgN: TImage;
+    imgH: TImage;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -131,6 +137,7 @@ begin
   tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
+  tsSim1.caption := 'Simulation1';
   // tsLogin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
@@ -201,6 +208,13 @@ begin
   lblPlus1.Font.Size := 25;
   lblArrow1.Font.Size := 25;
 
+  btnNext.Caption := 'Next';
+  btnPrevious.Caption := 'Previous';
+  btnFlashcardsMenu.Caption := 'Flashcards';
+  btnTestMenu.Caption := 'Test';
+
+ if  PageControl1.ActivePage = tsSim1 then
+  btnPrevious.Visible := false;
 end;
 
 end.

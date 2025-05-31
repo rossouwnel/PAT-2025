@@ -1785,7 +1785,7 @@ object Form4: TForm4
           ExplicitHeight = 568
           object btnNext: TButton
             Left = 16
-            Top = 152
+            Top = 104
             Width = 153
             Height = 25
             Caption = 'btnNext'
@@ -1793,7 +1793,7 @@ object Form4: TForm4
           end
           object btnPrevious: TButton
             Left = 16
-            Top = 96
+            Top = 152
             Width = 153
             Height = 25
             Caption = 'btnPrevious'
@@ -1801,7 +1801,7 @@ object Form4: TForm4
           end
           object btnFlashcardsMenu: TButton
             Left = 16
-            Top = 212
+            Top = 204
             Width = 153
             Height = 25
             Caption = 'btnFlashcardsMenu'
@@ -1809,7 +1809,7 @@ object Form4: TForm4
           end
           object btnTestMenu: TButton
             Left = 16
-            Top = 272
+            Top = 256
             Width = 153
             Height = 25
             Caption = 'btnTestMenu'

@@ -1,11 +1,12 @@
-﻿unit Unit4;
+﻿// rossouw nel
+unit Unit4;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls,
-  Vcl.ExtCtrls;
+  Vcl.ExtCtrls, Vcl.Samples.Spin;
 
 type
   TForm4 = class(TForm)
@@ -34,12 +35,32 @@ type
     edtCPassword: TEdit;
     cbxSH2: TCheckBox;
     cbxSHC: TCheckBox;
+    pnlOptions: TPanel;
+    btnFlashcards: TButton;
+    btnTest: TButton;
+    btnSim1: TButton;
+    btnSim2: TButton;
+    btnSim3: TButton;
+    pnlHeading3: TPanel;
+    tsSim1: TTabSheet;
+    pnlSim1: TPanel;
+    pnlNH: TPanel;
+    pnlSim1Menu: TPanel;
+    sedN: TSpinEdit;
+    sedH: TSpinEdit;
+    sedNH: TSpinEdit;
+    lblN: TLabel;
+    lblH: TLabel;
+    lblNH: TLabel;
+    lblPlus1: TLabel;
+    lblArrow1: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
     procedure cbxSH1Click(Sender: TObject);
     procedure cbxSH2Click(Sender: TObject);
     procedure cbxSHCClick(Sender: TObject);
+    procedure btnLoginClick(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -65,6 +86,11 @@ begin
 
 end;
 
+procedure TForm4.btnLoginClick(Sender: TObject);
+begin
+ ShowOnly(tsOptions);
+end;
+
 procedure TForm4.btnRegisterClick(Sender: TObject);
 
 begin
@@ -84,7 +110,6 @@ begin
     edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
 end;
 
-
 procedure TForm4.cbxSH2Click(Sender: TObject);
 begin
   if cbxSH2.Checked then
@@ -103,7 +128,7 @@ end;
 
 procedure TForm4.FormCreate(Sender: TObject);
 begin
-  tsLogin.caption := 'login';
+  tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
   // tsLogin
@@ -141,12 +166,41 @@ begin
   edtCPassword.text := '';
   edtRPassword.PasswordChar := '*';
   edtCPassword.PasswordChar := '*';
+  // tsOptions
+  pnlOptions.caption := '';
+  pnlHeading3.caption := 'Menu';
+  pnlHeading3.font.size := 25;
 
+  btnSim1.caption := 'Simulation 1';
+  btnSim2.caption := 'Simulation 2';
+  btnSim3.caption := 'Simulation 3';
+  btnFlashcards.caption := 'Flashcards';
+  btnTest.caption := 'Test';
+  //  Simulation 1
+  pnlSim1.caption := '';
+  pnlNH.caption := '';
+  pnlSim1Menu.caption := '';
+  pnlNH.Brush.color := clSkyBlue;
+  pnlSim1Menu.brush.color := clMenuHighlight;
 
+  sedN.font.size := 30;
+  sedH.font.size := 30;
+  sedNH.font.size := 30;
+  sedN.MaxValue := 3;
+  sedH.MaxValue := 3;
+  sedNH.MaxValue := 3;
 
+  lblN.caption := 'N₂-Molekules';
+  lblH.caption := 'H₂-Molekules';
+  lblNH.caption := 'NH₃-Molekules';
+  lblPlus1.caption := '+';
+  lblArrow1.caption := '→';
+  lblN.Font.Size := 14;
+  lblH.Font.Size := 14;
+  lblNH.Font.Size := 14;
+  lblPlus1.Font.Size := 25;
+  lblArrow1.Font.Size := 25;
 
 end;
-
-
 
 end.
