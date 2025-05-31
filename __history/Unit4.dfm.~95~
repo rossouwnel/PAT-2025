@@ -5280,24 +5280,6 @@ object Form4: TForm4
           Height = 73
           Caption = 'btnHint1'
           TabOrder = 0
-          OnClick = btnHint1Click
-        end
-        object btnNext: TButton
-          AlignWithMargins = True
-          Left = 192
-          Top = 250
-          Width = 137
-          Height = 36
-          Caption = 'btnNext'
-          TabOrder = 1
-        end
-        object rgpQuestion1: TRadioGroup
-          Left = 32
-          Top = 92
-          Width = 729
-          Height = 152
-          Caption = 'Choose an Option'
-          TabOrder = 2
         end
         object btnOK: TButton
           AlignWithMargins = True
@@ -5306,8 +5288,24 @@ object Form4: TForm4
           Width = 137
           Height = 36
           Caption = 'btnOK'
+          TabOrder = 1
+        end
+        object btnNext: TButton
+          AlignWithMargins = True
+          Left = 192
+          Top = 250
+          Width = 137
+          Height = 36
+          Caption = 'btnNext'
+          TabOrder = 2
+        end
+        object rgpQuestion1: TRadioGroup
+          Left = 32
+          Top = 92
+          Width = 729
+          Height = 152
+          Caption = 'Choose an Option'
           TabOrder = 3
-          OnClick = btnOKClick
         end
       end
     end

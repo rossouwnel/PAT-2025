@@ -5260,11 +5260,9 @@ object Form4: TForm4
         object lblQuestion1: TLabel
           Left = 32
           Top = 24
-          Width = 587
-          Height = 62
-          Caption = 
-            'Question 1: What is the balanced form of this equation?'#13#10'H'#8322' + O'#8322 +
-            ' '#8594' H'#8322'O'
+          Width = 546
+          Height = 73
+          Caption = 'Question 1: Balance the following chemical reaction'
           Font.Charset = ANSI_CHARSET
           Font.Color = clWindowText
           Font.Height = -27
@@ -5280,24 +5278,6 @@ object Form4: TForm4
           Height = 73
           Caption = 'btnHint1'
           TabOrder = 0
-          OnClick = btnHint1Click
-        end
-        object btnNext: TButton
-          AlignWithMargins = True
-          Left = 192
-          Top = 250
-          Width = 137
-          Height = 36
-          Caption = 'btnNext'
-          TabOrder = 1
-        end
-        object rgpQuestion1: TRadioGroup
-          Left = 32
-          Top = 92
-          Width = 729
-          Height = 152
-          Caption = 'Choose an Option'
-          TabOrder = 2
         end
         object btnOK: TButton
           AlignWithMargins = True
@@ -5306,8 +5286,24 @@ object Form4: TForm4
           Width = 137
           Height = 36
           Caption = 'btnOK'
+          TabOrder = 1
+        end
+        object btnNext: TButton
+          AlignWithMargins = True
+          Left = 192
+          Top = 250
+          Width = 137
+          Height = 36
+          Caption = 'btnNext'
+          TabOrder = 2
+        end
+        object Edit1: TEdit
+          Left = 32
+          Top = 125
+          Width = 737
+          Height = 55
           TabOrder = 3
-          OnClick = btnOKClick
+          Text = 'Edit1'
         end
       end
     end

@@ -47,30 +47,71 @@ type
     pnlNH: TPanel;
     pnlSim1Menu: TPanel;
     sedN: TSpinEdit;
-    sedH: TSpinEdit;
+    sedH1: TSpinEdit;
     sedNH: TSpinEdit;
     lblN: TLabel;
-    lblH: TLabel;
+    lblH1: TLabel;
     lblNH: TLabel;
     lblPlus1: TLabel;
     lblArrow1: TLabel;
-    btnNext: TButton;
-    btnPrevious: TButton;
-    btnFlashcardsMenu: TButton;
-    btnTestMenu: TButton;
+    btnNext1: TButton;
+    btnFlashcardsMenu1: TButton;
+    btnTestMenu1: TButton;
     imgN: TImage;
     imgH: TImage;
     tsSim2: TTabSheet;
     pnlSim2: TPanel;
     pnlCH: TPanel;
     pnlSim2Menu: TPanel;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
+    btnNext2: TButton;
+    btnPrevious1: TButton;
+    btnFlashcardsMenu2: TButton;
+    btnTestMenu2: TButton;
     Image1: TImage;
     Image2: TImage;
-    SpinEdit1: TSpinEdit;
+    sedH2: TSpinEdit;
+    sedC: TSpinEdit;
+    sedCH: TSpinEdit;
+    tsSim3: TTabSheet;
+    lblH2: TLabel;
+    lblC: TLabel;
+    lblCH: TLabel;
+    lblPlus2: TLabel;
+    lblArrow2: TLabel;
+    pnlSim3: TPanel;
+    pnlZnClH: TPanel;
+    Image3: TImage;
+    pnlSim3Menu: TPanel;
+    tsFlashcards: TTabSheet;
+    btnRevealNH: TButton;
+    btnRevealCH: TButton;
+    btnRevealZnClH: TButton;
+    Image4: TImage;
+    Image5: TImage;
+    sedHCl: TSpinEdit;
+    sedZnCl: TSpinEdit;
+    sedH3: TSpinEdit;
+    lblZn: TLabel;
+    lblHCl: TLabel;
+    lblPlus3: TLabel;
+    lblZnCl: TLabel;
+    lblPlus4: TLabel;
+    lblH3: TLabel;
+    sedZn: TSpinEdit;
+    btnPrevious2: TButton;
+    btnFlashcardsMenu3: TButton;
+    btnTestMenu3: TButton;
+    pnlFlashcard5: TPanel;
+    pnlFlashcard2: TPanel;
+    pnlFlashcard3: TPanel;
+    pnlFlashcard4: TPanel;
+    pnlFlashcard1: TPanel;
+    btnHint1: TButton;
+    btnOK: TButton;
+    lblArrow3: TLabel;
+    btnNext: TButton;
+    lblQuestion1: TLabel;
+    rgpQuestion1: TRadioGroup;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -78,6 +119,15 @@ type
     procedure cbxSH2Click(Sender: TObject);
     procedure cbxSHCClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
+    procedure btnNext1Click(Sender: TObject);
+    procedure btnPrevious1Click(Sender: TObject);
+    procedure btnSim1Click(Sender: TObject);
+    procedure btnSim2Click(Sender: TObject);
+    procedure PageControl1Change(Sender: TObject);
+    procedure btnNext2Click(Sender: TObject);
+    procedure btnPrevious2Click(Sender: TObject);
+    procedure btnFlashcardsClick(Sender: TObject);
+    procedure btnOKClick(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -103,9 +153,47 @@ begin
 
 end;
 
+procedure TForm4.PageControl1Change(Sender: TObject);
+begin
+  ShowOnly(tsOptions);
+end;
+
+procedure TForm4.btnFlashcardsClick(Sender: TObject);
+begin
+ ShowOnly(tsFlashcards);
+end;
+
 procedure TForm4.btnLoginClick(Sender: TObject);
 begin
  ShowOnly(tsOptions);
+end;
+
+procedure TForm4.btnNext1Click(Sender: TObject);
+begin
+ShowOnly(tsSim2);
+end;
+
+procedure TForm4.btnNext2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim3);
+end;
+
+procedure TForm4.btnOKClick(Sender: TObject);
+begin
+  if rgpQuestion1.ItemIndex = 1 then
+    ShowMessage('Correct!')
+  else
+    ShowMessage('Incorrect. Try again!');
+end;
+
+procedure TForm4.btnPrevious1Click(Sender: TObject);
+begin
+  ShowOnly(tsSim1);
+end;
+
+procedure TForm4.btnPrevious2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim2);
 end;
 
 procedure TForm4.btnRegisterClick(Sender: TObject);
@@ -117,6 +205,16 @@ end;
 procedure TForm4.btnReturnClick(Sender: TObject);
 begin
   ShowOnly(tsLogin);
+end;
+
+procedure TForm4.btnSim1Click(Sender: TObject);
+begin
+  ShowOnly(tsSim1);
+end;
+
+procedure TForm4.btnSim2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim2);
 end;
 
 procedure TForm4.cbxSH1Click(Sender: TObject);
@@ -148,8 +246,9 @@ begin
   tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
-  tsSim1.caption := 'Simulation1';
-  tsSim2.caption := 'Simulation2';
+  tsSim1.caption := 'Simulation 1';
+  tsSim2.caption := 'Simulation 2';
+  tsSim3.caption := 'Simulation 3';
   // tsLogin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
@@ -203,27 +302,27 @@ begin
   pnlSim1Menu.brush.color := clMenuHighlight;
 
   sedN.font.size := 30;
-  sedH.font.size := 30;
+  sedH1.font.size := 30;
   sedNH.font.size := 30;
   sedN.MaxValue := 3;
-  sedH.MaxValue := 3;
+  sedH1.MaxValue := 3;
   sedNH.MaxValue := 3;
 
   lblN.caption := 'N₂-Molekules';
-  lblH.caption := 'H₂-Molekules';
+  lblH1.caption := 'H₂-Molekules';
   lblNH.caption := 'NH₃-Molekules';
   lblPlus1.caption := '+';
   lblArrow1.caption := '→';
   lblN.Font.Size := 14;
-  lblH.Font.Size := 14;
+  lblH1.Font.Size := 14;
   lblNH.Font.Size := 14;
   lblPlus1.Font.Size := 25;
   lblArrow1.Font.Size := 25;
 
-  btnNext.Caption := 'Next';
-  btnPrevious.Caption := 'Previous';
-  btnFlashcardsMenu.Caption := 'Flashcards';
-  btnTestMenu.Caption := 'Test';
+  btnRevealNH.caption := 'Reveal';
+  btnNext1.Caption := 'Next';
+  btnFlashcardsMenu1.Caption := 'Flashcards';
+  btnTestMenu1.Caption := 'Test';
   // Simulation 2
   pnlSim2.caption := '';
   pnlCH.caption := '';
@@ -231,14 +330,85 @@ begin
   pnlCH.Brush.color := clSkyBlue;
   pnlSim2Menu.brush.color := clMenuHighlight;
 
+  btnNext2.Caption := 'Next';
+  btnPrevious1.Caption := 'Previous';
+  btnFlashcardsMenu2.Caption := 'Flashcards';
+  btnTestMenu2.Caption := 'Test';
+  btnRevealCH.caption := 'Reveal';
+
+  sedC.font.size := 30;
+  sedH2.font.size := 30;
+  sedCH.font.size := 30;
+  sedC.MaxValue := 3;
+  sedH2.MaxValue := 3;
+  sedCH.MaxValue := 3;
+
+  lblH2.caption := 'N₂-Molekules';
+  lblC.caption := 'C-Molekules';
+  lblCH.caption := 'CH₄-Molekules';
+  lblPlus2.caption := '+';
+  lblArrow2.caption := '→';
+  lblH2.Font.Size := 14;
+  lblC.Font.Size := 14;
+  lblCH.Font.Size := 14;
+  lblPlus2.Font.Size := 25;
+  lblArrow2.Font.Size := 25;
+  // Simulation 3
+  pnlSim3.caption := '';
+  pnlZnClH.caption := '';
+  pnlSim3Menu.caption := '';
+  pnlZnClH.Brush.color := clSkyBlue;
+  pnlSim3Menu.brush.color := clMenuHighlight;
+
+  btnRevealZnClH.caption := 'Reveal';
+  btnPrevious2.caption := 'Previous';
+  btnFlashcardsMenu3.caption := 'Flashcards';
+  btnTestMenu3.caption := 'Test';
+
+  sedZn.font.size := 30;
+  sedHCl.font.size := 30;
+  sedZnCl.font.size := 30;
+  sedH3.font.size := 30;
+  sedZn.MaxValue := 3;
+  sedHCl.MaxValue := 3;
+  sedZnCl.MaxValue := 3;
+  sedH3.MaxValue := 3;
+
+  lblZn.caption := 'Zn-Molekules';
+  lblHCl.caption := 'HCl-Molekules';
+  lblZnCl.caption := 'ZnCl₂-Molekules';
+  lblH3.caption := 'H₂-Molekules';
+  lblPlus3.caption := '+';
+  lblPlus4.caption := '+';
+  lblArrow3.caption := '→';
+  lblZn.Font.Size := 14;
+  lblHCl.Font.Size := 14;
+  lblZnCl.Font.Size := 14;
+  lblH3.Font.Size := 14;
+  lblPlus3.Font.Size := 25;
+  lblPlus4.Font.Size := 25;
+  lblArrow3.Font.Size := 25;
+  // Flashcards
+  pnlFlashcard1.caption := '';
+  lblQuestion1.Caption := 'Question 1: What is the balanced form of this equation?' + #13 + 'H₂ + O₂ → H₂O';
+  rgpQuestion1.Caption := 'Choose an Option below';
+  rgpQuestion1.font.size := 14;
+
+  rgpQuestion1.Items.Clear;
+  rgpQuestion1.Items.Add('A. H₂ + O₂ → H₂O');
+  rgpQuestion1.Items.Add('B. 2H₂ + O₂ → 2H₂O');  // regte antwoord
+  rgpQuestion1.Items.Add('C. H₂ + 2O₂ → 2H₂O');
+  rgpQuestion1.Items.Add('D. 2H₂ + 2O₂ → H₂O');
+  rgpQuestion1.Items.Add('E. H₂O → H₂ + O₂');
+
+
+rgpQuestion1.ItemIndex := -1;  // No option selected initially
 if PageControl1.ActivePage = tsSim1 then
 begin
-  btnPrevious.Visible := false;
   ShowOnly(tsSim1);
 end
 else if PageControl1.ActivePage = tsSim2 then
 begin
-  btnPrevious.Visible := true;
   ShowOnly(tsSim2);
 end;
 end;

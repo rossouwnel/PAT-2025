@@ -3871,7 +3871,7 @@ object Form4: TForm4
         end
         object Image4: TImage
           Left = 296
-          Top = -63
+          Top = -64
           Width = 921
           Height = 442
           Picture.Data = {
@@ -5218,97 +5218,13 @@ object Form4: TForm4
     object tsFlashcards: TTabSheet
       Caption = 'tsFlashcards'
       ImageIndex = 6
-      object pnlFlashcard5: TPanel
+      object pnlFlashcards: TPanel
         Left = 72
         Top = 112
         Width = 937
         Height = 305
-        Caption = 'pnlFlashcard5'
+        Caption = 'pnlFlashcards'
         TabOrder = 0
-      end
-      object pnlFlashcard2: TPanel
-        Left = 72
-        Top = 112
-        Width = 937
-        Height = 305
-        Caption = 'pnlFlashcard2'
-        TabOrder = 1
-      end
-      object pnlFlashcard3: TPanel
-        Left = 72
-        Top = 112
-        Width = 937
-        Height = 305
-        Caption = 'pnlFlashcard3'
-        TabOrder = 2
-      end
-      object pnlFlashcard4: TPanel
-        Left = 72
-        Top = 112
-        Width = 937
-        Height = 305
-        Caption = 'pnlFlashcard4'
-        TabOrder = 3
-      end
-      object pnlFlashcard1: TPanel
-        Left = 72
-        Top = 112
-        Width = 937
-        Height = 305
-        Caption = 'pnlFlashcard1'
-        TabOrder = 4
-        object lblQuestion1: TLabel
-          Left = 32
-          Top = 24
-          Width = 587
-          Height = 62
-          Caption = 
-            'Question 1: What is the balanced form of this equation?'#13#10'H'#8322' + O'#8322 +
-            ' '#8594' H'#8322'O'
-          Font.Charset = ANSI_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -27
-          Font.Name = 'Arial Narrow'
-          Font.Style = [fsBold]
-          ParentFont = False
-        end
-        object btnHint1: TButton
-          AlignWithMargins = True
-          Left = 776
-          Top = 24
-          Width = 137
-          Height = 73
-          Caption = 'btnHint1'
-          TabOrder = 0
-          OnClick = btnHint1Click
-        end
-        object btnNext: TButton
-          AlignWithMargins = True
-          Left = 192
-          Top = 250
-          Width = 137
-          Height = 36
-          Caption = 'btnNext'
-          TabOrder = 1
-        end
-        object rgpQuestion1: TRadioGroup
-          Left = 32
-          Top = 92
-          Width = 729
-          Height = 152
-          Caption = 'Choose an Option'
-          TabOrder = 2
-        end
-        object btnOK: TButton
-          AlignWithMargins = True
-          Left = 776
-          Top = 250
-          Width = 137
-          Height = 36
-          Caption = 'btnOK'
-          TabOrder = 3
-          OnClick = btnOKClick
-        end
       end
     end
   end

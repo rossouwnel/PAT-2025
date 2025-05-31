@@ -97,12 +97,21 @@ type
     lblZnCl: TLabel;
     lblPlus4: TLabel;
     lblH3: TLabel;
-    lblArrow3: TLabel;
     sedZn: TSpinEdit;
     btnPrevious2: TButton;
     btnFlashcardsMenu3: TButton;
     btnTestMenu3: TButton;
-    pnlFlashcards: TPanel;
+    pnlFlashcard5: TPanel;
+    pnlFlashcard2: TPanel;
+    pnlFlashcard3: TPanel;
+    pnlFlashcard4: TPanel;
+    pnlFlashcard1: TPanel;
+    btnHint1: TButton;
+    lblArrow3: TLabel;
+    btnNext: TButton;
+    lblQuestion1: TLabel;
+    rgpQuestion1: TRadioGroup;
+    btnOK: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -118,6 +127,8 @@ type
     procedure btnNext2Click(Sender: TObject);
     procedure btnPrevious2Click(Sender: TObject);
     procedure btnFlashcardsClick(Sender: TObject);
+    procedure btnOKClick(Sender: TObject);
+    procedure btnHint1Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -153,6 +164,11 @@ begin
  ShowOnly(tsFlashcards);
 end;
 
+procedure TForm4.btnHint1Click(Sender: TObject);
+begin
+  ShowMessage('Hint: Balance the number of H and O atoms on both sides of the equation.');
+end;
+
 procedure TForm4.btnLoginClick(Sender: TObject);
 begin
  ShowOnly(tsOptions);
@@ -166,6 +182,18 @@ end;
 procedure TForm4.btnNext2Click(Sender: TObject);
 begin
   ShowOnly(tsSim3);
+end;
+
+procedure TForm4.btnOKClick(Sender: TObject);
+begin
+   if rgpQuestion1.ItemIndex = 1 then
+   begin
+    ShowMessage('Correct!');
+    pnlFlashcard2.Visible := True;
+    pnlFlashcard1.Visible := False;
+    end
+  else
+    ShowMessage('Incorrect. Try again!');
 end;
 
 procedure TForm4.btnPrevious1Click(Sender: TObject);
@@ -370,6 +398,18 @@ begin
   lblPlus3.Font.Size := 25;
   lblPlus4.Font.Size := 25;
   lblArrow3.Font.Size := 25;
+  // Flashcards
+  pnlFlashcard1.caption := '';
+  lblQuestion1.Caption := 'Question 1: What is the balanced form of this equation?' + #13 + 'H₂ + O₂ → H₂O';
+  rgpQuestion1.Caption := 'Choose an Option below';
+  rgpQuestion1.font.size := 14;
+
+  rgpQuestion1.Items.Clear;
+  rgpQuestion1.Items.Add('A. H₂ + O₂ → H₂O');
+  rgpQuestion1.Items.Add('B. 2H₂ + O₂ → 2H₂O');  // regte antwoord
+  rgpQuestion1.Items.Add('C. H₂ + 2O₂ → 2H₂O');
+  rgpQuestion1.Items.Add('D. 2H₂ + 2O₂ → H₂O');
+  rgpQuestion1.Items.Add('E. H₂O → H₂ + O₂');
 
 if PageControl1.ActivePage = tsSim1 then
 begin
