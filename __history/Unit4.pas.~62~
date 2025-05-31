@@ -61,13 +61,6 @@ type
     imgN: TImage;
     imgH: TImage;
     tsSim2: TTabSheet;
-    pnlSim2: TPanel;
-    pnlCH: TPanel;
-    Panel1: TPanel;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);

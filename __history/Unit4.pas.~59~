@@ -61,13 +61,6 @@ type
     imgN: TImage;
     imgH: TImage;
     tsSim2: TTabSheet;
-    pnlSim2: TPanel;
-    pnlCH: TPanel;
-    Panel1: TPanel;
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -234,14 +227,11 @@ begin
   btnFlashcardsMenu.Caption := 'Flashcards';
   btnTestMenu.Caption := 'Test';
 
-if PageControl1.ActivePage = tsSim1 then
-begin
-  btnPrevious.Visible := false;
-end
-else if PageControl1.ActivePage = tsSim2 then
-begin
+  if  PageControl1.ActivePage = tsSim1 then
+  btnPrevious.Visible := false
+  else if PageControl1.ActivePage = tsSim2 then
   btnPrevious.Visible := true;
-end;
+
 end;
 
 end.
