@@ -6,7 +6,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.Samples.Spin;
+  Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Imaging.pngimage;
 
 type
   TForm4 = class(TForm)
@@ -54,6 +54,22 @@ type
     lblNH: TLabel;
     lblPlus1: TLabel;
     lblArrow1: TLabel;
+    btnNext: TButton;
+    btnPrevious: TButton;
+    btnFlashcardsMenu: TButton;
+    btnTestMenu: TButton;
+    imgN: TImage;
+    imgH: TImage;
+    tsSim2: TTabSheet;
+    pnlSim2: TPanel;
+    pnlCH: TPanel;
+    pnlSim2Menu: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Image1: TImage;
+    Image2: TImage;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -61,6 +77,8 @@ type
     procedure cbxSH2Click(Sender: TObject);
     procedure cbxSHCClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
+    procedure btnSim2Click(Sender: TObject);
+    procedure btnSim1Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -102,6 +120,16 @@ begin
   ShowOnly(tsLogin);
 end;
 
+procedure TForm4.btnSim1Click(Sender: TObject);
+begin
+   ShowOnly(tsSim1);
+end;
+
+procedure TForm4.btnSim2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim2);
+end;
+
 procedure TForm4.cbxSH1Click(Sender: TObject);
 begin
   if cbxSH1.Checked then
@@ -131,6 +159,8 @@ begin
   tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
+  tsSim1.caption := 'Simulation1';
+  tsSim2.caption := 'Simulation2';
   // tsLogin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
@@ -179,6 +209,9 @@ begin
   //  Simulation 1
   pnlSim1.caption := '';
   pnlNH.caption := '';
+  pnlSim1Menu.caption := '';
+  pnlNH.Brush.color := clSkyBlue;
+  pnlSim1Menu.brush.color := clMenuHighlight;
 
   sedN.font.size := 30;
   sedH.font.size := 30;
@@ -198,6 +231,25 @@ begin
   lblPlus1.Font.Size := 25;
   lblArrow1.Font.Size := 25;
 
+  btnNext.Caption := 'Next';
+  btnPrevious.Caption := 'Previous';
+  btnFlashcardsMenu.Caption := 'Flashcards';
+  btnTestMenu.Caption := 'Test';
+  // Simulation 2
+  pnlSim2.caption := '';
+  pnlCH.caption := '';
+  pnlSim2Menu.caption := '';
+  pnlCH.Brush.color := clSkyBlue;
+  pnlSim2Menu.brush.color := clMenuHighlight;
+
+if PageControl1.ActivePage = tsSim1 then
+begin
+  btnPrevious.Visible := false;
+end
+else if PageControl1.ActivePage = tsSim2 then
+begin
+  btnPrevious.Visible := true;
+end;
 end;
 
 end.

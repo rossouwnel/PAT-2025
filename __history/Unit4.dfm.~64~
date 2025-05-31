@@ -265,6 +265,7 @@ object Form4: TForm4
           Align = alBottom
           Caption = 'btnSim1'
           TabOrder = 2
+          OnClick = btnSim1Click
         end
         object btnSim2: TButton
           AlignWithMargins = True
@@ -275,6 +276,7 @@ object Form4: TForm4
           Align = alBottom
           Caption = 'btnSim2'
           TabOrder = 3
+          OnClick = btnSim2Click
         end
         object btnSim3: TButton
           AlignWithMargins = True

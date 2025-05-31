@@ -77,6 +77,8 @@ type
     procedure cbxSH2Click(Sender: TObject);
     procedure cbxSHCClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
+    procedure btnSim2Click(Sender: TObject);
+    procedure btnSim1Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -116,6 +118,16 @@ end;
 procedure TForm4.btnReturnClick(Sender: TObject);
 begin
   ShowOnly(tsLogin);
+end;
+
+procedure TForm4.btnSim1Click(Sender: TObject);
+begin
+   ShowOnly(tsSim1);
+end;
+
+procedure TForm4.btnSim2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim2);
 end;
 
 procedure TForm4.cbxSH1Click(Sender: TObject);
@@ -233,12 +245,10 @@ begin
 if PageControl1.ActivePage = tsSim1 then
 begin
   btnPrevious.Visible := false;
-  ShowOnly(tsSim1);
 end
 else if PageControl1.ActivePage = tsSim2 then
 begin
   btnPrevious.Visible := true;
-  ShowOnly(tsSim2);
 end;
 end;
 
