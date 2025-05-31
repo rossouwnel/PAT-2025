@@ -1755,6 +1755,15 @@ object Form4: TForm4
             TabOrder = 2
             Value = 0
           end
+          object btnRevealNH: TButton
+            Left = 976
+            Top = 1
+            Width = 100
+            Height = 223
+            Align = alRight
+            Caption = 'btnRevealNH'
+            TabOrder = 3
+          end
         end
         object pnlSim1Menu: TPanel
           Left = 893
@@ -2989,15 +2998,13 @@ object Form4: TForm4
         end
         object pnlCH: TPanel
           Left = 1
-          Top = 384
+          Top = 374
           Width = 1077
-          Height = 218
+          Height = 228
           Align = alBottom
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 9
-          ExplicitTop = 376
           object lblH2: TLabel
             Left = 111
             Top = 51
@@ -3063,12 +3070,21 @@ object Form4: TForm4
             TabOrder = 2
             Value = 0
           end
+          object btnRevealCH: TButton
+            Left = 984
+            Top = 1
+            Width = 92
+            Height = 226
+            Align = alRight
+            Caption = 'btnRevealCH'
+            TabOrder = 3
+          end
         end
         object pnlSim2Menu: TPanel
           Left = 893
           Top = 1
           Width = 185
-          Height = 383
+          Height = 373
           Align = alRight
           Caption = 'pnlSim1Menu'
           Color = clMenuHighlight
@@ -3083,6 +3099,7 @@ object Form4: TForm4
             Height = 25
             Caption = 'btnNext'
             TabOrder = 0
+            OnClick = btnNext2Click
           end
           object btnPrevious1: TButton
             Left = 16
@@ -4498,10 +4515,10 @@ object Form4: TForm4
           Stretch = True
         end
         object Image5: TImage
-          Left = 64
-          Top = -352
-          Width = 609
-          Height = 521
+          Left = 88
+          Top = -320
+          Width = 967
+          Height = 481
           Picture.Data = {
             0954506E67496D61676589504E470D0A1A0A0000000D49484452000008210000
             06D50803000000372ABD2D000000017352474200AECE1CE90000000467414D41
@@ -5057,6 +5074,55 @@ object Form4: TForm4
           Caption = 'pnlZnClH'
           TabOrder = 0
           ExplicitLeft = 0
+          object btnRevealZnClH: TButton
+            Left = 976
+            Top = 1
+            Width = 100
+            Height = 216
+            Align = alRight
+            Caption = 'btnRevealZnClH'
+            TabOrder = 0
+          end
+          object sedZn: TSpinEdit
+            Left = 56
+            Top = 64
+            Width = 121
+            Height = 25
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 1
+            Value = 0
+          end
+          object sedHcl: TSpinEdit
+            Left = 232
+            Top = 64
+            Width = 121
+            Height = 24
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+          end
+          object sedZnCl: TSpinEdit
+            Left = 632
+            Top = 64
+            Width = 121
+            Height = 24
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 3
+            Value = 0
+          end
+          object sedH3: TSpinEdit
+            Left = 792
+            Top = 64
+            Width = 121
+            Height = 24
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 4
+            Value = 0
+          end
         end
         object pnlSim3Menu: TPanel
           Left = 893

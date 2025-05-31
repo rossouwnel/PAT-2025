@@ -1,4 +1,4 @@
-// rossouw nel
+﻿// rossouw nel
 unit Unit4;
 
 interface
@@ -85,8 +85,6 @@ type
     Image5: TImage;
     pnlSim3Menu: TPanel;
     TabSheet2: TTabSheet;
-    btnRevealNH: TButton;
-    Button1: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -99,7 +97,6 @@ type
     procedure btnSim1Click(Sender: TObject);
     procedure btnSim2Click(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
-    procedure btnNext2Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -138,11 +135,6 @@ end;
 procedure TForm4.btnNext1Click(Sender: TObject);
 begin
 ShowOnly(tsSim2);
-end;
-
-procedure TForm4.btnNext2Click(Sender: TObject);
-begin
-  ShowOnly(tsSim3);
 end;
 
 procedure TForm4.btnPrevious1Click(Sender: TObject);
@@ -273,7 +265,6 @@ begin
   lblPlus1.Font.Size := 25;
   lblArrow1.Font.Size := 25;
 
-  btnRevealNH.caption := 'Reveal';
   btnNext1.Caption := 'Next';
   btnFlashcardsMenu1.Caption := 'Flashcards';
   btnTestMenu1.Caption := 'Test';
@@ -288,7 +279,6 @@ begin
   btnPrevious1.Caption := 'Previous';
   btnFlashcardsMenu2.Caption := 'Flashcards';
   btnTestMenu2.Caption := 'Test';
-  btn
 
   sedC.font.size := 30;
   sedH2.font.size := 30;

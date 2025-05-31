@@ -17,7 +17,7 @@ object Form4: TForm4
     Top = 0
     Width = 1087
     Height = 633
-    ActivePage = tsSim2
+    ActivePage = tsSim3
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -1755,15 +1755,6 @@ object Form4: TForm4
             TabOrder = 2
             Value = 0
           end
-          object btnRevealNH: TButton
-            Left = 976
-            Top = 1
-            Width = 100
-            Height = 223
-            Align = alRight
-            Caption = 'btnRevealNH'
-            TabOrder = 3
-          end
         end
         object pnlSim1Menu: TPanel
           Left = 893
@@ -3072,15 +3063,6 @@ object Form4: TForm4
             TabOrder = 2
             Value = 0
           end
-          object Button1: TButton
-            Left = 984
-            Top = 1
-            Width = 92
-            Height = 216
-            Align = alRight
-            Caption = 'Button1'
-            TabOrder = 3
-          end
         end
         object pnlSim2Menu: TPanel
           Left = 893
@@ -3101,7 +3083,6 @@ object Form4: TForm4
             Height = 25
             Caption = 'btnNext'
             TabOrder = 0
-            OnClick = btnNext2Click
           end
           object btnPrevious1: TButton
             Left = 16

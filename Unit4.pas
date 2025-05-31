@@ -81,10 +81,17 @@ type
     pnlSim3: TPanel;
     pnlZnClH: TPanel;
     Image3: TImage;
-    Image4: TImage;
-    Image5: TImage;
     pnlSim3Menu: TPanel;
     TabSheet2: TTabSheet;
+    btnRevealNH: TButton;
+    btnRevealCH: TButton;
+    btnRevealZnClH: TButton;
+    Image4: TImage;
+    Image5: TImage;
+    sedZn: TSpinEdit;
+    sedHcl: TSpinEdit;
+    sedZnCl: TSpinEdit;
+    sedH3: TSpinEdit;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -97,6 +104,7 @@ type
     procedure btnSim1Click(Sender: TObject);
     procedure btnSim2Click(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
+    procedure btnNext2Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -135,6 +143,11 @@ end;
 procedure TForm4.btnNext1Click(Sender: TObject);
 begin
 ShowOnly(tsSim2);
+end;
+
+procedure TForm4.btnNext2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim3);
 end;
 
 procedure TForm4.btnPrevious1Click(Sender: TObject);
@@ -265,6 +278,7 @@ begin
   lblPlus1.Font.Size := 25;
   lblArrow1.Font.Size := 25;
 
+  btnRevealNH.caption := 'Reveal';
   btnNext1.Caption := 'Next';
   btnFlashcardsMenu1.Caption := 'Flashcards';
   btnTestMenu1.Caption := 'Test';
@@ -279,6 +293,7 @@ begin
   btnPrevious1.Caption := 'Previous';
   btnFlashcardsMenu2.Caption := 'Flashcards';
   btnTestMenu2.Caption := 'Test';
+  btnRevealCH.caption := 'Reveal';
 
   sedC.font.size := 30;
   sedH2.font.size := 30;
@@ -286,6 +301,33 @@ begin
   sedC.MaxValue := 3;
   sedH2.MaxValue := 3;
   sedCH.MaxValue := 3;
+
+  lblH2.caption := 'N₂-Molekules';
+  lblC.caption := 'C-Molekules';
+  lblCH.caption := 'CH₄-Molekules';
+  lblPlus2.caption := '+';
+  lblArrow2.caption := '→';
+  lblH2.Font.Size := 14;
+  lblC.Font.Size := 14;
+  lblCH.Font.Size := 14;
+  lblPlus2.Font.Size := 25;
+  lblArrow2.Font.Size := 25;
+  // Simulation 3
+  pnlSim3.caption := '';
+  pnlZnClH.caption := '';
+  pnlSim3Menu.caption := '';
+  pnlZnClH.Brush.color := clSkyBlue;
+  pnlSim3Menu.brush.color := clMenuHighlight;
+
+  btnRevealZnClH.caption := 'Reveal';
+  sedZn.font.size := 30;
+  sedHCl.font.size := 30;
+  sedZnCl.font.size := 30;
+  sedH3.font.size := 30;
+  sedZn.MaxValue := 3;
+  sedHCl.MaxValue := 3;
+  sedZnCl.MaxValue := 3;
+  sedH3.MaxValue := 3;
 
   lblH2.caption := 'N₂-Molekules';
   lblC.caption := 'C-Molekules';
