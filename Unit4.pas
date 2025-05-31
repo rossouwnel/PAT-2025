@@ -63,11 +63,13 @@ type
     tsSim2: TTabSheet;
     pnlSim2: TPanel;
     pnlCH: TPanel;
-    Panel1: TPanel;
+    pnlSim2Menu: TPanel;
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Image1: TImage;
+    Image2: TImage;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -233,6 +235,12 @@ begin
   btnPrevious.Caption := 'Previous';
   btnFlashcardsMenu.Caption := 'Flashcards';
   btnTestMenu.Caption := 'Test';
+  // Simulation 2
+  pnlSim2.caption := '';
+  pnlCH.caption := '';
+  pnlSim2Menu.caption := '';
+  pnlCH.Brush.color := clSkyBlue;
+  pnlSim2Menu.brush.color := clMenuHighlight;
 
 if PageControl1.ActivePage = tsSim1 then
 begin

@@ -1803,23 +1803,12 @@ object Form4: TForm4
         Width = 1067
         Height = 658
         Align = alClient
+        Caption = 'pnlSim2'
         TabOrder = 0
         ExplicitLeft = 720
         ExplicitTop = 328
         ExplicitWidth = 185
         ExplicitHeight = 41
-        object Image1: TImage
-          Left = 440
-          Top = 216
-          Width = 105
-          Height = 105
-        end
-        object Image2: TImage
-          Left = 520
-          Top = 336
-          Width = 105
-          Height = 105
-        end
         object pnlCH: TPanel
           Left = 1
           Top = 504
@@ -1827,11 +1816,9 @@ object Form4: TForm4
           Height = 153
           Align = alBottom
           Caption = 'pnlCH'
-          Color = clSkyBlue
-          ParentBackground = False
           TabOrder = 0
         end
-        object pnlSim2Menu: TPanel
+        object Panel1: TPanel
           Left = 881
           Top = 1
           Width = 185
