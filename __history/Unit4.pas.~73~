@@ -47,19 +47,32 @@ type
     pnlNH: TPanel;
     pnlSim1Menu: TPanel;
     sedN: TSpinEdit;
-    sedH: TSpinEdit;
+    sedH1: TSpinEdit;
     sedNH: TSpinEdit;
     lblN: TLabel;
     lblH: TLabel;
     lblNH: TLabel;
     lblPlus1: TLabel;
     lblArrow1: TLabel;
-    btnNext: TButton;
-    btnPrevious: TButton;
-    btnFlashcardsMenu: TButton;
-    btnTestMenu: TButton;
+    btnNext1: TButton;
+    btnPrevious1: TButton;
+    btnFlashcardsMenu1: TButton;
+    btnTestMenu1: TButton;
     imgN: TImage;
     imgH: TImage;
+    tsSim2: TTabSheet;
+    pnlSim2: TPanel;
+    pnlCH: TPanel;
+    pnlSim2Menu: TPanel;
+    btnNext2: TButton;
+    btnPrevious2: TButton;
+    btnFlashcardsMenu2: TButton;
+    btnTestMenu2: TButton;
+    Image1: TImage;
+    Image2: TImage;
+    sedH2: TSpinEdit;
+    sedC: TSpinEdit;
+    sedCH: TSpinEdit;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -67,6 +80,8 @@ type
     procedure cbxSH2Click(Sender: TObject);
     procedure cbxSHCClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
+    procedure btnNext1Click(Sender: TObject);
+    procedure btnPrevious2Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -95,6 +110,16 @@ end;
 procedure TForm4.btnLoginClick(Sender: TObject);
 begin
  ShowOnly(tsOptions);
+end;
+
+procedure TForm4.btnNext1Click(Sender: TObject);
+begin
+ShowOnly(tsSim2);
+end;
+
+procedure TForm4.btnPrevious2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim1);
 end;
 
 procedure TForm4.btnRegisterClick(Sender: TObject);
@@ -137,6 +162,8 @@ begin
   tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
+  tsSim1.caption := 'Simulation1';
+  tsSim2.caption := 'Simulation2';
   // tsLogin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
@@ -190,10 +217,10 @@ begin
   pnlSim1Menu.brush.color := clMenuHighlight;
 
   sedN.font.size := 30;
-  sedH.font.size := 30;
+  sedH1.font.size := 30;
   sedNH.font.size := 30;
   sedN.MaxValue := 3;
-  sedH.MaxValue := 3;
+  sedH1.MaxValue := 3;
   sedNH.MaxValue := 3;
 
   lblN.caption := 'N₂-Molekules';
@@ -207,10 +234,39 @@ begin
   lblPlus1.Font.Size := 25;
   lblArrow1.Font.Size := 25;
 
-  btnNext.Caption := 'Next';
-  btnPrevious.Caption := 'Previous';
-  btnFlashcardsMenu.Caption := 'Flashcards';
-  btnTestMenu.Caption := 'Test';
+  btnNext1.Caption := 'Next';
+  btnPrevious1.Caption := 'Previous';
+  btnFlashcardsMenu1.Caption := 'Flashcards';
+  btnTestMenu1.Caption := 'Test';
+  // Simulation 2
+  pnlSim2.caption := '';
+  pnlCH.caption := '';
+  pnlSim2Menu.caption := '';
+  pnlCH.Brush.color := clSkyBlue;
+  pnlSim2Menu.brush.color := clMenuHighlight;
+
+  btnNext2.Caption := 'Next';
+  btnPrevious2.Caption := 'Previous';
+  btnFlashcardsMenu2.Caption := 'Flashcards';
+  btnTestMenu2.Caption := 'Test';
+
+  sedC.font.size := 30;
+  sedH2.font.size := 30;
+  sedCH.font.size := 30;
+  sedC.MaxValue := 3;
+  sedH2.MaxValue := 3;
+  sedCH.MaxValue := 3;
+
+if PageControl1.ActivePage = tsSim1 then
+begin
+  btnPrevious1.Visible := false;
+  ShowOnly(tsSim1);
+end
+else if PageControl1.ActivePage = tsSim2 then
+begin
+  btnPrevious2.Visible := true;
+  ShowOnly(tsSim2);
+end;
 end;
 
 end.

@@ -6,7 +6,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.Samples.Spin;
+  Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Imaging.pngimage;
 
 type
   TForm4 = class(TForm)
@@ -54,6 +54,25 @@ type
     lblNH: TLabel;
     lblPlus1: TLabel;
     lblArrow1: TLabel;
+    btnNext1: TButton;
+    btnPrevious1: TButton;
+    btnFlashcardsMenu1: TButton;
+    btnTestMenu1: TButton;
+    imgN: TImage;
+    imgH: TImage;
+    tsSim2: TTabSheet;
+    pnlSim2: TPanel;
+    pnlCH: TPanel;
+    pnlSim2Menu: TPanel;
+    btnNext2: TButton;
+    btnPrevious2: TButton;
+    btnFlashcardsMenu2: TButton;
+    btnTestMenu2: TButton;
+    Image1: TImage;
+    Image2: TImage;
+    SpinEdit1: TSpinEdit;
+    SpinEdit2: TSpinEdit;
+    SpinEdit3: TSpinEdit;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -131,6 +150,8 @@ begin
   tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
+  tsSim1.caption := 'Simulation1';
+  tsSim2.caption := 'Simulation2';
   // tsLogin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';
@@ -201,6 +222,32 @@ begin
   lblPlus1.Font.Size := 25;
   lblArrow1.Font.Size := 25;
 
+  btnNext1.Caption := 'Next';
+  btnPrevious1.Caption := 'Previous';
+  btnFlashcardsMenu1.Caption := 'Flashcards';
+  btnTestMenu1.Caption := 'Test';
+  // Simulation 2
+  pnlSim2.caption := '';
+  pnlCH.caption := '';
+  pnlSim2Menu.caption := '';
+  pnlCH.Brush.color := clSkyBlue;
+  pnlSim2Menu.brush.color := clMenuHighlight;
+
+  btnNext2.Caption := 'Next';
+  btnPrevious2.Caption := 'Previous';
+  btnFlashcardsMenu2.Caption := 'Flashcards';
+  btnTestMenu2.Caption := 'Test';
+
+if PageControl1.ActivePage = tsSim1 then
+begin
+  btnPrevious1.Visible := false;
+  ShowOnly(tsSim1);
+end
+else if PageControl1.ActivePage = tsSim2 then
+begin
+  btnPrevious2.Visible := true;
+  ShowOnly(tsSim2);
+end;
 end;
 
 end.

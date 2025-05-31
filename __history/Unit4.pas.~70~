@@ -61,6 +61,16 @@ type
     imgN: TImage;
     imgH: TImage;
     tsSim2: TTabSheet;
+    pnlSim2: TPanel;
+    pnlCH: TPanel;
+    pnlSim2Menu: TPanel;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    Image1: TImage;
+    Image2: TImage;
+    SpinEdit1: TSpinEdit;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -68,8 +78,6 @@ type
     procedure cbxSH2Click(Sender: TObject);
     procedure cbxSHCClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
-    procedure btnSim2Click(Sender: TObject);
-    procedure btnSim1Click(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -109,16 +117,6 @@ end;
 procedure TForm4.btnReturnClick(Sender: TObject);
 begin
   ShowOnly(tsLogin);
-end;
-
-procedure TForm4.btnSim1Click(Sender: TObject);
-begin
-   ShowOnly(tsSim1);
-end;
-
-procedure TForm4.btnSim2Click(Sender: TObject);
-begin
-  ShowOnly(tsSim2);
 end;
 
 procedure TForm4.cbxSH1Click(Sender: TObject);
@@ -226,12 +224,23 @@ begin
   btnPrevious.Caption := 'Previous';
   btnFlashcardsMenu.Caption := 'Flashcards';
   btnTestMenu.Caption := 'Test';
+  // Simulation 2
+  pnlSim2.caption := '';
+  pnlCH.caption := '';
+  pnlSim2Menu.caption := '';
+  pnlCH.Brush.color := clSkyBlue;
+  pnlSim2Menu.brush.color := clMenuHighlight;
 
-  if  PageControl1.ActivePage = tsSim1 then
-  btnPrevious.Visible := false
-  else if PageControl1.ActivePage = tsSim2 then
+if PageControl1.ActivePage = tsSim1 then
+begin
+  btnPrevious.Visible := false;
+  ShowOnly(tsSim1);
+end
+else if PageControl1.ActivePage = tsSim2 then
+begin
   btnPrevious.Visible := true;
-
+  ShowOnly(tsSim2);
+end;
 end;
 
 end.
