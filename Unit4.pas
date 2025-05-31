@@ -82,7 +82,7 @@ type
     pnlZnClH: TPanel;
     Image3: TImage;
     pnlSim3Menu: TPanel;
-    TabSheet2: TTabSheet;
+    tsFlashcards: TTabSheet;
     btnRevealNH: TButton;
     btnRevealCH: TButton;
     btnRevealZnClH: TButton;
@@ -102,6 +102,7 @@ type
     btnPrevious2: TButton;
     btnFlashcardsMenu3: TButton;
     btnTestMenu3: TButton;
+    pnlFlashcards: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -116,6 +117,7 @@ type
     procedure PageControl1Change(Sender: TObject);
     procedure btnNext2Click(Sender: TObject);
     procedure btnPrevious2Click(Sender: TObject);
+    procedure btnFlashcardsClick(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -144,6 +146,11 @@ end;
 procedure TForm4.PageControl1Change(Sender: TObject);
 begin
   ShowOnly(tsOptions);
+end;
+
+procedure TForm4.btnFlashcardsClick(Sender: TObject);
+begin
+ ShowOnly(tsFlashcards);
 end;
 
 procedure TForm4.btnLoginClick(Sender: TObject);

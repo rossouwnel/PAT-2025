@@ -17,7 +17,7 @@ object Form4: TForm4
     Top = 0
     Width = 1087
     Height = 633
-    ActivePage = tsFlashcards
+    ActivePage = tsSim3
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -246,7 +246,6 @@ object Form4: TForm4
           Align = alBottom
           Caption = 'btnFlashcards'
           TabOrder = 0
-          OnClick = btnFlashcardsClick
         end
         object btnTest: TButton
           AlignWithMargins = True
@@ -5215,17 +5214,9 @@ object Form4: TForm4
         end
       end
     end
-    object tsFlashcards: TTabSheet
-      Caption = 'tsFlashcards'
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
       ImageIndex = 6
-      object pnlFlashcards: TPanel
-        Left = 72
-        Top = 112
-        Width = 937
-        Height = 305
-        Caption = 'pnlFlashcards'
-        TabOrder = 0
-      end
     end
   end
 end
