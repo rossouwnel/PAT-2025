@@ -72,19 +72,12 @@ type
     sedH2: TSpinEdit;
     sedC: TSpinEdit;
     sedCH: TSpinEdit;
-    tsSim3: TTabSheet;
+    TabSheet1: TTabSheet;
     lblH2: TLabel;
     lblC: TLabel;
     lblCH: TLabel;
     lblPlus2: TLabel;
     lblArrow2: TLabel;
-    pnlSim3: TPanel;
-    pnlZnClH: TPanel;
-    Image3: TImage;
-    Image4: TImage;
-    Image5: TImage;
-    pnlSim3Menu: TPanel;
-    TabSheet2: TTabSheet;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -96,7 +89,6 @@ type
     procedure btnPrevious1Click(Sender: TObject);
     procedure btnSim1Click(Sender: TObject);
     procedure btnSim2Click(Sender: TObject);
-    procedure PageControl1Change(Sender: TObject);
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -120,11 +112,6 @@ begin
     PageControl1.Pages[i].TabVisible := (PageControl1.Pages[i] = ATab);
   PageControl1.ActivePage := ATab;
 
-end;
-
-procedure TForm4.PageControl1Change(Sender: TObject);
-begin
-  ShowOnly(tsOptions);
 end;
 
 procedure TForm4.btnLoginClick(Sender: TObject);
@@ -192,9 +179,8 @@ begin
   tsLogin.caption := 'Login';
   tsRegister.caption := 'Register';
   tsOptions.caption := 'Options';
-  tsSim1.caption := 'Simulation 1';
-  tsSim2.caption := 'Simulation 2';
-  tsSim3.caption := 'Simulation 3';
+  tsSim1.caption := 'Simulation1';
+  tsSim2.caption := 'Simulation2';
   // tsLogin
   pnlLogin.caption := '';
   pnlHeading1.caption := 'Login or Sign up';

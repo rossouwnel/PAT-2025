@@ -2,8 +2,8 @@ object Form4: TForm4
   Left = 0
   Top = 0
   Caption = 'Form4'
-  ClientHeight = 688
-  ClientWidth = 1075
+  ClientHeight = 633
+  ClientWidth = 1087
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,9 +15,9 @@ object Form4: TForm4
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 1075
-    Height = 688
-    ActivePage = tsSim1
+    Width = 1087
+    Height = 633
+    ActivePage = tsLogin
     Align = alClient
     TabOrder = 0
     object tsLogin: TTabSheet
@@ -265,6 +265,7 @@ object Form4: TForm4
           Align = alBottom
           Caption = 'btnSim1'
           TabOrder = 2
+          OnClick = btnSim1Click
         end
         object btnSim2: TButton
           AlignWithMargins = True
@@ -275,6 +276,7 @@ object Form4: TForm4
           Align = alBottom
           Caption = 'btnSim2'
           TabOrder = 3
+          OnClick = btnSim2Click
         end
         object btnSim3: TButton
           AlignWithMargins = True
@@ -309,13 +311,15 @@ object Form4: TForm4
       object pnlSim1: TPanel
         Left = 0
         Top = 0
-        Width = 1067
-        Height = 658
+        Width = 1079
+        Height = 603
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 1067
+        ExplicitHeight = 658
         object imgN: TImage
-          Left = 160
-          Top = -143
+          Left = 184
+          Top = -182
           Width = 521
           Height = 345
           Picture.Data = {
@@ -1061,8 +1065,8 @@ object Form4: TForm4
           Stretch = True
         end
         object imgH: TImage
-          Left = 160
-          Top = 8
+          Left = 184
+          Top = -15
           Width = 521
           Height = 386
           Picture.Data = {
@@ -1638,13 +1642,15 @@ object Form4: TForm4
         end
         object pnlNH: TPanel
           Left = 1
-          Top = 432
-          Width = 1065
+          Top = 377
+          Width = 1077
           Height = 225
           Align = alBottom
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 432
+          ExplicitWidth = 1065
           object lblN: TLabel
             Left = 112
             Top = 59
@@ -1658,7 +1664,7 @@ object Form4: TForm4
             Font.Style = []
             ParentFont = False
           end
-          object lblH: TLabel
+          object lblH1: TLabel
             Left = 423
             Top = 59
             Width = 127
@@ -1726,11 +1732,11 @@ object Form4: TForm4
             TabOrder = 0
             Value = 0
           end
-          object sedH: TSpinEdit
+          object sedH1: TSpinEdit
             Left = 423
             Top = 88
             Width = 121
-            Height = 24
+            Height = 73
             MaxValue = 0
             MinValue = 0
             TabOrder = 1
@@ -1740,7 +1746,7 @@ object Form4: TForm4
             Left = 775
             Top = 88
             Width = 121
-            Height = 24
+            Height = 73
             MaxValue = 0
             MinValue = 0
             TabOrder = 2
@@ -1748,46 +1754,41 @@ object Form4: TForm4
           end
         end
         object pnlSim1Menu: TPanel
-          Left = 881
+          Left = 893
           Top = 1
           Width = 185
-          Height = 431
+          Height = 376
           Align = alRight
           Caption = 'pnlSim1Menu'
           Color = clMenuHighlight
           ParentBackground = False
           TabOrder = 1
-          object btnNext: TButton
+          ExplicitLeft = 881
+          ExplicitHeight = 431
+          object btnNext1: TButton
             Left = 16
             Top = 152
             Width = 153
             Height = 25
-            Caption = 'btnNext'
+            Caption = 'btnNext1'
             TabOrder = 0
+            OnClick = btnNext1Click
           end
-          object btnPrevious: TButton
-            Left = 16
-            Top = 96
-            Width = 153
-            Height = 25
-            Caption = 'btnPrevious'
-            TabOrder = 1
-          end
-          object btnFlashcardsMenu: TButton
+          object btnFlashcardsMenu1: TButton
             Left = 16
             Top = 212
             Width = 153
             Height = 25
-            Caption = 'btnFlashcardsMenu'
-            TabOrder = 2
+            Caption = 'btnFlashcardsMenu1'
+            TabOrder = 1
           end
-          object btnTestMenu: TButton
+          object btnTestMenu1: TButton
             Left = 16
             Top = 272
             Width = 153
             Height = 25
-            Caption = 'btnTestMenu'
-            TabOrder = 3
+            Caption = 'btnTestMenu1'
+            TabOrder = 2
           end
         end
       end
@@ -1798,13 +1799,15 @@ object Form4: TForm4
       object pnlSim2: TPanel
         Left = 0
         Top = 0
-        Width = 1067
-        Height = 658
+        Width = 1079
+        Height = 603
         Align = alClient
         TabOrder = 0
+        ExplicitLeft = 3
+        ExplicitTop = 16
         object Image1: TImage
-          Left = 184
-          Top = -148
+          Left = 192
+          Top = -220
           Width = 521
           Height = 386
           Picture.Data = {
@@ -2433,8 +2436,8 @@ object Form4: TForm4
           Stretch = True
         end
         object Image2: TImage
-          Left = 184
-          Top = 65
+          Left = 192
+          Top = -18
           Width = 521
           Height = 386
           Picture.Data = {
@@ -2981,26 +2984,94 @@ object Form4: TForm4
         end
         object pnlCH: TPanel
           Left = 1
-          Top = 504
-          Width = 1065
-          Height = 153
+          Top = 384
+          Width = 1077
+          Height = 218
           Align = alBottom
-          Caption = 'pnlCH'
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
+          ExplicitLeft = 9
+          ExplicitTop = 376
+          object lblH2: TLabel
+            Left = 111
+            Top = 51
+            Width = 67
+            Height = 15
+            Caption = 'H'#8322'-Molekule'
+          end
+          object lblC: TLabel
+            Left = 423
+            Top = 48
+            Width = 62
+            Height = 15
+            Caption = 'C-Molekule'
+          end
+          object lblCH: TLabel
+            Left = 775
+            Top = 48
+            Width = 75
+            Height = 15
+            Caption = 'CH'#8324'-Molekule'
+          end
+          object lblPlus2: TLabel
+            Left = 296
+            Top = 88
+            Width = 41
+            Height = 15
+            Caption = 'lblPlus2'
+          end
+          object lblArrow2: TLabel
+            Left = 640
+            Top = 88
+            Width = 51
+            Height = 15
+            Caption = 'lblArrow2'
+          end
+          object sedH2: TSpinEdit
+            Left = 111
+            Top = 80
+            Width = 121
+            Height = 73
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 0
+            Value = 0
+          end
+          object sedC: TSpinEdit
+            Left = 423
+            Top = 80
+            Width = 121
+            Height = 73
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 1
+            Value = 0
+          end
+          object sedCH: TSpinEdit
+            Left = 775
+            Top = 80
+            Width = 121
+            Height = 73
+            MaxValue = 0
+            MinValue = 0
+            TabOrder = 2
+            Value = 0
+          end
         end
         object pnlSim2Menu: TPanel
-          Left = 881
+          Left = 893
           Top = 1
           Width = 185
-          Height = 503
+          Height = 383
           Align = alRight
           Caption = 'pnlSim1Menu'
           Color = clMenuHighlight
           ParentBackground = False
           TabOrder = 1
-          object Button1: TButton
+          ExplicitLeft = 881
+          ExplicitHeight = 503
+          object btnNext2: TButton
             Left = 16
             Top = 152
             Width = 153
@@ -3008,15 +3079,16 @@ object Form4: TForm4
             Caption = 'btnNext'
             TabOrder = 0
           end
-          object Button2: TButton
+          object btnPrevious1: TButton
             Left = 16
             Top = 96
             Width = 153
             Height = 25
             Caption = 'btnPrevious'
             TabOrder = 1
+            OnClick = btnPrevious1Click
           end
-          object Button3: TButton
+          object btnFlashcardsMenu2: TButton
             Left = 16
             Top = 212
             Width = 153
@@ -3024,7 +3096,7 @@ object Form4: TForm4
             Caption = 'btnFlashcardsMenu'
             TabOrder = 2
           end
-          object Button4: TButton
+          object btnTestMenu2: TButton
             Left = 16
             Top = 272
             Width = 153
@@ -3034,6 +3106,10 @@ object Form4: TForm4
           end
         end
       end
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      ImageIndex = 5
     end
   end
 end

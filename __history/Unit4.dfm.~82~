@@ -12,15 +12,14 @@ object Form4: TForm4
   Font.Style = []
   OnCreate = FormCreate
   TextHeight = 15
-  object PageControl1: TPageControl
+  object tsSim3: TPageControl
     Left = 0
     Top = 0
     Width = 1087
     Height = 633
-    ActivePage = tsSim3
+    ActivePage = tsLogin
     Align = alClient
     TabOrder = 0
-    OnChange = PageControl1Change
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
@@ -3112,8 +3111,8 @@ object Form4: TForm4
         end
       end
     end
-    object tsSim3: TTabSheet
-      Caption = 'tsSim3'
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
       ImageIndex = 5
       object pnlSim3: TPanel
         Left = 0
@@ -3123,6 +3122,10 @@ object Form4: TForm4
         Align = alClient
         Caption = 'pnlSim3'
         TabOrder = 0
+        ExplicitLeft = 440
+        ExplicitTop = 240
+        ExplicitWidth = 185
+        ExplicitHeight = 41
         object Image3: TImage
           Left = -143
           Top = -63
@@ -5056,7 +5059,6 @@ object Form4: TForm4
           Align = alBottom
           Caption = 'pnlZnClH'
           TabOrder = 0
-          ExplicitLeft = 0
         end
         object pnlSim3Menu: TPanel
           Left = 893
@@ -5071,10 +5073,6 @@ object Form4: TForm4
           ExplicitHeight = 41
         end
       end
-    end
-    object TabSheet2: TTabSheet
-      Caption = 'TabSheet2'
-      ImageIndex = 6
     end
   end
 end

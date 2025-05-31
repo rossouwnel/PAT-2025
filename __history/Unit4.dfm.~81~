@@ -17,10 +17,9 @@ object Form4: TForm4
     Top = 0
     Width = 1087
     Height = 633
-    ActivePage = tsSim3
+    ActivePage = TabSheet1
     Align = alClient
     TabOrder = 0
-    OnChange = PageControl1Change
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
@@ -3112,17 +3111,21 @@ object Form4: TForm4
         end
       end
     end
-    object tsSim3: TTabSheet
-      Caption = 'tsSim3'
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
       ImageIndex = 5
-      object pnlSim3: TPanel
+      object Panel1: TPanel
         Left = 0
         Top = 0
         Width = 1079
         Height = 603
         Align = alClient
-        Caption = 'pnlSim3'
+        Caption = 'Panel1'
         TabOrder = 0
+        ExplicitLeft = 440
+        ExplicitTop = 240
+        ExplicitWidth = 185
+        ExplicitHeight = 41
         object Image3: TImage
           Left = -143
           Top = -63
@@ -5048,33 +5051,28 @@ object Form4: TForm4
           Proportional = True
           Stretch = True
         end
-        object pnlZnClH: TPanel
+        object Panel2: TPanel
           Left = 1
           Top = 384
           Width = 1077
           Height = 218
           Align = alBottom
-          Caption = 'pnlZnClH'
+          Caption = 'Panel2'
           TabOrder = 0
-          ExplicitLeft = 0
         end
-        object pnlSim3Menu: TPanel
+        object Panel3: TPanel
           Left = 893
           Top = 1
           Width = 185
           Height = 383
           Align = alRight
-          Caption = 'pnlSim3Menu'
+          Caption = 'Panel3'
           TabOrder = 1
           ExplicitLeft = 808
           ExplicitTop = 384
           ExplicitHeight = 41
         end
       end
-    end
-    object TabSheet2: TTabSheet
-      Caption = 'TabSheet2'
-      ImageIndex = 6
     end
   end
 end
