@@ -754,9 +754,6 @@ begin
   rgpQuestion.font.size := 14;
   btnSubmit.Caption := 'Submit';
   btnNext.Caption := 'Next';
-  lblRevealAnswer.Visible := false;
-  lblRevealAnswer.Font.Size := 16;
-  lblRevealAnswer.Font.Style := lblRevealAnswer.Font.Style + [fsBold];
 
   rgpQuestion.Items.Clear;
   rgpQuestion.Items.Add('A. H₂ + O₂ → H₂O');

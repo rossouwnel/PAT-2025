@@ -3906,7 +3906,7 @@ object Form4: TForm4
         end
         object lblRevealAnswer: TLabel
           Left = 32
-          Top = 255
+          Top = 263
           Width = 881
           Height = 34
           Caption = 'lblRevealAnswer'

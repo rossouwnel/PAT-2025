@@ -3887,7 +3887,7 @@ object Form4: TForm4
         Left = 88
         Top = 112
         Width = 937
-        Height = 297
+        Height = 273
         TabOrder = 0
         object lblQuestion: TLabel
           Left = 32
@@ -3904,16 +3904,9 @@ object Form4: TForm4
           Font.Style = [fsBold]
           ParentFont = False
         end
-        object lblRevealAnswer: TLabel
-          Left = 32
-          Top = 255
-          Width = 881
-          Height = 34
-          Caption = 'lblRevealAnswer'
-        end
         object rgpQuestion: TRadioGroup
           Left = 32
-          Top = 106
+          Top = 92
           Width = 729
           Height = 152
           Caption = 'Choose an Option'

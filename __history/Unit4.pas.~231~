@@ -103,9 +103,6 @@ type
     btnSubmit: TButton;
     pbxH1: TPaintBox;
     pbxNH: TPaintBox;
-    btnNext: TButton;
-    btnReveal: TButton;
-    lblRevealAnswer: TLabel;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -133,9 +130,6 @@ type
     procedure btnFlashcardsMenu1Click(Sender: TObject);
     procedure btnFlashcardsMenu2Click(Sender: TObject);
     procedure btnFlashcardsMenu3Click(Sender: TObject);
-    procedure btnNextClick(Sender: TObject);
-    procedure btnRevealClick(Sender: TObject);
-
   private
     { Private declaratio
     Edit1: TEdit;ns }
@@ -150,7 +144,7 @@ var
   Form4: TForm4;
   Username, Password, Progress : string;
   Fields : TstringList;
-  LoginSuccesful : Boolean = false;
+  LoginSuccesful : Boolean=false;
   Displace1, Displace2, Displace3, Displace : integer;
   Flash : textfile;
   sLine, question,A,B,C,D,Answer, QuestionNum : String;
@@ -316,6 +310,7 @@ with pbxNH.Canvas do
     end;
    pbxNH.Canvas.Polygon(Stripe);
    pbxNH.Canvas.Polygon(Triangle);
+
 end;
 end;
 
@@ -368,11 +363,16 @@ with pbxH1.Canvas do
    pbxH1.Canvas.Polygon(Stripe);
    pbxH1.Canvas.Polygon(Triangle);
   end;
+
+
 end;
+
 
 procedure TForm4.sedH1Change(Sender: TObject);
 begin
-pbxH1.Repaint ;
+
+
+  pbxH1.Repaint ;
 end;
 
 procedure TForm4.sedNChange(Sender: TObject);
@@ -427,20 +427,6 @@ begin
   ShowOnly(tsSim3);
 end;
 
-procedure TForm4.btnNextClick(Sender: TObject);
-begin
-  if rgpQuestion.ItemIndex = -1 then
-  begin
-    ShowMessage('Please select an answer.');
-    Exit;
-  end
-  else
-  begin
-
-  end;
-
-end;
-
 procedure TForm4.btnSubmitClick(Sender: TObject);
 begin
   if rgpQuestion.ItemIndex = -1 then
@@ -450,7 +436,7 @@ begin
   end;
 
   if StrToInt(Answer) = rgpQuestion.ItemIndex + 1 then
-  ShowMessage('Correct!')
+    ShowMessage('Correct!')
   else
   Showmessage('Wrong ✘');
 end;
@@ -492,14 +478,6 @@ end;
 procedure TForm4.btnReturnClick(Sender: TObject);
 begin
   ShowOnly(tsLogin);
-end;
-
-procedure TForm4.btnRevealClick(Sender: TObject);
-begin
-  rgpQuestion.ItemIndex := StrToInt(Answer) - 1;
-  lblRevealAnswer.Caption := 'Correct answer: ' + rgpQuestion.Items[rgpQuestion.ItemIndex];
-  lblRevealAnswer.Font.Color := clGreen;
-  lblRevealAnswer.Visible := True;
 end;
 
 procedure TForm4.btnRevealNHClick(Sender: TObject);
@@ -753,10 +731,6 @@ begin
   //rgpQuestion.Caption := 'Choose an Option below';
   rgpQuestion.font.size := 14;
   btnSubmit.Caption := 'Submit';
-  btnNext.Caption := 'Next';
-  lblRevealAnswer.Visible := false;
-  lblRevealAnswer.Font.Size := 16;
-  lblRevealAnswer.Font.Style := lblRevealAnswer.Font.Style + [fsBold];
 
   rgpQuestion.Items.Clear;
   rgpQuestion.Items.Add('A. H₂ + O₂ → H₂O');
