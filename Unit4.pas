@@ -424,17 +424,61 @@ begin
 end;
 
 procedure TForm4.btnNextClick(Sender: TObject);
+var
+  Reader: TStreamReader;
+  Found: Boolean;
+  LineFields: TStringList;
+  CurrentQuestionNum: Integer;
 begin
+
   if rgpQuestion.ItemIndex = -1 then
   begin
-    ShowMessage('Please select an answer.');
+    ShowMessage('Please select an answer before proceeding.');
     Exit;
-  end
-  else
-  begin
-
   end;
 
+  Inc(qNum);
+  Found := False;
+  LineFields := TStringList.Create;
+  LineFields.Delimiter := '|';
+  LineFields.StrictDelimiter := True;
+
+  Reader := TStreamReader.Create('C:\IT PAT 2025\Flash.txt', TEncoding.UTF8);
+  try
+    while not Reader.EndOfStream do
+    begin
+      sLine := Reader.ReadLine;
+      LineFields.DelimitedText := sLine;
+      if LineFields.Count = 7 then
+      begin
+        CurrentQuestionNum := StrToIntDef(LineFields[6], 0);
+        if CurrentQuestionNum = qNum then
+        begin
+          Question := LineFields[0];
+          A := LineFields[1];
+          B := LineFields[2];
+          C := LineFields[3];
+          D := LineFields[4];
+          Answer := LineFields[5];
+          QuestionNum := LineFields[6];
+          Found := True;
+          Break;
+        end;
+      end;
+    end;
+
+  finally
+    Reader.Free;
+    LineFields.Free;
+  end;
+
+  lblQuestion.Caption := Question;
+  rgpQuestion.Items[0] := A;
+  rgpQuestion.Items[1] := B;
+  rgpQuestion.Items[2] := C;
+  rgpQuestion.Items[3] := D;
+  rgpQuestion.ItemIndex := -1;
+  lblRevealAnswer.Visible := False;
 end;
 
 procedure TForm4.btnSubmitClick(Sender: TObject);
