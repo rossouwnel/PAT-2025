@@ -3943,7 +3943,7 @@ object Form4: TForm4
         Height = 305
         Caption = 'pnlFlashcard1'
         TabOrder = 4
-        object lblQuestion: TLabel
+        object lblQuestion1: TLabel
           Left = 32
           Top = 24
           Width = 587
@@ -3967,7 +3967,7 @@ object Form4: TForm4
           Caption = 'btnNext'
           TabOrder = 0
         end
-        object rgpQuestion: TRadioGroup
+        object rgpQuestion1: TRadioGroup
           Left = 32
           Top = 92
           Width = 729
@@ -3980,15 +3980,15 @@ object Form4: TForm4
             '4')
           TabOrder = 1
         end
-        object btnSubmit: TButton
+        object btnOK: TButton
           AlignWithMargins = True
           Left = 776
           Top = 100
           Width = 137
           Height = 194
-          Caption = 'btnSubmit'
+          Caption = 'btnOK'
           TabOrder = 2
-          OnClick = btnSubmitClick
+          OnClick = btnOKClick
         end
       end
     end

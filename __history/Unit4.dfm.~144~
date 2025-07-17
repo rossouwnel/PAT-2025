@@ -17,7 +17,7 @@ object Form4: TForm4
     Top = 0
     Width = 1087
     Height = 615
-    ActivePage = tsFlashcards
+    ActivePage = tsSim1
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -457,7 +457,6 @@ object Form4: TForm4
             Align = alRight
             Caption = 'btnRevealNH'
             TabOrder = 3
-            OnClick = btnRevealNHClick
           end
         end
         object pnlSim1Menu: TPanel
@@ -3943,7 +3942,7 @@ object Form4: TForm4
         Height = 305
         Caption = 'pnlFlashcard1'
         TabOrder = 4
-        object lblQuestion: TLabel
+        object lblQuestion1: TLabel
           Left = 32
           Top = 24
           Width = 587
@@ -3958,6 +3957,16 @@ object Form4: TForm4
           Font.Style = [fsBold]
           ParentFont = False
         end
+        object btnHint1: TButton
+          AlignWithMargins = True
+          Left = 776
+          Top = 13
+          Width = 137
+          Height = 73
+          Caption = 'btnHint1'
+          TabOrder = 0
+          OnClick = btnHint1Click
+        end
         object btnNext: TButton
           AlignWithMargins = True
           Left = 32
@@ -3965,9 +3974,9 @@ object Form4: TForm4
           Width = 137
           Height = 36
           Caption = 'btnNext'
-          TabOrder = 0
+          TabOrder = 1
         end
-        object rgpQuestion: TRadioGroup
+        object rgpQuestion1: TRadioGroup
           Left = 32
           Top = 92
           Width = 729
@@ -3978,17 +3987,17 @@ object Form4: TForm4
             '2'
             '3'
             '4')
-          TabOrder = 1
+          TabOrder = 2
         end
-        object btnSubmit: TButton
+        object btnOK: TButton
           AlignWithMargins = True
           Left = 776
           Top = 100
           Width = 137
           Height = 194
-          Caption = 'btnSubmit'
-          TabOrder = 2
-          OnClick = btnSubmitClick
+          Caption = 'btnOK'
+          TabOrder = 3
+          OnClick = btnOKClick
         end
       end
     end

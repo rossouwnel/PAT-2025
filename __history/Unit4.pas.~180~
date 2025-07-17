@@ -104,11 +104,12 @@ type
     pnlFlashcard3: TPanel;
     pnlFlashcard4: TPanel;
     pnlFlashcard1: TPanel;
+    btnHint1: TButton;
     lblArrow3: TLabel;
     btnNext: TButton;
-    lblQuestion: TLabel;
-    rgpQuestion: TRadioGroup;
-    btnSubmit: TButton;
+    lblQuestion1: TLabel;
+    rgpQuestion1: TRadioGroup;
+    btnOK: TButton;
     pbxH1: TPaintBox;
     pbxNH: TPaintBox;
     procedure FormCreate(Sender: TObject);
@@ -126,7 +127,7 @@ type
     procedure btnNext2Click(Sender: TObject);
     procedure btnPrevious2Click(Sender: TObject);
     procedure btnFlashcardsClick(Sender: TObject);
-    procedure btnSubmitClick(Sender: TObject);
+    procedure btnOKClick(Sender: TObject);
     procedure btnHint1Click(Sender: TObject);
     procedure btnRLoginClick(Sender: TObject);
     //procedure pbxH1Click(Sender: TObject);
@@ -140,7 +141,6 @@ type
   private
     { Private declaratio
     Edit1: TEdit;ns }
-    procedure Quest() ;
     procedure ShowOnly(ATab: TTabSheet);
     procedure login();
   public
@@ -153,65 +153,11 @@ var
   Fields : TstringList;
   LoginSuccesful : Boolean=false;
   Displace1, Displace2, Displace3, Displace : integer;
-   Flash : textfile;
-  sLine, question,A,B,C,D,Answer, QuestionNum : String;
-  qNum : Integer ;
+  
 
 implementation
 
 {$R *.dfm}
-
-procedure TForm4.Quest() ;
-
-
-begin
- AssignFile(Flash,'C:\IT PAT 2025\fold\balancing_questions_10000.txt');
- reset(Flash);
- Fields := TstringList.Create;
- Fields.Delimiter := '|';
- Fields.StrictDelimiter := True;
- LoginSuccesful := false;
-
-qNum := Random(1000) + 1 ;
-try
-while not eof(Flash) do
-    begin
-      ReadLn(Flash,sLine) ;
-      fields.DelimitedText := sLine  ;
-        if fields.Count = 7 then
-          begin
-            question := Fields[0];
-            A := Fields[1] ;
-            B := Fields[2];
-            C := Fields[3];
-            D := Fields[4];
-            Answer := Fields[5];
-            QuestionNum := Fields[6];
-          end;
-      if questionNum = '1' then
-        Begin
-          Break ;
-        End;
-
-    end;
-lblQuestion.Caption := Question ;
-rgpQuestion.Items[0] := A;
-rgpQuestion.Items[1] := B;
-rgpQuestion.Items[2] := C;
-rgpQuestion.Items[3] := D;
-rgpQuestion.ItemIndex := -1;
-
-if StrTOInt(Answer) = rgpQuestion.ItemIndex+1 then
-  begin
-    Showmessage('Correct!');
-  end
-else
-showMessage('Wrong ✘');
-Finally
-  fields.Free
-end;
-end;
-
 
 procedure TForm4.login();
 
@@ -307,13 +253,13 @@ displace := displace1 + displace2 ;
 with pbxNH.Canvas do
   begin
    MoveTo(CentreX, CentreY);
-   pbxNH.Canvas.Brush.Color := RGB(255, 153, 0);
+   pbxNH.Canvas.Brush.Color := RGB (255, 117, 44);;
    pbxNH.Canvas.Pen.Color := clBlack;
 
    if (displace = 0) and (sedN.Value <>0) then
    begin
-    pen.Color := RGB(71, 212, 90);
-    brush.Color:= RGB(71, 212, 90);
+    pen.Color := clGreen;
+    brush.Color:= clGreen;
    end;
   Circle := 310 ;
   for j := 1 to 2 do
@@ -368,8 +314,8 @@ with pbxH1.Canvas do
 
    if (displace = 0) and (sedH1.Value <>0) then
    begin
-    pen.Color := RGB(71, 212, 90);
-    brush.Color:= RGB(71, 212, 90);
+    pen.Color := clGreen;
+    brush.Color:= clGreen;
    end;
   Circle := 310 ;
   for j := 1 to 2 do
@@ -441,24 +387,25 @@ begin
   ShowOnly(tsSim3);
 end;
 
-procedure TForm4.btnSubmitClick(Sender: TObject);
-//begin
-//if strToInt(Progress) = 5 then
-//begin
- //shellexecute(handle, 'open', 'C:\IT PAT 2025\video vir PAT\WhatsApp Video 2025-07-14 at 16.40.05_1b83271f.mp4', nil, nil, SW_SHOWNORMAL);
- //exit;
-// end;
+procedure TForm4.btnOKClick(Sender: TObject);
+begin
+if strToInt(Progress) = 5 then
+begin
+ shellexecute(handle, 'open', 'C:\IT PAT 2025\video vir PAT\WhatsApp Video 2025-07-14 at 16.40.05_1b83271f.mp4', nil, nil, SW_SHOWNORMAL);
+ exit;
+ end;
 
 begin
-  quest ;
-  if StrTOInt(Answer) = rgpQuestion.ItemIndex+1 then
-  begin
-    Showmessage('Correct!');
-  end
-else
-showMessage('Wrong ): ') ;
+   if rgpQuestion1.ItemIndex = 1 then
+   begin
+    ShowMessage('Correct!');
+    pnlFlashcard2.Visible := True;
+    pnlFlashcard1.Visible := False;
+    end
+  else
+    ShowMessage('Incorrect. Try again!');
 end;
-//end;
+end;
 
 procedure TForm4.btnPrevious1Click(Sender: TObject);
 begin
@@ -731,17 +678,16 @@ begin
   lblArrow3.Font.Size := 25;
   // Flashcards
   pnlFlashcard1.caption := '';
-  lblQuestion.Caption := 'Question 1: What is the balanced form of this equation?' + #13 + 'H₂ + O₂ → H₂O';
-  rgpQuestion.Caption := 'Choose an Option below';
-  rgpQuestion.font.size := 14;
+  lblQuestion1.Caption := 'Question 1: What is the balanced form of this equation?' + #13 + 'H₂ + O₂ → H₂O';
+  rgpQuestion1.Caption := 'Choose an Option below';
+  rgpQuestion1.font.size := 14;
 
-  rgpQuestion.Items.Clear;
-  rgpQuestion.Items.Add('A. H₂ + O₂ → H₂O');
-  rgpQuestion.Items.Add('B. 2H₂ + O₂ → 2H₂O');  // regte antwoord
-  rgpQuestion.Items.Add('C. H₂ + 2O₂ → 2H₂O');
-  rgpQuestion.Items.Add('D. 2H₂ + 2O₂ → H₂O');
-
-  quest ;
+  rgpQuestion1.Items.Clear;
+  rgpQuestion1.Items.Add('A. H₂ + O₂ → H₂O');
+  rgpQuestion1.Items.Add('B. 2H₂ + O₂ → 2H₂O');  // regte antwoord
+  rgpQuestion1.Items.Add('C. H₂ + 2O₂ → 2H₂O');
+  rgpQuestion1.Items.Add('D. 2H₂ + 2O₂ → H₂O');
+  rgpQuestion1.Items.Add('E. H₂O → H₂ + O₂');
 repeat
 begin
  sedH1.Value := Random(4);
