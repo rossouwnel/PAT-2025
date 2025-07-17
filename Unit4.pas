@@ -160,47 +160,43 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm4.Quest() ;
-
-
+procedure TForm4.Quest();
+var
+  Reader: TStreamReader;
 begin
- AssignFile(Flash,'C:\IT PAT 2025\Flash.txt');
- reset(Flash);
- Fields := TstringList.Create;
- Fields.Delimiter := '|';
- Fields.StrictDelimiter := True;
- // LoginSuccesful := false;
+  Fields := TStringList.Create;
+  Fields.Delimiter := '|';
+  Fields.StrictDelimiter := True;
 
-qNum := Random(1000);
-TRY
-while not EOF(Flash) do
+  Reader := TStreamReader.Create('C:\IT PAT 2025\Flash.txt', TEncoding.UTF8);
+  try
+    while not Reader.EndOfStream do
     begin
-      ReadLn(Flash, sLine) ;
-      fields.DelimitedText := sLine  ;
-        if fields.Count = 7 then
-          begin
-            Question := Fields[0];
-            A := Fields[1] ;
-            B := Fields[2];
-            C := Fields[3];
-            D := Fields[4];
-            Answer := Fields[5];
-            QuestionNum := Fields[6];
-          end;
-      if questionNum = '1' then
-        Begin
-          Break ;
-        End;
-
+      sLine := Reader.ReadLine;
+      Fields.DelimitedText := sLine;
+      if Fields.Count = 7 then
+      begin
+        Question := Fields[0];
+        A := Fields[1];
+        B := Fields[2];
+        C := Fields[3];
+        D := Fields[4];
+        Answer := Fields[5];
+        QuestionNum := Fields[6];
+      end;
+      if QuestionNum = '1' then
+        Break;
     end;
-lblQuestion.Caption := Question ;
-rgpQuestion.Items[0] := A;
-rgpQuestion.Items[1] := B;
-rgpQuestion.Items[2] := C;
-rgpQuestion.Items[3] := D;
-rgpQuestion.ItemIndex := -1;
-FINALLY
-end;
+  finally
+    Reader.Free;
+  end;
+
+  lblQuestion.Caption := Question;
+  rgpQuestion.Items[0] := A;
+  rgpQuestion.Items[1] := B;
+  rgpQuestion.Items[2] := C;
+  rgpQuestion.Items[3] := D;
+  rgpQuestion.ItemIndex := -1;
 end;
 
 procedure TForm4.login();
