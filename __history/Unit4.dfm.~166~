@@ -1,7 +1,7 @@
 object Form4: TForm4
   Left = 0
   Top = 0
-  Caption = 'Simulation'
+  Caption = 'Form4'
   ClientHeight = 615
   ClientWidth = 1087
   Color = clBtnFace
@@ -17,7 +17,7 @@ object Form4: TForm4
     Top = 0
     Width = 1087
     Height = 615
-    ActivePage = tsFlashcards
+    ActivePage = tsLogin
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -26,15 +26,14 @@ object Form4: TForm4
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
-        Left = 0
-        Top = 0
-        Width = 1079
-        Height = 585
-        Align = alClient
+        Left = 280
+        Top = 128
+        Width = 505
+        Height = 265
         TabOrder = 0
         object lblUsername: TLabel
-          Left = 390
-          Top = 149
+          Left = 104
+          Top = 99
           Width = 77
           Height = 23
           Caption = 'Username'
@@ -46,8 +45,8 @@ object Form4: TForm4
           ParentFont = False
         end
         object lblLPassword: TLabel
-          Left = 390
-          Top = 229
+          Left = 111
+          Top = 135
           Width = 70
           Height = 23
           Caption = 'Password'
@@ -58,26 +57,19 @@ object Form4: TForm4
           Font.Style = []
           ParentFont = False
         end
-        object lblCreateAccount: TLabel
-          Left = 390
-          Top = 432
-          Width = 128
-          Height = 15
-          Caption = 'Dont'#39't have an account?'
-        end
         object pnlHeading1: TPanel
           Left = 1
           Top = 1
-          Width = 1077
+          Width = 503
           Height = 41
           Align = alTop
           Caption = 'Login or Sign up'
           TabOrder = 0
         end
         object btnRegister: TButton
-          Left = 390
-          Top = 472
-          Width = 250
+          Left = 1
+          Top = 224
+          Width = 256
           Height = 41
           Align = alCustom
           Caption = 'btnRegister'
@@ -85,22 +77,22 @@ object Form4: TForm4
           OnClick = btnRegisterClick
         end
         object edtLUsername: TEdit
-          Left = 390
-          Top = 178
-          Width = 250
+          Left = 216
+          Top = 102
+          Width = 121
           Height = 23
           TabOrder = 2
         end
         object edtLPassword: TEdit
-          Left = 390
-          Top = 258
-          Width = 250
+          Left = 216
+          Top = 138
+          Width = 121
           Height = 23
           TabOrder = 3
         end
         object cbxSH1: TCheckBox
-          Left = 663
-          Top = 261
+          Left = 351
+          Top = 141
           Width = 97
           Height = 17
           Align = alCustom
@@ -109,8 +101,8 @@ object Form4: TForm4
           OnClick = cbxSH1Click
         end
         object btnLogin: TButton
-          Left = 390
-          Top = 344
+          Left = 254
+          Top = 224
           Width = 250
           Height = 41
           Align = alCustom
@@ -124,15 +116,14 @@ object Form4: TForm4
       Caption = 'tsRegister'
       ImageIndex = 1
       object pnlRegister: TPanel
-        Left = 0
-        Top = 0
-        Width = 1079
-        Height = 585
-        Align = alClient
+        Left = 288
+        Top = 120
+        Width = 505
+        Height = 265
         TabOrder = 0
         object lblRUsername: TLabel
-          Left = 375
-          Top = 197
+          Left = 74
+          Top = 69
           Width = 105
           Height = 23
           Caption = 'lblRUsername'
@@ -144,8 +135,8 @@ object Form4: TForm4
           ParentFont = False
         end
         object lblCPassword: TLabel
-          Left = 375
-          Top = 368
+          Left = 19
+          Top = 168
           Width = 136
           Height = 23
           Caption = 'Confirm Password'
@@ -157,8 +148,8 @@ object Form4: TForm4
           ParentFont = False
         end
         object lblRPassword: TLabel
-          Left = 375
-          Top = 279
+          Left = 89
+          Top = 120
           Width = 98
           Height = 23
           Caption = 'lblRPassword'
@@ -170,9 +161,9 @@ object Form4: TForm4
           ParentFont = False
         end
         object btnReturn: TButton
-          Left = 375
-          Top = 513
-          Width = 249
+          Left = 1
+          Top = 225
+          Width = 256
           Height = 41
           Align = alCustom
           Caption = 'Return'
@@ -182,60 +173,60 @@ object Form4: TForm4
         object pnlHeading2: TPanel
           Left = 1
           Top = 1
-          Width = 1077
+          Width = 503
           Height = 41
           Align = alTop
           Caption = 'pnlHeading2'
           TabOrder = 1
         end
-        object edtRUsername: TEdit
-          Left = 375
-          Top = 233
+        object btnRLogin: TButton
+          Left = 255
+          Top = 225
           Width = 249
-          Height = 23
+          Height = 41
+          Align = alCustom
+          Caption = 'Login'
           TabOrder = 2
+          OnClick = btnRLoginClick
         end
-        object edtRPassword: TEdit
-          Left = 375
-          Top = 323
-          Width = 249
+        object edtRUsername: TEdit
+          Left = 216
+          Top = 72
+          Width = 121
           Height = 23
           TabOrder = 3
         end
-        object edtCPassword: TEdit
-          Left = 375
-          Top = 397
-          Width = 249
+        object edtRPassword: TEdit
+          Left = 216
+          Top = 120
+          Width = 121
           Height = 23
           TabOrder = 4
         end
-        object cbxSH2: TCheckBox
-          Left = 648
-          Top = 322
-          Width = 97
-          Height = 25
-          Caption = 'show/hide'
+        object edtCPassword: TEdit
+          Left = 216
+          Top = 168
+          Width = 121
+          Height = 23
           TabOrder = 5
-          OnClick = cbxSH2Click
         end
-        object cbxSHC: TCheckBox
-          Left = 648
-          Top = 396
+        object cbxSH2: TCheckBox
+          Left = 352
+          Top = 120
           Width = 97
           Height = 25
           Caption = 'show/hide'
           TabOrder = 6
-          OnClick = cbxSHCClick
+          OnClick = cbxSH2Click
         end
-        object btnRLogin: TButton
-          Left = 375
-          Top = 442
-          Width = 249
-          Height = 41
-          Align = alCustom
-          Caption = 'Register'
+        object cbxSHC: TCheckBox
+          Left = 352
+          Top = 168
+          Width = 97
+          Height = 25
+          Caption = 'show/hide'
           TabOrder = 7
-          OnClick = btnRLoginClick
+          OnClick = cbxSHCClick
         end
       end
     end
@@ -243,56 +234,78 @@ object Form4: TForm4
       Caption = 'tsOptions'
       ImageIndex = 2
       object pnlOptions: TPanel
-        Left = 0
-        Top = 0
-        Width = 1079
-        Height = 585
-        Align = alClient
+        Left = 240
+        Top = 144
+        Width = 561
+        Height = 281
         TabOrder = 0
-        ExplicitLeft = 136
-        ExplicitTop = -16
-        object lblHeadingPnl3: TLabel
-          Left = 216
-          Top = 136
-          Width = 632
-          Height = 45
-          Caption = 'Hi there friend, what are we learning today?'
+        object btnFlashcards: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 221
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnFlashcards'
+          TabOrder = 0
+          OnClick = btnFlashcardsClick
+        end
+        object btnTest: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 252
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnTest'
+          TabOrder = 1
+        end
+        object btnSim1: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 128
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnSim1'
+          TabOrder = 2
+          OnClick = btnSim1Click
+        end
+        object btnSim2: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 159
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnSim2'
+          TabOrder = 3
+          OnClick = btnSim2Click
+        end
+        object btnSim3: TButton
+          AlignWithMargins = True
+          Left = 4
+          Top = 190
+          Width = 553
+          Height = 25
+          Align = alBottom
+          Caption = 'btnSim3'
+          TabOrder = 4
+        end
+        object pnlHeading3: TPanel
+          Left = 1
+          Top = 1
+          Width = 559
+          Height = 120
+          Align = alTop
+          Caption = 'Menu'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -33
           Font.Name = 'Segoe UI'
-          Font.Style = []
+          Font.Style = [fsBold]
           ParentFont = False
-        end
-        object btnFlashcards: TButton
-          Left = 263
-          Top = 400
-          Width = 553
-          Height = 25
-          Caption = 'Flashcards'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 0
-          OnClick = btnFlashcardsClick
-        end
-        object btnSim: TButton
-          Left = 263
-          Top = 328
-          Width = 553
-          Height = 25
-          Caption = 'Simulations'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -17
-          Font.Name = 'Segoe UI'
-          Font.Style = []
-          ParentFont = False
-          TabOrder = 1
-          OnClick = btnSimClick
+          TabOrder = 5
         end
       end
     end
@@ -306,8 +319,7 @@ object Form4: TForm4
         Height = 585
         Align = alClient
         TabOrder = 0
-        ExplicitWidth = 1077
-        ExplicitHeight = 577
+        ExplicitTop = -3
         object pbxH1: TPaintBox
           Left = 200
           Top = 200
@@ -331,8 +343,6 @@ object Form4: TForm4
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
-          ExplicitTop = 351
-          ExplicitWidth = 1075
           object lblN: TLabel
             Left = 112
             Top = 59
@@ -419,7 +429,7 @@ object Form4: TForm4
             Left = 423
             Top = 88
             Width = 121
-            Height = 24
+            Height = 73
             MaxValue = 0
             MinValue = 0
             TabOrder = 1
@@ -430,7 +440,7 @@ object Form4: TForm4
             Left = 775
             Top = 88
             Width = 121
-            Height = 24
+            Height = 73
             MaxValue = 0
             MinValue = 0
             TabOrder = 2
@@ -446,7 +456,6 @@ object Form4: TForm4
             Caption = 'btnRevealNH'
             TabOrder = 3
             OnClick = btnRevealNHClick
-            ExplicitLeft = 974
           end
         end
         object pnlSim1Menu: TPanel
@@ -459,8 +468,6 @@ object Form4: TForm4
           Color = clMenuHighlight
           ParentBackground = False
           TabOrder = 1
-          ExplicitLeft = 891
-          ExplicitHeight = 350
           object btnNext1: TButton
             Left = 16
             Top = 152
@@ -469,6 +476,15 @@ object Form4: TForm4
             Caption = 'btnNext1'
             TabOrder = 0
             OnClick = btnNext1Click
+          end
+          object btnFlashcardsMenu1: TButton
+            Left = 16
+            Top = 212
+            Width = 153
+            Height = 25
+            Caption = 'btnFlashcardsMenu1'
+            TabOrder = 1
+            OnClick = btnFlashcardsMenu1Click
           end
         end
       end
@@ -1774,6 +1790,15 @@ object Form4: TForm4
             TabOrder = 1
             OnClick = btnPrevious1Click
           end
+          object btnFlashcardsMenu2: TButton
+            Left = 16
+            Top = 212
+            Width = 153
+            Height = 25
+            Caption = 'btnFlashcardsMenu'
+            TabOrder = 2
+            OnClick = btnFlashcardsMenu2Click
+          end
         end
       end
     end
@@ -2518,7 +2543,7 @@ object Form4: TForm4
         end
         object Image4: TImage
           Left = 296
-          Top = 0
+          Top = -63
           Width = 921
           Height = 442
           Picture.Data = {
@@ -3832,7 +3857,6 @@ object Form4: TForm4
           Color = clMenuHighlight
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 0
           object btnPrevious2: TButton
             Left = 16
             Top = 150
@@ -3842,14 +3866,14 @@ object Form4: TForm4
             TabOrder = 0
             OnClick = btnPrevious2Click
           end
-          object btnReturnToMenu: TButton
-            Left = 32
-            Top = 224
-            Width = 121
+          object btnFlashcardsMenu3: TButton
+            Left = 16
+            Top = 208
+            Width = 153
             Height = 25
-            Caption = 'Return To menu'
+            Caption = 'btnFlashcardsMenu3'
             TabOrder = 1
-            OnClick = btnReturnToMenuClick
+            OnClick = btnFlashcardsMenu3Click
           end
         end
       end
@@ -3858,19 +3882,14 @@ object Form4: TForm4
       Caption = 'tsFlashcards'
       ImageIndex = 6
       object pnlFlashcard1: TPanel
-        Left = 0
-        Top = 0
-        Width = 1079
-        Height = 585
-        Align = alClient
+        Left = 88
+        Top = 112
+        Width = 937
+        Height = 305
         TabOrder = 0
-        ExplicitLeft = 88
-        ExplicitTop = 112
-        ExplicitWidth = 937
-        ExplicitHeight = 305
         object lblQuestion: TLabel
-          Left = 120
-          Top = 38
+          Left = 32
+          Top = 24
           Width = 587
           Height = 62
           Caption = 
@@ -3883,22 +3902,16 @@ object Form4: TForm4
           Font.Style = [fsBold]
           ParentFont = False
         end
-        object lblAnswer: TLabel
-          Left = 120
-          Top = 354
-          Width = 729
-          Height = 30
-          Caption = 'lblAnswer'
-          Font.Charset = DEFAULT_CHARSET
-          Font.Color = clWindowText
-          Font.Height = -21
-          Font.Name = 'Segoe UI'
-          Font.Style = [fsBold]
-          ParentFont = False
+        object lblRevealAnswer: TLabel
+          Left = 32
+          Top = 263
+          Width = 86
+          Height = 15
+          Caption = 'lblRevealAnswer'
         end
         object rgpQuestion: TRadioGroup
-          Left = 120
-          Top = 162
+          Left = 32
+          Top = 106
           Width = 729
           Height = 152
           Caption = 'Choose an Option'
@@ -3909,24 +3922,34 @@ object Form4: TForm4
             '4')
           TabOrder = 0
         end
-        object btnMarkAnswer: TButton
+        object btnSubmit: TButton
           AlignWithMargins = True
-          Left = 120
-          Top = 447
+          Left = 784
+          Top = 79
           Width = 137
-          Height = 65
-          Caption = 'Mark Answer'
+          Height = 122
+          Caption = 'Submit'
           TabOrder = 1
-          OnClick = btnMarkAnswerClick
+          OnClick = btnSubmitClick
         end
-        object btnNextFlashcard: TButton
-          Left = 752
-          Top = 450
+        object btnNext: TButton
+          Left = 784
+          Top = 19
           Width = 137
-          Height = 59
-          Caption = 'Next Question'
+          Height = 54
+          Caption = 'btnNext'
           TabOrder = 2
+          OnClick = btnNextClick
         end
+      end
+      object btnReveal: TButton
+        Left = 872
+        Top = 319
+        Width = 137
+        Height = 50
+        Caption = 'btnReveal'
+        TabOrder = 1
+        OnClick = btnRevealClick
       end
     end
   end

@@ -399,6 +399,7 @@ begin
   ShowOnly(tsFlashcards);
 end;
 
+// ================================================================================
 procedure TForm4.btnLoginClick(Sender: TObject);
 begin
   Password := edtLPassword.text;
@@ -408,6 +409,7 @@ begin
 
 end;
 
+// ================================================================================
 procedure TForm4.btnNext1Click(Sender: TObject);
 begin
   ShowOnly(tsSim2);
@@ -431,6 +433,8 @@ begin
   else
     Showmessage('Wrong ✘');
 end;
+
+
 
 procedure TForm4.btnPrevious1Click(Sender: TObject);
 begin

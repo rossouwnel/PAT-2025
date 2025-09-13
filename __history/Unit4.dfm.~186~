@@ -17,7 +17,7 @@ object Form4: TForm4
     Top = 0
     Width = 1087
     Height = 615
-    ActivePage = tsFlashcards
+    ActivePage = tsOptions
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
@@ -3849,7 +3849,6 @@ object Form4: TForm4
             Height = 25
             Caption = 'Return To menu'
             TabOrder = 1
-            OnClick = btnReturnToMenuClick
           end
         end
       end
@@ -3911,7 +3910,7 @@ object Form4: TForm4
         end
         object btnMarkAnswer: TButton
           AlignWithMargins = True
-          Left = 120
+          Left = 112
           Top = 447
           Width = 137
           Height = 65

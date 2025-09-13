@@ -7,7 +7,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Imaging.pngimage, shellapi, uFlashCards;
+  Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Imaging.pngimage, shellapi;
 
 type
   TForm4 = class(TForm)
@@ -129,6 +129,7 @@ type
     procedure btnFlashcardsMenu3Click(Sender: TObject);
     procedure btnSimClick(Sender: TObject);
     procedure btnReturnToMenuClick(Sender: TObject);
+
 
   private
     { Private declaratio
@@ -399,6 +400,7 @@ begin
   ShowOnly(tsFlashcards);
 end;
 
+// ================================================================================
 procedure TForm4.btnLoginClick(Sender: TObject);
 begin
   Password := edtLPassword.text;
@@ -408,6 +410,7 @@ begin
 
 end;
 
+// ================================================================================
 procedure TForm4.btnNext1Click(Sender: TObject);
 begin
   ShowOnly(tsSim2);
@@ -417,6 +420,7 @@ procedure TForm4.btnNext2Click(Sender: TObject);
 begin
   ShowOnly(tsSim3);
 end;
+
 
 procedure TForm4.btnMarkAnswerClick(Sender: TObject);
 begin
@@ -431,6 +435,24 @@ begin
   else
     Showmessage('Wrong ✘');
 end;
+
+// begin
+// if strToInt(Progress) = 5 then
+// begin
+// shellexecute(handle, 'open', 'C:\IT PAT 2025\video vir PAT\WhatsApp Video 2025-07-14 at 16.40.05_1b83271f.mp4', nil, nil, SW_SHOWNORMAL);
+// exit;
+// end;
+
+// begin
+// quest ;
+// if StrTOInt(Answer) = rgpQuestion.ItemIndex+1 then
+// begin
+// Showmessage('Correct!');
+// end
+// else
+// showMessage('Wrong ): ') ;
+// end;
+// end;
 
 procedure TForm4.btnPrevious1Click(Sender: TObject);
 begin
@@ -453,9 +475,11 @@ begin
   ShowOnly(tsLogin);
 end;
 
+
+
 procedure TForm4.btnReturnToMenuClick(Sender: TObject);
 begin
-  ShowOnly(tsOptions);
+ShowOnly(tsOptions) ;
 end;
 
 procedure TForm4.btnRevealNHClick(Sender: TObject);
@@ -520,9 +544,10 @@ begin
   login
 end;
 
+
 procedure TForm4.btnSimClick(Sender: TObject);
 begin
-  ShowOnly(tsSim1);
+      ShowOnly(tsSim1);
 end;
 
 procedure TForm4.Button1Click(Sender: TObject);
@@ -602,6 +627,7 @@ begin
   // tsOptions
   pnlOptions.Caption := '';
 
+
   // Simulation 1
   pnlSim1.Caption := '';
   pnlNH.Caption := '';
@@ -668,6 +694,7 @@ begin
 
   btnRevealZnClH.Caption := 'Reveal';
   btnPrevious2.Caption := 'Previous';
+
 
   sedZn.Font.size := 30;
   sedHCl.Font.size := 30;

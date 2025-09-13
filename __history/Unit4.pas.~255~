@@ -7,7 +7,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Math, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Imaging.pngimage, shellapi, uFlashCards;
+  Vcl.ExtCtrls, Vcl.Samples.Spin, Vcl.Imaging.pngimage, shellapi;
 
 type
   TForm4 = class(TForm)
@@ -36,6 +36,10 @@ type
     cbxSH2: TCheckBox;
     cbxSHC: TCheckBox;
     pnlOptions: TPanel;
+    btnSim1: TButton;
+    btnSim2: TButton;
+    btnSim3: TButton;
+    pnlHeading3: TPanel;
     tsSim1: TTabSheet;
     pnlSim1: TPanel;
     pnlNH: TPanel;
@@ -49,12 +53,14 @@ type
     lblPlus1: TLabel;
     lblArrow1: TLabel;
     btnNext1: TButton;
+    btnFlashcardsMenu1: TButton;
     tsSim2: TTabSheet;
     pnlSim2: TPanel;
     pnlCH: TPanel;
     pnlSim2Menu: TPanel;
     btnNext2: TButton;
     btnPrevious1: TButton;
+    btnFlashcardsMenu2: TButton;
     Image1: TImage;
     Image2: TImage;
     sedH2: TSpinEdit;
@@ -87,21 +93,20 @@ type
     lblH3: TLabel;
     sedZn: TSpinEdit;
     btnPrevious2: TButton;
+    btnFlashcardsMenu3: TButton;
     pnlFlashcard1: TPanel;
     lblArrow3: TLabel;
     lblQuestion: TLabel;
     rgpQuestion: TRadioGroup;
-    btnMarkAnswer: TButton;
+    btnSubmit: TButton;
     pbxH1: TPaintBox;
     pbxNH: TPaintBox;
-    btnNextFlashcard: TButton;
-    lblAnswer: TLabel;
+    btnNext: TButton;
+    btnReveal: TButton;
+    lblRevealAnswer: TLabel;
     lblCreateAccount: TLabel;
     btnRLogin: TButton;
     btnFlashcards: TButton;
-    lblHeadingPnl3: TLabel;
-    btnReturnToMenu: TButton;
-    btnSim: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -111,11 +116,13 @@ type
     procedure btnLoginClick(Sender: TObject);
     procedure btnNext1Click(Sender: TObject);
     procedure btnPrevious1Click(Sender: TObject);
+    procedure btnSim1Click(Sender: TObject);
+    procedure btnSim2Click(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
     procedure btnNext2Click(Sender: TObject);
     procedure btnPrevious2Click(Sender: TObject);
     procedure btnFlashcardsClick(Sender: TObject);
-    procedure btnMarkAnswerClick(Sender: TObject);
+    procedure btnSubmitClick(Sender: TObject);
     procedure btnRLoginClick(Sender: TObject);
     procedure pbxH1Paint(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -127,8 +134,8 @@ type
     procedure btnFlashcardsMenu1Click(Sender: TObject);
     procedure btnFlashcardsMenu2Click(Sender: TObject);
     procedure btnFlashcardsMenu3Click(Sender: TObject);
-    procedure btnSimClick(Sender: TObject);
-    procedure btnReturnToMenuClick(Sender: TObject);
+    procedure btnNextClick(Sender: TObject);
+    procedure btnRevealClick(Sender: TObject);
 
   private
     { Private declaratio
@@ -399,6 +406,7 @@ begin
   ShowOnly(tsFlashcards);
 end;
 
+// ================================================================================
 procedure TForm4.btnLoginClick(Sender: TObject);
 begin
   Password := edtLPassword.text;
@@ -408,6 +416,7 @@ begin
 
 end;
 
+// ================================================================================
 procedure TForm4.btnNext1Click(Sender: TObject);
 begin
   ShowOnly(tsSim2);
@@ -418,7 +427,72 @@ begin
   ShowOnly(tsSim3);
 end;
 
-procedure TForm4.btnMarkAnswerClick(Sender: TObject);
+procedure TForm4.btnNextClick(Sender: TObject);
+var
+  Reader: TStreamReader;
+  Found: Boolean;
+  LineFields: TstringList;
+  CurrentQuestionNum: integer;
+begin
+
+  if rgpQuestion.ItemIndex = -1 then
+  begin
+    Showmessage('Please select an answer before proceeding.');
+    Exit;
+  end;
+
+  Inc(qNum);
+  Found := false;
+  LineFields := TstringList.Create;
+  LineFields.Delimiter := '|';
+  LineFields.StrictDelimiter := True;
+
+  Reader := TStreamReader.Create('C:\IT PAT 2025\Flash.txt', TEncoding.UTF8);
+  try
+    while not Reader.EndOfStream do
+    begin
+      sLine := Reader.ReadLine;
+      LineFields.DelimitedText := sLine;
+      if LineFields.Count = 7 then
+      begin
+        CurrentQuestionNum := StrToIntDef(LineFields[6], 0);
+        if CurrentQuestionNum = qNum then
+        begin
+          question := LineFields[0];
+          A := LineFields[1];
+          B := LineFields[2];
+          C := LineFields[3];
+          D := LineFields[4];
+          Answer := LineFields[5];
+          QuestionNum := LineFields[6];
+          Found := True;
+          Break;
+        end;
+      end;
+    end;
+
+    if not Found then
+    begin
+      Showmessage('No more questions.');
+      Dec(qNum); // Go back to previous question to avoid overflow
+      Exit;
+    end;
+
+  finally
+    Reader.Free;
+    LineFields.Free;
+  end;
+
+  lblQuestion.Caption := question;
+  rgpQuestion.Items[0] := A;
+  rgpQuestion.Items[1] := B;
+  rgpQuestion.Items[2] := C;
+  rgpQuestion.Items[3] := D;
+  rgpQuestion.ItemIndex := -1;
+  lblRevealAnswer.Visible := false;
+end;
+
+procedure TForm4.btnSubmitClick(Sender: TObject);
 begin
   if rgpQuestion.ItemIndex = -1 then
   begin
@@ -431,6 +505,24 @@ begin
   else
     Showmessage('Wrong ✘');
 end;
+
+// begin
+// if strToInt(Progress) = 5 then
+// begin
+// shellexecute(handle, 'open', 'C:\IT PAT 2025\video vir PAT\WhatsApp Video 2025-07-14 at 16.40.05_1b83271f.mp4', nil, nil, SW_SHOWNORMAL);
+// exit;
+// end;
+
+// begin
+// quest ;
+// if StrTOInt(Answer) = rgpQuestion.ItemIndex+1 then
+// begin
+// Showmessage('Correct!');
+// end
+// else
+// showMessage('Wrong ): ') ;
+// end;
+// end;
 
 procedure TForm4.btnPrevious1Click(Sender: TObject);
 begin
@@ -453,9 +545,13 @@ begin
   ShowOnly(tsLogin);
 end;
 
-procedure TForm4.btnReturnToMenuClick(Sender: TObject);
+procedure TForm4.btnRevealClick(Sender: TObject);
 begin
-  ShowOnly(tsOptions);
+  rgpQuestion.ItemIndex := StrToInt(Answer) - 1;
+  lblRevealAnswer.Caption := 'Correct answer: ' + rgpQuestion.Items
+    [rgpQuestion.ItemIndex];
+  lblRevealAnswer.Font.Color := clGreen;
+  lblRevealAnswer.Visible := True;
 end;
 
 procedure TForm4.btnRevealNHClick(Sender: TObject);
@@ -520,9 +616,14 @@ begin
   login
 end;
 
-procedure TForm4.btnSimClick(Sender: TObject);
+procedure TForm4.btnSim1Click(Sender: TObject);
 begin
   ShowOnly(tsSim1);
+end;
+
+procedure TForm4.btnSim2Click(Sender: TObject);
+begin
+  ShowOnly(tsSim2);
 end;
 
 procedure TForm4.Button1Click(Sender: TObject);
@@ -601,6 +702,13 @@ begin
   edtCPassword.PasswordChar := '*';
   // tsOptions
   pnlOptions.Caption := '';
+  pnlHeading3.Caption := 'Menu';
+  pnlHeading3.Font.size := 25;
+
+  btnSim1.Caption := 'Simulation 1';
+  btnSim2.Caption := 'Simulation 2';
+  btnSim3.Caption := 'Simulation 3';
+  btnFlashcards.Caption := 'Flashcards';
 
   // Simulation 1
   pnlSim1.Caption := '';
@@ -629,7 +737,7 @@ begin
 
   btnRevealNH.Caption := 'Reveal';
   btnNext1.Caption := 'Next';
-
+  btnFlashcardsMenu1.Caption := 'Flashcards';
   // Simulation 2
   pnlSim2.Caption := '';
   pnlCH.Caption := '';
@@ -639,7 +747,7 @@ begin
 
   btnNext2.Caption := 'Next';
   btnPrevious1.Caption := 'Previous';
-
+  btnFlashcardsMenu2.Caption := 'Flashcards';
   btnRevealCH.Caption := 'Reveal';
 
   sedC.Font.size := 30;
@@ -668,6 +776,7 @@ begin
 
   btnRevealZnClH.Caption := 'Reveal';
   btnPrevious2.Caption := 'Previous';
+  btnFlashcardsMenu3.Caption := 'Flashcards';
 
   sedZn.Font.size := 30;
   sedHCl.Font.size := 30;
@@ -694,9 +803,11 @@ begin
   lblArrow3.Font.size := 25;
   // Flashcards
   rgpQuestion.Font.size := 14;
-  btnNextFlashcard.Caption := 'Next';
-  lblAnswer.Visible := false;
-
+  btnSubmit.Caption := 'Submit';
+  btnNext.Caption := 'Next';
+  lblRevealAnswer.Visible := false;
+  lblRevealAnswer.Font.size := 16;
+  lblRevealAnswer.Font.Style := lblRevealAnswer.Font.Style + [fsBold];
   qNum := 1;
   Quest();
 
