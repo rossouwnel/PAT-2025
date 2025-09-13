@@ -1,5 +1,5 @@
 ﻿// rossouw nel
-unit Unit4;
+unit uMain;
 
 interface
 
@@ -49,46 +49,9 @@ type
     lblPlus1: TLabel;
     lblArrow1: TLabel;
     btnNext1: TButton;
-    tsSim2: TTabSheet;
-    pnlSim2: TPanel;
-    pnlCH: TPanel;
-    pnlSim2Menu: TPanel;
-    btnNext2: TButton;
-    btnPrevious1: TButton;
-    Image1: TImage;
-    Image2: TImage;
-    sedH2: TSpinEdit;
-    sedC: TSpinEdit;
-    sedCH: TSpinEdit;
-    tsSim3: TTabSheet;
-    lblH2: TLabel;
-    lblC: TLabel;
-    lblCH: TLabel;
-    lblPlus2: TLabel;
-    lblArrow2: TLabel;
-    pnlSim3: TPanel;
-    pnlZnClH: TPanel;
-    Image3: TImage;
-    pnlSim3Menu: TPanel;
     tsFlashcards: TTabSheet;
     btnRevealNH: TButton;
-    btnRevealCH: TButton;
-    btnRevealZnClH: TButton;
-    Image4: TImage;
-    Image5: TImage;
-    sedHCl: TSpinEdit;
-    sedZnCl: TSpinEdit;
-    sedH3: TSpinEdit;
-    lblZn: TLabel;
-    lblHCl: TLabel;
-    lblPlus3: TLabel;
-    lblZnCl: TLabel;
-    lblPlus4: TLabel;
-    lblH3: TLabel;
-    sedZn: TSpinEdit;
-    btnPrevious2: TButton;
     pnlFlashcard1: TPanel;
-    lblArrow3: TLabel;
     lblQuestion: TLabel;
     rgpQuestion: TRadioGroup;
     btnMarkAnswer: TButton;
@@ -100,8 +63,10 @@ type
     btnRLogin: TButton;
     btnFlashcards: TButton;
     lblHeadingPnl3: TLabel;
-    btnReturnToMenu: TButton;
     btnSim: TButton;
+    tsResultsScreen: TTabSheet;
+    lblCorrectPercent: TLabel;
+    btnBackToMenuRes: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -109,31 +74,25 @@ type
     procedure cbxSH2Click(Sender: TObject);
     procedure cbxSHCClick(Sender: TObject);
     procedure btnLoginClick(Sender: TObject);
-    procedure btnNext1Click(Sender: TObject);
     procedure btnPrevious1Click(Sender: TObject);
     procedure PageControl1Change(Sender: TObject);
-    procedure btnNext2Click(Sender: TObject);
-    procedure btnPrevious2Click(Sender: TObject);
     procedure btnFlashcardsClick(Sender: TObject);
     procedure btnMarkAnswerClick(Sender: TObject);
+    procedure btnNextFlashcardClick(Sender: TObject);
     procedure btnRLoginClick(Sender: TObject);
     procedure pbxH1Paint(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnBackToMenuResClick(Sender: TObject);
     procedure sedH1Change(Sender: TObject);
     procedure sedNHChange(Sender: TObject);
     procedure pbxNHPaint(Sender: TObject);
     procedure sedNChange(Sender: TObject);
     procedure btnRevealNHClick(Sender: TObject);
-    procedure btnFlashcardsMenu1Click(Sender: TObject);
-    procedure btnFlashcardsMenu2Click(Sender: TObject);
-    procedure btnFlashcardsMenu3Click(Sender: TObject);
     procedure btnSimClick(Sender: TObject);
     procedure btnReturnToMenuClick(Sender: TObject);
 
   private
     { Private declaratio
       Edit1: TEdit;ns }
-    procedure Quest();
     procedure ShowOnly(ATab: TTabSheet);
     procedure login();
   public
@@ -154,51 +113,13 @@ implementation
 
 {$R *.dfm}
 
-procedure TForm4.Quest();
-var
-  Reader: TStreamReader;
-begin
-  Fields := TstringList.Create;
-  Fields.Delimiter := '|';
-  Fields.StrictDelimiter := True;
-
-  Reader := TStreamReader.Create('C:\IT PAT 2025\Flash.txt', TEncoding.UTF8);
-  try
-    while not Reader.EndOfStream do
-    begin
-      sLine := Reader.ReadLine;
-      Fields.DelimitedText := sLine;
-      if Fields.Count = 7 then
-      begin
-        question := Fields[0];
-        A := Fields[1];
-        B := Fields[2];
-        C := Fields[3];
-        D := Fields[4];
-        Answer := Fields[5];
-        QuestionNum := Fields[6];
-      end;
-      if QuestionNum = '1' then
-        Break;
-    end;
-  finally
-    Reader.Free;
-  end;
-
-  lblQuestion.Caption := question;
-  rgpQuestion.Items[0] := A;
-  rgpQuestion.Items[1] := B;
-  rgpQuestion.Items[2] := C;
-  rgpQuestion.Items[3] := D;
-  rgpQuestion.ItemIndex := -1;
-end;
 
 procedure TForm4.login();
 var
   Users: textfile;
   sLine, FileUsername, FilePassword: String;
 begin
-  AssignFile(Users, 'C:\IT PAT 2025\Users.txt');
+  AssignFile(Users, 'E:\Roussouw IT PAT\PAT-2025\assets\Users.txt');
   reset(Users);
   Fields := TstringList.Create;
   Fields.Delimiter := '|';
@@ -382,22 +303,9 @@ end;
 procedure TForm4.btnFlashcardsClick(Sender: TObject);
 begin
   ShowOnly(tsFlashcards);
+  Flashcards_Start;
 end;
 
-procedure TForm4.btnFlashcardsMenu1Click(Sender: TObject);
-begin
-  ShowOnly(tsFlashcards);
-end;
-
-procedure TForm4.btnFlashcardsMenu2Click(Sender: TObject);
-begin
-  ShowOnly(tsFlashcards);
-end;
-
-procedure TForm4.btnFlashcardsMenu3Click(Sender: TObject);
-begin
-  ShowOnly(tsFlashcards);
-end;
 
 procedure TForm4.btnLoginClick(Sender: TObject);
 begin
@@ -408,18 +316,10 @@ begin
 
 end;
 
-procedure TForm4.btnNext1Click(Sender: TObject);
-begin
-  ShowOnly(tsSim2);
-end;
-
-procedure TForm4.btnNext2Click(Sender: TObject);
-begin
-  ShowOnly(tsSim3);
-end;
-
 procedure TForm4.btnMarkAnswerClick(Sender: TObject);
 begin
+  Flashcards_MarkAnswer;
+  Exit;
   if rgpQuestion.ItemIndex = -1 then
   begin
     Showmessage('Please select an answer.');
@@ -432,14 +332,14 @@ begin
     Showmessage('Wrong ✘');
 end;
 
+procedure TForm4.btnNextFlashcardClick(Sender: TObject);
+begin
+  Flashcards_NextQuestion;
+end;
+
 procedure TForm4.btnPrevious1Click(Sender: TObject);
 begin
   ShowOnly(tsSim1);
-end;
-
-procedure TForm4.btnPrevious2Click(Sender: TObject);
-begin
-  ShowOnly(tsSim2);
 end;
 
 procedure TForm4.btnRegisterClick(Sender: TObject);
@@ -479,7 +379,7 @@ begin
   end;
 
   Exists := false;
-  AssignFile(Users, 'C:\IT PAT 2025\Users.txt');
+  AssignFile(Users, 'E:\Roussouw IT PAT\PAT-2025\assets\Users.txt');
   reset(Users);
   Username := edtRUsername.text;
   Password := edtRPassword.text;
@@ -504,7 +404,7 @@ begin
 
     CloseFile(Users);
 
-    AssignFile(Users, 'C:\IT PAT 2025\Users.txt');
+    AssignFile(Users, 'E:\Roussouw IT PAT\PAT-2025\assets\Users.txt');
     Append(Users);
     WriteLn(Users, Username + '|' + Password + '|' + '0');
     CloseFile(Users);
@@ -525,9 +425,11 @@ begin
   ShowOnly(tsSim1);
 end;
 
-procedure TForm4.Button1Click(Sender: TObject);
+procedure TForm4.btnBackToMenuResClick(Sender: TObject);
 begin
-  pbxH1.Repaint;
+    ShowOnly(tsOptions);
+    
+
 end;
 
 procedure TForm4.cbxSH1Click(Sender: TObject);
@@ -561,8 +463,6 @@ begin
   tsRegister.Caption := 'Register';
   tsOptions.Caption := 'Options';
   tsSim1.Caption := 'Simulation 1';
-  tsSim2.Caption := 'Simulation 2';
-  tsSim3.Caption := 'Simulation 3';
   // tsLogin
   pnlLogin.Caption := '';
   pnlHeading1.Caption := 'Login';
@@ -631,74 +531,20 @@ begin
   btnNext1.Caption := 'Next';
 
   // Simulation 2
-  pnlSim2.Caption := '';
-  pnlCH.Caption := '';
-  pnlSim2Menu.Caption := '';
-  pnlCH.Brush.Color := clSkyBlue;
-  pnlSim2Menu.Brush.Color := clMenuHighlight;
 
-  btnNext2.Caption := 'Next';
-  btnPrevious1.Caption := 'Previous';
-
-  btnRevealCH.Caption := 'Reveal';
-
-  sedC.Font.size := 30;
-  sedH2.Font.size := 30;
-  sedCH.Font.size := 30;
-  sedC.MaxValue := 3;
-  sedH2.MaxValue := 3;
-  sedCH.MaxValue := 3;
-
-  lblH2.Caption := 'N₂-Molekules';
-  lblC.Caption := 'C-Molekules';
-  lblCH.Caption := 'CH₄-Molekules';
-  lblPlus2.Caption := '+';
-  lblArrow2.Caption := '→';
-  lblH2.Font.size := 14;
-  lblC.Font.size := 14;
-  lblCH.Font.size := 14;
-  lblPlus2.Font.size := 25;
-  lblArrow2.Font.size := 25;
-  // Simulation 3
-  pnlSim3.Caption := '';
-  pnlZnClH.Caption := '';
-  pnlSim3Menu.Caption := '';
-  pnlZnClH.Brush.Color := clSkyBlue;
-  pnlSim3Menu.Brush.Color := clMenuHighlight;
-
-  btnRevealZnClH.Caption := 'Reveal';
-  btnPrevious2.Caption := 'Previous';
-
-  sedZn.Font.size := 30;
-  sedHCl.Font.size := 30;
-  sedZnCl.Font.size := 30;
-  sedH3.Font.size := 30;
-  sedZn.MaxValue := 3;
-  sedHCl.MaxValue := 3;
-  sedZnCl.MaxValue := 3;
-  sedH3.MaxValue := 3;
-
-  lblZn.Caption := 'Zn-Molekules';
-  lblHCl.Caption := 'HCl-Molekules';
-  lblZnCl.Caption := 'ZnCl₂-Molekules';
-  lblH3.Caption := 'H₂-Molekules';
-  lblPlus3.Caption := '+';
-  lblPlus4.Caption := '+';
-  lblArrow3.Caption := '→';
-  lblZn.Font.size := 14;
-  lblHCl.Font.size := 14;
-  lblZnCl.Font.size := 14;
-  lblH3.Font.size := 14;
-  lblPlus3.Font.size := 25;
-  lblPlus4.Font.size := 25;
-  lblArrow3.Font.size := 25;
   // Flashcards
   rgpQuestion.Font.size := 14;
   btnNextFlashcard.Caption := 'Next';
   lblAnswer.Visible := false;
 
+  // Wire Next button and initialize flashcards module
+  btnNextFlashcard.OnClick := btnNextFlashcardClick;
+  Flashcards_Init(lblQuestion, rgpQuestion, btnMarkAnswer, btnNextFlashcard,
+                  lblAnswer, lblCorrectPercent, tsFlashcards, tsResultsScreen);
+  Flashcards_SetShowOnly(ShowOnly);
+
   qNum := 1;
-  Quest();
+
 
   rgpQuestion.Items.Clear;
   rgpQuestion.Items.Add('A. H₂ + O₂ → H₂O');
@@ -706,13 +552,7 @@ begin
   rgpQuestion.Items.Add('C. H₂ + 2O₂ → 2H₂O');
   rgpQuestion.Items.Add('D. 2H₂ + 2O₂ → H₂O');
 
-  Quest;
-  repeat
-  begin
-    sedH1.Value := Random(4);
-    sedNH.Value := Random(4);
-  end;
-  until sedH1.Value <> 0;
+
 end;
 
 end.

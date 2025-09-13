@@ -1,0 +1,902 @@
+{
+  "question_1": {
+    "equation": "___C₁H₄ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁H₄ + 4O₂ → 2CO₂ + 4H₂O",
+    "options": {
+      "option_1": "3C₁H₄ + 4O₂ → 2CO₂ + 4H₂O",
+      "option_2": "2C₁H₄ + 4O₂ → 2CO₂ + 5H₂O",
+      "option_3": "2C₁H₄ + 3O₂ → 2CO₂ + 4H₂O"
+    }
+  },
+  "question_2": {
+    "equation": "___C₂H₆ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O",
+    "options": {
+      "option_1": "3C₂H₆ + 7O₂ → 4CO₂ + 6H₂O",
+      "option_2": "2C₂H₆ + 7O₂ → 4CO₂ + 7H₂O",
+      "option_3": "2C₂H₆ + 6O₂ → 4CO₂ + 6H₂O"
+    }
+  },
+  "question_3": {
+    "equation": "___C₃H₈ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₃H₈ + 10O₂ → 6CO₂ + 8H₂O",
+    "options": {
+      "option_1": "3C₃H₈ + 10O₂ → 6CO₂ + 8H₂O",
+      "option_2": "2C₃H₈ + 10O₂ → 6CO₂ + 9H₂O",
+      "option_3": "2C₃H₈ + 9O₂ → 6CO₂ + 8H₂O"
+    }
+  },
+  "question_4": {
+    "equation": "___C₄H₁₀ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O",
+    "options": {
+      "option_1": "3C₄H₁₀ + 13O₂ → 8CO₂ + 10H₂O",
+      "option_2": "2C₄H₁₀ + 13O₂ → 8CO₂ + 11H₂O",
+      "option_3": "2C₄H₁₀ + 12O₂ → 8CO₂ + 10H₂O"
+    }
+  },
+  "question_5": {
+    "equation": "___C₅H₁₂ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₅H₁₂ + 16O₂ → 10CO₂ + 12H₂O",
+    "options": {
+      "option_1": "3C₅H₁₂ + 16O₂ → 10CO₂ + 12H₂O",
+      "option_2": "2C₅H₁₂ + 16O₂ → 10CO₂ + 13H₂O",
+      "option_3": "2C₅H₁₂ + 15O₂ → 10CO₂ + 12H₂O"
+    }
+  },
+  "question_6": {
+    "equation": "___C₆H₁₄ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₆H₁₄ + 19O₂ → 12CO₂ + 14H₂O",
+    "options": {
+      "option_1": "3C₆H₁₄ + 19O₂ → 12CO₂ + 14H₂O",
+      "option_2": "2C₆H₁₄ + 19O₂ → 12CO₂ + 15H₂O",
+      "option_3": "2C₆H₁₄ + 18O₂ → 12CO₂ + 14H₂O"
+    }
+  },
+  "question_7": {
+    "equation": "___C₇H₁₆ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₇H₁₆ + 22O₂ → 14CO₂ + 16H₂O",
+    "options": {
+      "option_1": "3C₇H₁₆ + 22O₂ → 14CO₂ + 16H₂O",
+      "option_2": "2C₇H₁₆ + 22O₂ → 14CO₂ + 17H₂O",
+      "option_3": "2C₇H₁₆ + 21O₂ → 14CO₂ + 16H₂O"
+    }
+  },
+  "question_8": {
+    "equation": "___C₈H₁₈ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O",
+    "options": {
+      "option_1": "3C₈H₁₈ + 25O₂ → 16CO₂ + 18H₂O",
+      "option_2": "2C₈H₁₈ + 25O₂ → 16CO₂ + 19H₂O",
+      "option_3": "2C₈H₁₈ + 24O₂ → 16CO₂ + 18H₂O"
+    }
+  },
+  "question_9": {
+    "equation": "___C₉H₂₀ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₉H₂₀ + 28O₂ → 18CO₂ + 20H₂O",
+    "options": {
+      "option_1": "3C₉H₂₀ + 28O₂ → 18CO₂ + 20H₂O",
+      "option_2": "2C₉H₂₀ + 28O₂ → 18CO₂ + 21H₂O",
+      "option_3": "2C₉H₂₀ + 27O₂ → 18CO₂ + 20H₂O"
+    }
+  },
+  "question_10": {
+    "equation": "___C₁₀H₂₂ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₀H₂₂ + 31O₂ → 20CO₂ + 22H₂O",
+    "options": {
+      "option_1": "3C₁₀H₂₂ + 31O₂ → 20CO₂ + 22H₂O",
+      "option_2": "2C₁₀H₂₂ + 31O₂ → 20CO₂ + 23H₂O",
+      "option_3": "2C₁₀H₂₂ + 30O₂ → 20CO₂ + 22H₂O"
+    }
+  },
+  "question_11": {
+    "equation": "___C₁₁H₂₄ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₁H₂₄ + 34O₂ → 22CO₂ + 24H₂O",
+    "options": {
+      "option_1": "3C₁₁H₂₄ + 34O₂ → 22CO₂ + 24H₂O",
+      "option_2": "2C₁₁H₂₄ + 34O₂ → 22CO₂ + 25H₂O",
+      "option_3": "2C₁₁H₂₄ + 33O₂ → 22CO₂ + 24H₂O"
+    }
+  },
+  "question_12": {
+    "equation": "___C₁₂H₂₆ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₂H₂₆ + 37O₂ → 24CO₂ + 26H₂O",
+    "options": {
+      "option_1": "3C₁₂H₂₆ + 37O₂ → 24CO₂ + 26H₂O",
+      "option_2": "2C₁₂H₂₆ + 37O₂ → 24CO₂ + 27H₂O",
+      "option_3": "2C₁₂H₂₆ + 36O₂ → 24CO₂ + 26H₂O"
+    }
+  },
+  "question_13": {
+    "equation": "___C₁₃H₂₈ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₃H₂₈ + 40O₂ → 26CO₂ + 28H₂O",
+    "options": {
+      "option_1": "3C₁₃H₂₈ + 40O₂ → 26CO₂ + 28H₂O",
+      "option_2": "2C₁₃H₂₈ + 40O₂ → 26CO₂ + 29H₂O",
+      "option_3": "2C₁₃H₂₈ + 39O₂ → 26CO₂ + 28H₂O"
+    }
+  },
+  "question_14": {
+    "equation": "___C₁₄H₃₀ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₄H₃₀ + 43O₂ → 28CO₂ + 30H₂O",
+    "options": {
+      "option_1": "3C₁₄H₃₀ + 43O₂ → 28CO₂ + 30H₂O",
+      "option_2": "2C₁₄H₃₀ + 43O₂ → 28CO₂ + 31H₂O",
+      "option_3": "2C₁₄H₃₀ + 42O₂ → 28CO₂ + 30H₂O"
+    }
+  },
+  "question_15": {
+    "equation": "___C₁₅H₃₂ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₅H₃₂ + 46O₂ → 30CO₂ + 32H₂O",
+    "options": {
+      "option_1": "3C₁₅H₃₂ + 46O₂ → 30CO₂ + 32H₂O",
+      "option_2": "2C₁₅H₃₂ + 46O₂ → 30CO₂ + 33H₂O",
+      "option_3": "2C₁₅H₃₂ + 45O₂ → 30CO₂ + 32H₂O"
+    }
+  },
+  "question_16": {
+    "equation": "___C₁₆H₃₄ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₆H₃₄ + 49O₂ → 32CO₂ + 34H₂O",
+    "options": {
+      "option_1": "3C₁₆H₃₄ + 49O₂ → 32CO₂ + 34H₂O",
+      "option_2": "2C₁₆H₃₄ + 49O₂ → 32CO₂ + 35H₂O",
+      "option_3": "2C₁₆H₃₄ + 48O₂ → 32CO₂ + 34H₂O"
+    }
+  },
+  "question_17": {
+    "equation": "___C₁₇H₃₆ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₇H₃₆ + 52O₂ → 34CO₂ + 36H₂O",
+    "options": {
+      "option_1": "3C₁₇H₃₆ + 52O₂ → 34CO₂ + 36H₂O",
+      "option_2": "2C₁₇H₃₆ + 52O₂ → 34CO₂ + 37H₂O",
+      "option_3": "2C₁₇H₃₆ + 51O₂ → 34CO₂ + 36H₂O"
+    }
+  },
+  "question_18": {
+    "equation": "___C₁₈H₃₈ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₈H₃₈ + 55O₂ → 36CO₂ + 38H₂O",
+    "options": {
+      "option_1": "3C₁₈H₃₈ + 55O₂ → 36CO₂ + 38H₂O",
+      "option_2": "2C₁₈H₃₈ + 55O₂ → 36CO₂ + 39H₂O",
+      "option_3": "2C₁₈H₃₈ + 54O₂ → 36CO₂ + 38H₂O"
+    }
+  },
+  "question_19": {
+    "equation": "___C₁₉H₄₀ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₉H₄₀ + 58O₂ → 38CO₂ + 40H₂O",
+    "options": {
+      "option_1": "3C₁₉H₄₀ + 58O₂ → 38CO₂ + 40H₂O",
+      "option_2": "2C₁₉H₄₀ + 58O₂ → 38CO₂ + 41H₂O",
+      "option_3": "2C₁₉H₄₀ + 57O₂ → 38CO₂ + 40H₂O"
+    }
+  },
+  "question_20": {
+    "equation": "___C₂₀H₄₂ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₂₀H₄₂ + 61O₂ → 40CO₂ + 42H₂O",
+    "options": {
+      "option_1": "3C₂₀H₄₂ + 61O₂ → 40CO₂ + 42H₂O",
+      "option_2": "2C₂₀H₄₂ + 61O₂ → 40CO₂ + 43H₂O",
+      "option_3": "2C₂₀H₄₂ + 60O₂ → 40CO₂ + 42H₂O"
+    }
+  },
+  "question_21": {
+    "equation": "___C₂H₄ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₂H₄ + 6O₂ → 4CO₂ + 2H₂O",
+    "options": {
+      "option_1": "3C₂H₄ + 6O₂ → 4CO₂ + 2H₂O",
+      "option_2": "2C₂H₄ + 6O₂ → 4CO₂ + 3H₂O",
+      "option_3": "2C₂H₄ + 5O₂ → 4CO₂ + 2H₂O"
+    }
+  },
+  "question_22": {
+    "equation": "___C₃H₆ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₃H₆ + 9O₂ → 6CO₂ + 3H₂O",
+    "options": {
+      "option_1": "3C₃H₆ + 9O₂ → 6CO₂ + 3H₂O",
+      "option_2": "2C₃H₆ + 9O₂ → 6CO₂ + 4H₂O",
+      "option_3": "2C₃H₆ + 8O₂ → 6CO₂ + 3H₂O"
+    }
+  },
+  "question_23": {
+    "equation": "___C₄H₈ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₄H₈ + 12O₂ → 8CO₂ + 4H₂O",
+    "options": {
+      "option_1": "3C₄H₈ + 12O₂ → 8CO₂ + 4H₂O",
+      "option_2": "2C₄H₈ + 12O₂ → 8CO₂ + 5H₂O",
+      "option_3": "2C₄H₈ + 11O₂ → 8CO₂ + 4H₂O"
+    }
+  },
+  "question_24": {
+    "equation": "___C₅H₁₀ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₅H₁₀ + 15O₂ → 10CO₂ + 5H₂O",
+    "options": {
+      "option_1": "3C₅H₁₀ + 15O₂ → 10CO₂ + 5H₂O",
+      "option_2": "2C₅H₁₀ + 15O₂ → 10CO₂ + 6H₂O",
+      "option_3": "2C₅H₁₀ + 14O₂ → 10CO₂ + 5H₂O"
+    }
+  },
+  "question_25": {
+    "equation": "___C₆H₁₂ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₆H₁₂ + 18O₂ → 12CO₂ + 6H₂O",
+    "options": {
+      "option_1": "3C₆H₁₂ + 18O₂ → 12CO₂ + 6H₂O",
+      "option_2": "2C₆H₁₂ + 18O₂ → 12CO₂ + 7H₂O",
+      "option_3": "2C₆H₁₂ + 17O₂ → 12CO₂ + 6H₂O"
+    }
+  },
+  "question_26": {
+    "equation": "___C₇H₁₄ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₇H₁₄ + 21O₂ → 14CO₂ + 7H₂O",
+    "options": {
+      "option_1": "3C₇H₁₄ + 21O₂ → 14CO₂ + 7H₂O",
+      "option_2": "2C₇H₁₄ + 21O₂ → 14CO₂ + 8H₂O",
+      "option_3": "2C₇H₁₄ + 20O₂ → 14CO₂ + 7H₂O"
+    }
+  },
+  "question_27": {
+    "equation": "___C₈H₁₆ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₈H₁₆ + 24O₂ → 16CO₂ + 8H₂O",
+    "options": {
+      "option_1": "3C₈H₁₆ + 24O₂ → 16CO₂ + 8H₂O",
+      "option_2": "2C₈H₁₆ + 24O₂ → 16CO₂ + 9H₂O",
+      "option_3": "2C₈H₁₆ + 23O₂ → 16CO₂ + 8H₂O"
+    }
+  },
+  "question_28": {
+    "equation": "___C₉H₁₈ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₉H₁₈ + 27O₂ → 18CO₂ + 9H₂O",
+    "options": {
+      "option_1": "3C₉H₁₈ + 27O₂ → 18CO₂ + 9H₂O",
+      "option_2": "2C₉H₁₈ + 27O₂ → 18CO₂ + 10H₂O",
+      "option_3": "2C₉H₁₈ + 26O₂ → 18CO₂ + 9H₂O"
+    }
+  },
+  "question_29": {
+    "equation": "___C₁₀H₂₀ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₀H₂₀ + 30O₂ → 20CO₂ + 10H₂O",
+    "options": {
+      "option_1": "3C₁₀H₂₀ + 30O₂ → 20CO₂ + 10H₂O",
+      "option_2": "2C₁₀H₂₀ + 30O₂ → 20CO₂ + 11H₂O",
+      "option_3": "2C₁₀H₂₀ + 29O₂ → 20CO₂ + 10H₂O"
+    }
+  },
+  "question_30": {
+    "equation": "___C₁₁H₂₂ + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₁H₂₂ + 33O₂ → 22CO₂ + 11H₂O",
+    "options": {
+      "option_1": "3C₁₁H₂₂ + 33O₂ → 22CO₂ + 11H₂O",
+      "option_2": "2C₁₁H₂₂ + 33O₂ → 22CO₂ + 12H₂O",
+      "option_3": "2C₁₁H₂₂ + 32O₂ → 22CO₂ + 11H₂O"
+    }
+  },
+  "question_31": {
+    "equation": "___C₁H₄O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁H₄O + 3O₂ → 2CO₂ + 4H₂O",
+    "options": {
+      "option_1": "3C₁H₄O + 3O₂ → 2CO₂ + 4H₂O",
+      "option_2": "2C₁H₄O + 3O₂ → 2CO₂ + 5H₂O",
+      "option_3": "2C₁H₄O + 2O₂ → 2CO₂ + 4H₂O"
+    }
+  },
+  "question_32": {
+    "equation": "___C₂H₆O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₂H₆O + 6O₂ → 4CO₂ + 6H₂O",
+    "options": {
+      "option_1": "3C₂H₆O + 6O₂ → 4CO₂ + 6H₂O",
+      "option_2": "2C₂H₆O + 6O₂ → 4CO₂ + 7H₂O",
+      "option_3": "2C₂H₆O + 5O₂ → 4CO₂ + 6H₂O"
+    }
+  },
+  "question_33": {
+    "equation": "___C₃H₈O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₃H₈O + 9O₂ → 6CO₂ + 8H₂O",
+    "options": {
+      "option_1": "3C₃H₈O + 9O₂ → 6CO₂ + 8H₂O",
+      "option_2": "2C₃H₈O + 9O₂ → 6CO₂ + 9H₂O",
+      "option_3": "2C₃H₈O + 8O₂ → 6CO₂ + 8H₂O"
+    }
+  },
+  "question_34": {
+    "equation": "___C₄H₁₀O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₄H₁₀O + 12O₂ → 8CO₂ + 10H₂O",
+    "options": {
+      "option_1": "3C₄H₁₀O + 12O₂ → 8CO₂ + 10H₂O",
+      "option_2": "2C₄H₁₀O + 12O₂ → 8CO₂ + 11H₂O",
+      "option_3": "2C₄H₁₀O + 11O₂ → 8CO₂ + 10H₂O"
+    }
+  },
+  "question_35": {
+    "equation": "___C₅H₁₂O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₅H₁₂O + 15O₂ → 10CO₂ + 12H₂O",
+    "options": {
+      "option_1": "3C₅H₁₂O + 15O₂ → 10CO₂ + 12H₂O",
+      "option_2": "2C₅H₁₂O + 15O₂ → 10CO₂ + 13H₂O",
+      "option_3": "2C₅H₁₂O + 14O₂ → 10CO₂ + 12H₂O"
+    }
+  },
+  "question_36": {
+    "equation": "___C₆H₁₄O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₆H₁₄O + 18O₂ → 12CO₂ + 14H₂O",
+    "options": {
+      "option_1": "3C₆H₁₄O + 18O₂ → 12CO₂ + 14H₂O",
+      "option_2": "2C₆H₁₄O + 18O₂ → 12CO₂ + 15H₂O",
+      "option_3": "2C₆H₁₄O + 17O₂ → 12CO₂ + 14H₂O"
+    }
+  },
+  "question_37": {
+    "equation": "___C₇H₁₆O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₇H₁₆O + 21O₂ → 14CO₂ + 16H₂O",
+    "options": {
+      "option_1": "3C₇H₁₆O + 21O₂ → 14CO₂ + 16H₂O",
+      "option_2": "2C₇H₁₆O + 21O₂ → 14CO₂ + 17H₂O",
+      "option_3": "2C₇H₁₆O + 20O₂ → 14CO₂ + 16H₂O"
+    }
+  },
+  "question_38": {
+    "equation": "___C₈H₁₈O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₈H₁₈O + 24O₂ → 16CO₂ + 18H₂O",
+    "options": {
+      "option_1": "3C₈H₁₈O + 24O₂ → 16CO₂ + 18H₂O",
+      "option_2": "2C₈H₁₈O + 24O₂ → 16CO₂ + 19H₂O",
+      "option_3": "2C₈H₁₈O + 23O₂ → 16CO₂ + 18H₂O"
+    }
+  },
+  "question_39": {
+    "equation": "___C₉H₂₀O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₉H₂₀O + 27O₂ → 18CO₂ + 20H₂O",
+    "options": {
+      "option_1": "3C₉H₂₀O + 27O₂ → 18CO₂ + 20H₂O",
+      "option_2": "2C₉H₂₀O + 27O₂ → 18CO₂ + 21H₂O",
+      "option_3": "2C₉H₂₀O + 26O₂ → 18CO₂ + 20H₂O"
+    }
+  },
+  "question_40": {
+    "equation": "___C₁₀H₂₂O + ___O₂ → ___CO₂ + ___H₂O",
+    "answer": "2C₁₀H₂₂O + 30O₂ → 20CO₂ + 22H₂O",
+    "options": {
+      "option_1": "3C₁₀H₂₂O + 30O₂ → 20CO₂ + 22H₂O",
+      "option_2": "2C₁₀H₂₂O + 30O₂ → 20CO₂ + 23H₂O",
+      "option_3": "2C₁₀H₂₂O + 29O₂ → 20CO₂ + 22H₂O"
+    }
+  },
+  "question_41": {
+    "equation": "___KClO₃ → ___KCl + ___O₂",
+    "answer": "2KClO₃ → 2KCl + 3O₂",
+    "options": {
+      "option_1": "3KClO₃ → 2KCl + 3O₂",
+      "option_2": "2KClO₃ → 2KCl + 5O₂",
+      "option_3": "2KClO₃ → 3KCl + 3O₂"
+    }
+  },
+  "question_42": {
+    "equation": "___NaClO₃ → ___NaCl + ___O₂",
+    "answer": "2NaClO₃ → 2NaCl + 3O₂",
+    "options": {
+      "option_1": "3NaClO₃ → 2NaCl + 3O₂",
+      "option_2": "2NaClO₃ → 2NaCl + 5O₂",
+      "option_3": "2NaClO₃ → 3NaCl + 3O₂"
+    }
+  },
+  "question_43": {
+    "equation": "___LiClO₃ → ___LiCl + ___O₂",
+    "answer": "2LiClO₃ → 2LiCl + 3O₂",
+    "options": {
+      "option_1": "3LiClO₃ → 2LiCl + 3O₂",
+      "option_2": "2LiClO₃ → 2LiCl + 5O₂",
+      "option_3": "2LiClO₃ → 3LiCl + 3O₂"
+    }
+  },
+  "question_44": {
+    "equation": "___CaCO₃ → ___CaO + ___CO₂",
+    "answer": "1CaCO₃ → 1CaO + 1CO₂",
+    "options": {
+      "option_1": "2CaCO₃ → 1CaO + 1CO₂",
+      "option_2": "1CaCO₃ → 1CaO + 2CO₂",
+      "option_3": "1CaCO₃ → 2CaO + 1CO₂"
+    }
+  },
+  "question_45": {
+    "equation": "___MgCO₃ → ___MgO + ___CO₂",
+    "answer": "1MgCO₃ → 1MgO + 1CO₂",
+    "options": {
+      "option_1": "2MgCO₃ → 1MgO + 1CO₂",
+      "option_2": "1MgCO₃ → 1MgO + 2CO₂",
+      "option_3": "1MgCO₃ → 2MgO + 1CO₂"
+    }
+  },
+  "question_46": {
+    "equation": "___ZnCO₃ → ___ZnO + ___CO₂",
+    "answer": "1ZnCO₃ → 1ZnO + 1CO₂",
+    "options": {
+      "option_1": "2ZnCO₃ → 1ZnO + 1CO₂",
+      "option_2": "1ZnCO₃ → 1ZnO + 2CO₂",
+      "option_3": "1ZnCO₃ → 2ZnO + 1CO₂"
+    }
+  },
+  "question_47": {
+    "equation": "___CuCO₃ → ___CuO + ___CO₂",
+    "answer": "1CuCO₃ → 1CuO + 1CO₂",
+    "options": {
+      "option_1": "2CuCO₃ → 1CuO + 1CO₂",
+      "option_2": "1CuCO₃ → 1CuO + 2CO₂",
+      "option_3": "1CuCO₃ → 2CuO + 1CO₂"
+    }
+  },
+  "question_48": {
+    "equation": "___FeCO₃ → ___FeO + ___CO₂",
+    "answer": "1FeCO₃ → 1FeO + 1CO₂",
+    "options": {
+      "option_1": "2FeCO₃ → 1FeO + 1CO₂",
+      "option_2": "1FeCO₃ → 1FeO + 2CO₂",
+      "option_3": "1FeCO₃ → 2FeO + 1CO₂"
+    }
+  },
+  "question_49": {
+    "equation": "___MnCO₃ → ___MnO + ___CO₂",
+    "answer": "1MnCO₃ → 1MnO + 1CO₂",
+    "options": {
+      "option_1": "2MnCO₃ → 1MnO + 1CO₂",
+      "option_2": "1MnCO₃ → 1MnO + 2CO₂",
+      "option_3": "1MnCO₃ → 2MnO + 1CO₂"
+    }
+  },
+  "question_50": {
+    "equation": "___CoCO₃ → ___CoO + ___CO₂",
+    "answer": "1CoCO₃ → 1CoO + 1CO₂",
+    "options": {
+      "option_1": "2CoCO₃ → 1CoO + 1CO₂",
+      "option_2": "1CoCO₃ → 1CoO + 2CO₂",
+      "option_3": "1CoCO₃ → 2CoO + 1CO₂"
+    }
+  },
+  "question_51": {
+    "equation": "___NiCO₃ → ___NiO + ___CO₂",
+    "answer": "1NiCO₃ → 1NiO + 1CO₂",
+    "options": {
+      "option_1": "2NiCO₃ → 1NiO + 1CO₂",
+      "option_2": "1NiCO₃ → 1NiO + 2CO₂",
+      "option_3": "1NiCO₃ → 2NiO + 1CO₂"
+    }
+  },
+  "question_52": {
+    "equation": "___PbCO₃ → ___PbO + ___CO₂",
+    "answer": "1PbCO₃ → 1PbO + 1CO₂",
+    "options": {
+      "option_1": "2PbCO₃ → 1PbO + 1CO₂",
+      "option_2": "1PbCO₃ → 1PbO + 2CO₂",
+      "option_3": "1PbCO₃ → 2PbO + 1CO₂"
+    }
+  },
+  "question_53": {
+    "equation": "___BaCO₃ → ___BaO + ___CO₂",
+    "answer": "1BaCO₃ → 1BaO + 1CO₂",
+    "options": {
+      "option_1": "2BaCO₃ → 1BaO + 1CO₂",
+      "option_2": "1BaCO₃ → 1BaO + 2CO₂",
+      "option_3": "1BaCO₃ → 2BaO + 1CO₂"
+    }
+  },
+  "question_54": {
+    "equation": "___Zn + ___HCl → ___ZnCl₂ + ___H₂",
+    "answer": "1Zn + 2HCl → 1ZnCl₂ + 1H₂",
+    "options": {
+      "option_1": "2Zn + 2HCl → 1ZnCl₂ + 1H₂",
+      "option_2": "1Zn + 2HCl → 1ZnCl₂ + 2H₂",
+      "option_3": "1Zn + 1HCl → 1ZnCl₂ + 1H₂"
+    }
+  },
+  "question_55": {
+    "equation": "___Mg + ___HCl → ___MgCl₂ + ___H₂",
+    "answer": "1Mg + 2HCl → 1MgCl₂ + 1H₂",
+    "options": {
+      "option_1": "2Mg + 2HCl → 1MgCl₂ + 1H₂",
+      "option_2": "1Mg + 2HCl → 1MgCl₂ + 2H₂",
+      "option_3": "1Mg + 1HCl → 1MgCl₂ + 1H₂"
+    }
+  },
+  "question_56": {
+    "equation": "___Fe + ___HCl → ___FeCl₂ + ___H₂",
+    "answer": "1Fe + 2HCl → 1FeCl₂ + 1H₂",
+    "options": {
+      "option_1": "2Fe + 2HCl → 1FeCl₂ + 1H₂",
+      "option_2": "1Fe + 2HCl → 1FeCl₂ + 2H₂",
+      "option_3": "1Fe + 1HCl → 1FeCl₂ + 1H₂"
+    }
+  },
+  "question_57": {
+    "equation": "___Ca + ___HCl → ___CaCl₂ + ___H₂",
+    "answer": "1Ca + 2HCl → 1CaCl₂ + 1H₂",
+    "options": {
+      "option_1": "2Ca + 2HCl → 1CaCl₂ + 1H₂",
+      "option_2": "1Ca + 2HCl → 1CaCl₂ + 2H₂",
+      "option_3": "1Ca + 1HCl → 1CaCl₂ + 1H₂"
+    }
+  },
+  "question_58": {
+    "equation": "___Ni + ___HCl → ___NiCl₂ + ___H₂",
+    "answer": "1Ni + 2HCl → 1NiCl₂ + 1H₂",
+    "options": {
+      "option_1": "2Ni + 2HCl → 1NiCl₂ + 1H₂",
+      "option_2": "1Ni + 2HCl → 1NiCl₂ + 2H₂",
+      "option_3": "1Ni + 1HCl → 1NiCl₂ + 1H₂"
+    }
+  },
+  "question_59": {
+    "equation": "___Al + ___HCl → ___AlCl₃ + ___H₂",
+    "answer": "2Al + 6HCl → 2AlCl₃ + 3H₂",
+    "options": {
+      "option_1": "3Al + 6HCl → 2AlCl₃ + 3H₂",
+      "option_2": "2Al + 6HCl → 2AlCl₃ + 4H₂",
+      "option_3": "2Al + 5HCl → 2AlCl₃ + 3H₂"
+    }
+  },
+  "question_60": {
+    "equation": "___Na + ___HCl → ___NaCl + ___H₂",
+    "answer": "2Na + 2HCl → 2NaCl + 1H₂",
+    "options": {
+      "option_1": "3Na + 2HCl → 2NaCl + 1H₂",
+      "option_2": "2Na + 2HCl → 2NaCl + 2H₂",
+      "option_3": "2Na + 1HCl → 2NaCl + 1H₂"
+    }
+  },
+  "question_61": {
+    "equation": "___K + ___HCl → ___KCl + ___H₂",
+    "answer": "2K + 2HCl → 2KCl + 1H₂",
+    "options": {
+      "option_1": "3K + 2HCl → 2KCl + 1H₂",
+      "option_2": "2K + 2HCl → 2KCl + 2H₂",
+      "option_3": "2K + 1HCl → 2KCl + 1H₂"
+    }
+  },
+  "question_62": {
+    "equation": "___HCl + ___NaOH → ___NaCl + ___H₂O",
+    "answer": "1HCl + 1NaOH → 1NaCl + 1H₂O",
+    "options": {
+      "option_1": "2HCl + 1NaOH → 1NaCl + 1H₂O",
+      "option_2": "1HCl + 1NaOH → 1NaCl + 2H₂O",
+      "option_3": "1HCl + 2NaOH → 1NaCl + 1H₂O"
+    }
+  },
+  "question_63": {
+    "equation": "___HCl + ___KOH → ___KCl + ___H₂O",
+    "answer": "1HCl + 1KOH → 1KCl + 1H₂O",
+    "options": {
+      "option_1": "2HCl + 1KOH → 1KCl + 1H₂O",
+      "option_2": "1HCl + 1KOH → 1KCl + 2H₂O",
+      "option_3": "1HCl + 2KOH → 1KCl + 1H₂O"
+    }
+  },
+  "question_64": {
+    "equation": "___HNO₃ + ___NaOH → ___NaNO₃ + ___H₂O",
+    "answer": "1HNO₃ + 1NaOH → 1NaNO₃ + 1H₂O",
+    "options": {
+      "option_1": "2HNO₃ + 1NaOH → 1NaNO₃ + 1H₂O",
+      "option_2": "1HNO₃ + 1NaOH → 1NaNO₃ + 2H₂O",
+      "option_3": "1HNO₃ + 2NaOH → 1NaNO₃ + 1H₂O"
+    }
+  },
+  "question_65": {
+    "equation": "___HNO₃ + ___KOH → ___KNO₃ + ___H₂O",
+    "answer": "1HNO₃ + 1KOH → 1KNO₃ + 1H₂O",
+    "options": {
+      "option_1": "2HNO₃ + 1KOH → 1KNO₃ + 1H₂O",
+      "option_2": "1HNO₃ + 1KOH → 1KNO₃ + 2H₂O",
+      "option_3": "1HNO₃ + 2KOH → 1KNO₃ + 1H₂O"
+    }
+  },
+  "question_66": {
+    "equation": "___H₂SO₄ + ___NaOH → ___Na₂SO₄ + ___H₂O",
+    "answer": "1H₂SO₄ + 2NaOH → 1Na₂SO₄ + 2H₂O",
+    "options": {
+      "option_1": "2H₂SO₄ + 2NaOH → 1Na₂SO₄ + 2H₂O",
+      "option_2": "1H₂SO₄ + 2NaOH → 1Na₂SO₄ + 3H₂O",
+      "option_3": "1H₂SO₄ + 1NaOH → 1Na₂SO₄ + 2H₂O"
+    }
+  },
+  "question_67": {
+    "equation": "___H₂SO₄ + ___KOH → ___K₂SO₄ + ___H₂O",
+    "answer": "1H₂SO₄ + 2KOH → 1K₂SO₄ + 2H₂O",
+    "options": {
+      "option_1": "2H₂SO₄ + 2KOH → 1K₂SO₄ + 2H₂O",
+      "option_2": "1H₂SO₄ + 2KOH → 1K₂SO₄ + 3H₂O",
+      "option_3": "1H₂SO₄ + 1KOH → 1K₂SO₄ + 2H₂O"
+    }
+  },
+  "question_68": {
+    "equation": "___H₃PO₄ + ___NaOH → ___Na₃PO₄ + ___H₂O",
+    "answer": "1H₃PO₄ + 3NaOH → 1Na₃PO₄ + 3H₂O",
+    "options": {
+      "option_1": "2H₃PO₄ + 3NaOH → 1Na₃PO₄ + 3H₂O",
+      "option_2": "1H₃PO₄ + 3NaOH → 1Na₃PO₄ + 4H₂O",
+      "option_3": "1H₃PO₄ + 2NaOH → 1Na₃PO₄ + 3H₂O"
+    }
+  },
+  "question_69": {
+    "equation": "___H₃PO₄ + ___KOH → ___K₃PO₄ + ___H₂O",
+    "answer": "1H₃PO₄ + 3KOH → 1K₃PO₄ + 3H₂O",
+    "options": {
+      "option_1": "2H₃PO₄ + 3KOH → 1K₃PO₄ + 3H₂O",
+      "option_2": "1H₃PO₄ + 3KOH → 1K₃PO₄ + 4H₂O",
+      "option_3": "1H₃PO₄ + 2KOH → 1K₃PO₄ + 3H₂O"
+    }
+  },
+  "question_70": {
+    "equation": "___HCl + ___Ca(OH)₂ → ___CaCl₂ + ___H₂O",
+    "answer": "2HCl + 1Ca(OH)₂ → 1CaCl₂ + 2H₂O",
+    "options": {
+      "option_1": "3HCl + 1Ca(OH)₂ → 1CaCl₂ + 2H₂O",
+      "option_2": "2HCl + 1Ca(OH)₂ → 1CaCl₂ + 3H₂O",
+      "option_3": "2HCl + 2Ca(OH)₂ → 1CaCl₂ + 2H₂O"
+    }
+  },
+  "question_71": {
+    "equation": "___HNO₃ + ___Ca(OH)₂ → ___Ca(NO₃)₂ + ___H₂O",
+    "answer": "2HNO₃ + 1Ca(OH)₂ → 1Ca(NO₃)₂ + 2H₂O",
+    "options": {
+      "option_1": "3HNO₃ + 1Ca(OH)₂ → 1Ca(NO₃)₂ + 2H₂O",
+      "option_2": "2HNO₃ + 1Ca(OH)₂ → 1Ca(NO₃)₂ + 3H₂O",
+      "option_3": "2HNO₃ + 2Ca(OH)₂ → 1Ca(NO₃)₂ + 2H₂O"
+    }
+  },
+  "question_72": {
+    "equation": "___AgNO₃ + ___NaCl → ___AgCl + ___NaNO₃",
+    "answer": "1AgNO₃ + 1NaCl → 1AgCl + 1NaNO₃",
+    "options": {
+      "option_1": "2AgNO₃ + 1NaCl → 1AgCl + 1NaNO₃",
+      "option_2": "1AgNO₃ + 1NaCl → 1AgCl + 2NaNO₃",
+      "option_3": "1AgNO₃ + 2NaCl → 1AgCl + 1NaNO₃"
+    }
+  },
+  "question_73": {
+    "equation": "___BaCl₂ + ___Na₂SO₄ → ___BaSO₄ + ___NaCl",
+    "answer": "1BaCl₂ + 1Na₂SO₄ → 1BaSO₄ + 2NaCl",
+    "options": {
+      "option_1": "2BaCl₂ + 1Na₂SO₄ → 1BaSO₄ + 2NaCl",
+      "option_2": "1BaCl₂ + 1Na₂SO₄ → 1BaSO₄ + 3NaCl",
+      "option_3": "1BaCl₂ + 2Na₂SO₄ → 1BaSO₄ + 2NaCl"
+    }
+  },
+  "question_74": {
+    "equation": "___Pb(NO₃)₂ + ___KI → ___PbI₂ + ___KNO₃",
+    "answer": "1Pb(NO₃)₂ + 2KI → 1PbI₂ + 2KNO₃",
+    "options": {
+      "option_1": "2Pb(NO₃)₂ + 2KI → 1PbI₂ + 2KNO₃",
+      "option_2": "1Pb(NO₃)₂ + 2KI → 1PbI₂ + 3KNO₃",
+      "option_3": "1Pb(NO₃)₂ + 1KI → 1PbI₂ + 2KNO₃"
+    }
+  },
+  "question_75": {
+    "equation": "___CaCl₂ + ___Na₂CO₃ → ___CaCO₃ + ___NaCl",
+    "answer": "1CaCl₂ + 1Na₂CO₃ → 1CaCO₃ + 2NaCl",
+    "options": {
+      "option_1": "2CaCl₂ + 1Na₂CO₃ → 1CaCO₃ + 2NaCl",
+      "option_2": "1CaCl₂ + 1Na₂CO₃ → 1CaCO₃ + 3NaCl",
+      "option_3": "1CaCl₂ + 2Na₂CO₃ → 1CaCO₃ + 2NaCl"
+    }
+  },
+  "question_76": {
+    "equation": "___FeCl₃ + ___NaOH → ___Fe(OH)₃ + ___NaCl",
+    "answer": "1FeCl₃ + 3NaOH → 1Fe(OH)₃ + 3NaCl",
+    "options": {
+      "option_1": "2FeCl₃ + 3NaOH → 1Fe(OH)₃ + 3NaCl",
+      "option_2": "1FeCl₃ + 3NaOH → 1Fe(OH)₃ + 4NaCl",
+      "option_3": "1FeCl₃ + 2NaOH → 1Fe(OH)₃ + 3NaCl"
+    }
+  },
+  "question_77": {
+    "equation": "___CuSO₄ + ___NaOH → ___Cu(OH)₂ + ___Na₂SO₄",
+    "answer": "1CuSO₄ + 2NaOH → 1Cu(OH)₂ + 1Na₂SO₄",
+    "options": {
+      "option_1": "2CuSO₄ + 2NaOH → 1Cu(OH)₂ + 1Na₂SO₄",
+      "option_2": "1CuSO₄ + 2NaOH → 1Cu(OH)₂ + 2Na₂SO₄",
+      "option_3": "1CuSO₄ + 1NaOH → 1Cu(OH)₂ + 1Na₂SO₄"
+    }
+  },
+  "question_78": {
+    "equation": "___NiSO₄ + ___Na₂CO₃ → ___NiCO₃ + ___Na₂SO₄",
+    "answer": "1NiSO₄ + 1Na₂CO₃ → 1NiCO₃ + 1Na₂SO₄",
+    "options": {
+      "option_1": "2NiSO₄ + 1Na₂CO₃ → 1NiCO₃ + 1Na₂SO₄",
+      "option_2": "1NiSO₄ + 1Na₂CO₃ → 1NiCO₃ + 2Na₂SO₄",
+      "option_3": "1NiSO₄ + 2Na₂CO₃ → 1NiCO₃ + 1Na₂SO₄"
+    }
+  },
+  "question_79": {
+    "equation": "___Ca(NO₃)₂ + ___Na₃PO₄ → ___Ca₃(PO₄)₂ + ___NaNO₃",
+    "answer": "3Ca(NO₃)₂ + 2Na₃PO₄ → 1Ca₃(PO₄)₂ + 6NaNO₃",
+    "options": {
+      "option_1": "4Ca(NO₃)₂ + 2Na₃PO₄ → 1Ca₃(PO₄)₂ + 6NaNO₃",
+      "option_2": "3Ca(NO₃)₂ + 2Na₃PO₄ → 1Ca₃(PO₄)₂ + 7NaNO₃",
+      "option_3": "3Ca(NO₃)₂ + 1Na₃PO₄ → 1Ca₃(PO₄)₂ + 6NaNO₃"
+    }
+  },
+  "question_80": {
+    "equation": "___Al₂(SO₄)₃ + ___NaOH → ___Al(OH)₃ + ___Na₂SO₄",
+    "answer": "1Al₂(SO₄)₃ + 6NaOH → 2Al(OH)₃ + 3Na₂SO₄",
+    "options": {
+      "option_1": "2Al₂(SO₄)₃ + 6NaOH → 2Al(OH)₃ + 3Na₂SO₄",
+      "option_2": "1Al₂(SO₄)₃ + 6NaOH → 2Al(OH)₃ + 4Na₂SO₄",
+      "option_3": "1Al₂(SO₄)₃ + 5NaOH → 2Al(OH)₃ + 3Na₂SO₄"
+    }
+  },
+  "question_81": {
+    "equation": "___FeSO₄ + ___NaOH → ___Fe(OH)₂ + ___Na₂SO₄",
+    "answer": "1FeSO₄ + 2NaOH → 1Fe(OH)₂ + 1Na₂SO₄",
+    "options": {
+      "option_1": "2FeSO₄ + 2NaOH → 1Fe(OH)₂ + 1Na₂SO₄",
+      "option_2": "1FeSO₄ + 2NaOH → 1Fe(OH)₂ + 2Na₂SO₄",
+      "option_3": "1FeSO₄ + 1NaOH → 1Fe(OH)₂ + 1Na₂SO₄"
+    }
+  },
+  "question_82": {
+    "equation": "___H₂ + ___O₂ → ___H₂O",
+    "answer": "2H₂ + 1O₂ → 2H₂O",
+    "options": {
+      "option_1": "3H₂ + 1O₂ → 2H₂O",
+      "option_2": "2H₂ + 1O₂ → 3H₂O",
+      "option_3": "2H₂ + 2O₂ → 2H₂O"
+    }
+  },
+  "question_83": {
+    "equation": "___N₂ + ___H₂ → ___NH₃",
+    "answer": "1N₂ + 3H₂ → 2NH₃",
+    "options": {
+      "option_1": "2N₂ + 3H₂ → 2NH₃",
+      "option_2": "1N₂ + 3H₂ → 3NH₃",
+      "option_3": "1N₂ + 2H₂ → 2NH₃"
+    }
+  },
+  "question_84": {
+    "equation": "___CO + ___O₂ → ___CO₂",
+    "answer": "2CO + 1O₂ → 2CO₂",
+    "options": {
+      "option_1": "3CO + 1O₂ → 2CO₂",
+      "option_2": "2CO + 1O₂ → 3CO₂",
+      "option_3": "2CO + 2O₂ → 2CO₂"
+    }
+  },
+  "question_85": {
+    "equation": "___C + ___O₂ → ___CO₂",
+    "answer": "1C + 1O₂ → 1CO₂",
+    "options": {
+      "option_1": "2C + 1O₂ → 1CO₂",
+      "option_2": "1C + 1O₂ → 2CO₂",
+      "option_3": "1C + 2O₂ → 1CO₂"
+    }
+  },
+  "question_86": {
+    "equation": "___Fe + ___O₂ → ___Fe₂O₃",
+    "answer": "4Fe + 3O₂ → 2Fe₂O₃",
+    "options": {
+      "option_1": "5Fe + 3O₂ → 2Fe₂O₃",
+      "option_2": "4Fe + 3O₂ → 3Fe₂O₃",
+      "option_3": "4Fe + 2O₂ → 2Fe₂O₃"
+    }
+  },
+  "question_87": {
+    "equation": "___Na + ___Cl₂ → ___NaCl",
+    "answer": "2Na + 1Cl₂ → 2NaCl",
+    "options": {
+      "option_1": "3Na + 1Cl₂ → 2NaCl",
+      "option_2": "2Na + 1Cl₂ → 3NaCl",
+      "option_3": "2Na + 2Cl₂ → 2NaCl"
+    }
+  },
+  "question_88": {
+    "equation": "___Mg + ___O₂ → ___MgO",
+    "answer": "2Mg + 1O₂ → 2MgO",
+    "options": {
+      "option_1": "3Mg + 1O₂ → 2MgO",
+      "option_2": "2Mg + 1O₂ → 3MgO",
+      "option_3": "2Mg + 2O₂ → 2MgO"
+    }
+  },
+  "question_89": {
+    "equation": "___Al + ___O₂ → ___Al₂O₃",
+    "answer": "4Al + 3O₂ → 2Al₂O₃",
+    "options": {
+      "option_1": "5Al + 3O₂ → 2Al₂O₃",
+      "option_2": "4Al + 3O₂ → 3Al₂O₃",
+      "option_3": "4Al + 2O₂ → 2Al₂O₃"
+    }
+  },
+  "question_90": {
+    "equation": "___NO + ___O₂ → ___NO₂",
+    "answer": "2NO + 1O₂ → 2NO₂",
+    "options": {
+      "option_1": "3NO + 1O₂ → 2NO₂",
+      "option_2": "2NO + 1O₂ → 3NO₂",
+      "option_3": "2NO + 2O₂ → 2NO₂"
+    }
+  },
+  "question_91": {
+    "equation": "___SO₂ + ___O₂ → ___SO₃",
+    "answer": "2SO₂ + 1O₂ → 2SO₃",
+    "options": {
+      "option_1": "3SO₂ + 1O₂ → 2SO₃",
+      "option_2": "2SO₂ + 1O₂ → 3SO₃",
+      "option_3": "2SO₂ + 2O₂ → 2SO₃"
+    }
+  },
+  "question_92": {
+    "equation": "___P₄ + ___O₂ → ___P₄O₁₀",
+    "answer": "1P₄ + 5O₂ → 1P₄O₁₀",
+    "options": {
+      "option_1": "2P₄ + 5O₂ → 1P₄O₁₀",
+      "option_2": "1P₄ + 5O₂ → 2P₄O₁₀",
+      "option_3": "1P₄ + 4O₂ → 1P₄O₁₀"
+    }
+  },
+  "question_93": {
+    "equation": "___H₂O₂ → ___H₂O + ___O₂",
+    "answer": "2H₂O₂ → 2H₂O + 1O₂",
+    "options": {
+      "option_1": "3H₂O₂ → 2H₂O + 1O₂",
+      "option_2": "2H₂O₂ → 2H₂O + 3O₂",
+      "option_3": "2H₂O₂ → 3H₂O + 1O₂"
+    }
+  },
+  "question_94": {
+    "equation": "___NaHCO₃ → ___Na₂CO₃ + ___CO₂ + ___H₂O",
+    "answer": "2NaHCO₃ → 1Na₂CO₃ + 1CO₂ + 1H₂O",
+    "options": {
+      "option_1": "3NaHCO₃ → 1Na₂CO₃ + 1CO₂ + 1H₂O",
+      "option_2": "2NaHCO₃ → 1Na₂CO₃ + 1CO₂ + 2H₂O",
+      "option_3": "2NaHCO₃ → 2Na₂CO₃ + 1CO₂ + 1H₂O"
+    }
+  },
+  "question_95": {
+    "equation": "___NaNO₃ → ___NaNO₂ + ___O₂",
+    "answer": "2NaNO₃ → 2NaNO₂ + 1O₂",
+    "options": {
+      "option_1": "3NaNO₃ → 2NaNO₂ + 1O₂",
+      "option_2": "2NaNO₃ → 2NaNO₂ + 3O₂",
+      "option_3": "2NaNO₃ → 3NaNO₂ + 1O₂"
+    }
+  },
+  "question_96": {
+    "equation": "___KNO₃ → ___KNO₂ + ___O₂",
+    "answer": "2KNO₃ → 2KNO₂ + 1O₂",
+    "options": {
+      "option_1": "3KNO₃ → 2KNO₂ + 1O₂",
+      "option_2": "2KNO₃ → 2KNO₂ + 3O₂",
+      "option_3": "2KNO₃ → 3KNO₂ + 1O₂"
+    }
+  },
+  "question_97": {
+    "equation": "___Ag₂O → ___Ag + ___O₂",
+    "answer": "2Ag₂O → 4Ag + 1O₂",
+    "options": {
+      "option_1": "3Ag₂O → 4Ag + 1O₂",
+      "option_2": "2Ag₂O → 4Ag + 3O₂",
+      "option_3": "2Ag₂O → 5Ag + 1O₂"
+    }
+  },
+  "question_98": {
+    "equation": "___CaO + ___CO₂ → ___CaCO₃",
+    "answer": "1CaO + 1CO₂ → 1CaCO₃",
+    "options": {
+      "option_1": "2CaO + 1CO₂ → 1CaCO₃",
+      "option_2": "1CaO + 1CO₂ → 2CaCO₃",
+      "option_3": "1CaO + 2CO₂ → 1CaCO₃"
+    }
+  },
+  "question_99": {
+    "equation": "___Fe₂O₃ + ___H₂ → ___Fe + ___H₂O",
+    "answer": "1Fe₂O₃ + 3H₂ → 2Fe + 3H₂O",
+    "options": {
+      "option_1": "2Fe₂O₃ + 3H₂ → 2Fe + 3H₂O",
+      "option_2": "1Fe₂O₃ + 3H₂ → 2Fe + 4H₂O",
+      "option_3": "1Fe₂O₃ + 2H₂ → 2Fe + 3H₂O"
+    }
+  },
+  "question_100": {
+    "equation": "___Ca + ___H₂O → ___Ca(OH)₂ + ___H₂",
+    "answer": "1Ca + 2H₂O → 1Ca(OH)₂ + 1H₂",
+    "options": {
+      "option_1": "2Ca + 2H₂O → 1Ca(OH)₂ + 1H₂",
+      "option_2": "1Ca + 2H₂O → 1Ca(OH)₂ + 2H₂",
+      "option_3": "1Ca + 1H₂O → 1Ca(OH)₂ + 1H₂"
+    }
+  }
+}

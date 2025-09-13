@@ -123,7 +123,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Unit4.pas">
+        <DCCReference Include="uMain.pas">
             <Form>Form4</Form>
         </DCCReference>
         <DCCReference Include="uFlashCards.pas"/>

@@ -2,7 +2,7 @@ program PAT_p;
 
 uses
   Vcl.Forms,
-  Unit4 in 'Unit4.pas' {Form4},
+  uMain in 'uMain.pas' {Form4},
   uFlashCards in 'uFlashCards.pas';
 
 {$R *.res}

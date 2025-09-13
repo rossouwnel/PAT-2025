@@ -1,3 +1,6 @@
-Win32
-Win64
-Images
+Win32/
+Win64/
+PAT_p.dproj.local
+PAT_p.identcache
+__history/
+__recovery/
