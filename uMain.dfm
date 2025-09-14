@@ -17,10 +17,12 @@ object Form4: TForm4
     Top = 0
     Width = 1087
     Height = 615
-    ActivePage = tsLogin
+    ActivePage = tsSim1
     Align = alClient
     TabOrder = 0
     OnChange = PageControl1Change
+    ExplicitWidth = 1085
+    ExplicitHeight = 607
     object tsLogin: TTabSheet
       Caption = 'tsLogin'
       object pnlLogin: TPanel
@@ -129,8 +131,8 @@ object Form4: TForm4
         Align = alClient
         TabOrder = 0
         object lblRUsername: TLabel
-          Left = 375
-          Top = 197
+          Left = 368
+          Top = 133
           Width = 105
           Height = 23
           Caption = 'lblRUsername'
@@ -142,8 +144,8 @@ object Form4: TForm4
           ParentFont = False
         end
         object lblCPassword: TLabel
-          Left = 375
-          Top = 368
+          Left = 368
+          Top = 344
           Width = 136
           Height = 23
           Caption = 'Confirm Password'
@@ -155,8 +157,8 @@ object Form4: TForm4
           ParentFont = False
         end
         object lblRPassword: TLabel
-          Left = 375
-          Top = 279
+          Left = 368
+          Top = 239
           Width = 98
           Height = 23
           Caption = 'lblRPassword'
@@ -168,8 +170,8 @@ object Form4: TForm4
           ParentFont = False
         end
         object btnReturn: TButton
-          Left = 375
-          Top = 513
+          Left = 368
+          Top = 505
           Width = 249
           Height = 41
           Align = alCustom
@@ -187,29 +189,29 @@ object Form4: TForm4
           TabOrder = 1
         end
         object edtRUsername: TEdit
-          Left = 375
-          Top = 233
+          Left = 368
+          Top = 169
           Width = 249
           Height = 23
           TabOrder = 2
         end
         object edtRPassword: TEdit
-          Left = 375
-          Top = 323
+          Left = 368
+          Top = 282
           Width = 249
           Height = 23
           TabOrder = 3
         end
         object edtCPassword: TEdit
-          Left = 375
-          Top = 397
+          Left = 368
+          Top = 381
           Width = 249
           Height = 23
           TabOrder = 4
         end
         object cbxSH2: TCheckBox
-          Left = 648
-          Top = 322
+          Left = 640
+          Top = 281
           Width = 97
           Height = 25
           Caption = 'show/hide'
@@ -217,8 +219,8 @@ object Form4: TForm4
           OnClick = cbxSH2Click
         end
         object cbxSHC: TCheckBox
-          Left = 648
-          Top = 396
+          Left = 640
+          Top = 380
           Width = 97
           Height = 25
           Caption = 'show/hide'
@@ -226,7 +228,7 @@ object Form4: TForm4
           OnClick = cbxSHCClick
         end
         object btnRLogin: TButton
-          Left = 375
+          Left = 368
           Top = 442
           Width = 249
           Height = 41
@@ -302,6 +304,8 @@ object Form4: TForm4
         Height = 585
         Align = alClient
         TabOrder = 0
+        ExplicitWidth = 1077
+        ExplicitHeight = 577
         object pbxH1: TPaintBox
           Left = 200
           Top = 200
@@ -325,6 +329,8 @@ object Form4: TForm4
           Color = clSkyBlue
           ParentBackground = False
           TabOrder = 0
+          ExplicitTop = 351
+          ExplicitWidth = 1075
           object lblN: TLabel
             Left = 112
             Top = 59
@@ -394,7 +400,7 @@ object Form4: TForm4
             Left = 112
             Top = 88
             Width = 121
-            Height = 72
+            Height = 73
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clWindowText
             Font.Height = -47
@@ -438,6 +444,7 @@ object Form4: TForm4
             Caption = 'btnRevealNH'
             TabOrder = 3
             OnClick = btnRevealNHClick
+            ExplicitLeft = 974
           end
         end
         object pnlSim1Menu: TPanel
@@ -450,13 +457,16 @@ object Form4: TForm4
           Color = clMenuHighlight
           ParentBackground = False
           TabOrder = 1
-          object btnNext1: TButton
-            Left = 16
-            Top = 152
-            Width = 153
-            Height = 25
-            Caption = 'btnNext1'
+          ExplicitLeft = 891
+          ExplicitHeight = 350
+          object btnSimBack2menu: TButton
+            Left = 24
+            Top = 23
+            Width = 145
+            Height = 313
+            Caption = 'Menu'
             TabOrder = 0
+            OnClick = btnSimBack2menuClick
           end
         end
       end

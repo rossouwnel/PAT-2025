@@ -1,0 +1,3 @@
+uFlashCards.pas
+uMain.dfm
+uMain.pas

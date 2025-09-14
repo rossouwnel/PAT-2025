@@ -48,7 +48,6 @@ type
     lblNH: TLabel;
     lblPlus1: TLabel;
     lblArrow1: TLabel;
-    btnNext1: TButton;
     tsFlashcards: TTabSheet;
     btnRevealNH: TButton;
     pnlFlashcard1: TPanel;
@@ -67,6 +66,7 @@ type
     tsResultsScreen: TTabSheet;
     lblCorrectPercent: TLabel;
     btnBackToMenuRes: TButton;
+    btnSimBack2menu: TButton;
     procedure FormCreate(Sender: TObject);
     procedure btnRegisterClick(Sender: TObject);
     procedure btnReturnClick(Sender: TObject);
@@ -89,6 +89,7 @@ type
     procedure btnRevealNHClick(Sender: TObject);
     procedure btnSimClick(Sender: TObject);
     procedure btnReturnToMenuClick(Sender: TObject);
+    procedure btnSimBack2menuClick(Sender: TObject);
 
   private
     { Private declaratio
@@ -119,7 +120,7 @@ var
   Users: textfile;
   sLine, FileUsername, FilePassword: String;
 begin
-  AssignFile(Users, 'E:\Roussouw IT PAT\PAT-2025\assets\Users.txt');
+  AssignFile(Users, 'C:\Git\IT PAT 2025\assets\Users.txt');
   reset(Users);
   Fields := TstringList.Create;
   Fields.Delimiter := '|';
@@ -379,7 +380,7 @@ begin
   end;
 
   Exists := false;
-  AssignFile(Users, 'E:\Roussouw IT PAT\PAT-2025\assets\Users.txt');
+  AssignFile(Users, 'C:\Git\IT PAT 2025\assets\Users.txt');
   reset(Users);
   Username := edtRUsername.text;
   Password := edtRPassword.text;
@@ -404,7 +405,7 @@ begin
 
     CloseFile(Users);
 
-    AssignFile(Users, 'E:\Roussouw IT PAT\PAT-2025\assets\Users.txt');
+    AssignFile(Users, 'C:\Git\IT PAT 2025\assets\Users.txt');
     Append(Users);
     WriteLn(Users, Username + '|' + Password + '|' + '0');
     CloseFile(Users);
@@ -417,7 +418,13 @@ begin
     Fields.Free;
   END;
 
-  login
+  login;
+
+end;
+
+procedure TForm4.btnSimBack2menuClick(Sender: TObject);
+begin
+showonly(tsOptions);
 end;
 
 procedure TForm4.btnSimClick(Sender: TObject);
@@ -428,7 +435,7 @@ end;
 procedure TForm4.btnBackToMenuResClick(Sender: TObject);
 begin
     ShowOnly(tsOptions);
-    
+
 
 end;
 
@@ -437,7 +444,7 @@ begin
   if cbxSH1.Checked then
     edtLPassword.PasswordChar := #0 // hierdie sal die teks wys wat ingetik word
   else
-    edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
+    edtLPassword.PasswordChar := '*' // steek weg wat mens tik met 'n * om jou password te beskerm
 end;
 
 procedure TForm4.cbxSH2Click(Sender: TObject);
@@ -445,15 +452,15 @@ begin
   if cbxSH2.Checked then
     edtRPassword.PasswordChar := #0 // hierdie sal die teks wys wat ingetik word
   else
-    edtRPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
+    edtRPassword.PasswordChar := '*' // steek  weg wat mens tik met 'n *om jou password te beskerm
 end;
 
 procedure TForm4.cbxSHCClick(Sender: TObject);
 begin
   if cbxSHC.Checked then
-    edtCPassword.PasswordChar := #0 // hierdie sal die teks wys wat ingetik word
+    edtCPassword.PasswordChar := #0 //  hierdie sal die teks wys wat ingetik word
   else
-    edtCPassword.PasswordChar := '*' // steek weg wat mens tik met 'n *
+    edtCPassword.PasswordChar := '*' // steek weg wat mens tik met 'n * om jou password te beskerm
 end;
 
 procedure TForm4.FormCreate(Sender: TObject);
@@ -463,6 +470,7 @@ begin
   tsRegister.Caption := 'Register';
   tsOptions.Caption := 'Options';
   tsSim1.Caption := 'Simulation 1';
+
   // tsLogin
   pnlLogin.Caption := '';
   pnlHeading1.Caption := 'Login';
@@ -499,10 +507,12 @@ begin
   edtCPassword.text := '';
   edtRPassword.PasswordChar := '*';
   edtCPassword.PasswordChar := '*';
+
   // tsOptions
   pnlOptions.Caption := '';
+  lblHeadingPnl3.Caption := 'Hi there friend, what are we learning today?';
 
-  // Simulation 1
+  // Simulation
   pnlSim1.Caption := '';
   pnlNH.Caption := '';
   pnlSim1Menu.Caption := '';
@@ -528,31 +538,19 @@ begin
   lblArrow1.Font.size := 25;
 
   btnRevealNH.Caption := 'Reveal';
-  btnNext1.Caption := 'Next';
-
-  // Simulation 2
 
   // Flashcards
   rgpQuestion.Font.size := 14;
   btnNextFlashcard.Caption := 'Next';
   lblAnswer.Visible := false;
 
-  // Wire Next button and initialize flashcards module
   btnNextFlashcard.OnClick := btnNextFlashcardClick;
-  Flashcards_Init(lblQuestion, rgpQuestion, btnMarkAnswer, btnNextFlashcard,
-                  lblAnswer, lblCorrectPercent, tsFlashcards, tsResultsScreen);
+  Flashcards_Init(lblQuestion, rgpQuestion, btnMarkAnswer, btnNextFlashcard, lblAnswer, lblCorrectPercent, tsFlashcards, tsResultsScreen);
   Flashcards_SetShowOnly(ShowOnly);
 
   qNum := 1;
 
-
-  rgpQuestion.Items.Clear;
-  rgpQuestion.Items.Add('A. H₂ + O₂ → H₂O');
-  rgpQuestion.Items.Add('B. 2H₂ + O₂ → 2H₂O'); // regte antwoord
-  rgpQuestion.Items.Add('C. H₂ + 2O₂ → 2H₂O');
-  rgpQuestion.Items.Add('D. 2H₂ + 2O₂ → H₂O');
-
-
 end;
 
 end.
+//rossouw nel
